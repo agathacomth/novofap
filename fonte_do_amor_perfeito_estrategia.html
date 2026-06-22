@@ -1,0 +1,3455 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fonte do Amor Perfeito — Estratégia Digital Completa</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #3AADA8;
+    --teal-dark: #2a8f8a;
+    --teal-light: #a8e0de;
+    --teal-pale: #e8f7f6;
+    --navy: #1B4F72;
+    --navy-deep: #0f2d42;
+    --gold: #D4A843;
+    --gold-light: #f0d890;
+    --gold-pale: #fdf5e0;
+    --white: #FFFFFF;
+    --off-white: #F8F5F0;
+    --text-dark: #1a2a35;
+    --text-mid: #3a5060;
+    --text-light: #6b8090;
+    --shadow: rgba(27, 79, 114, 0.12);
+    --shadow-gold: rgba(212, 168, 67, 0.25);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--off-white);
+    color: var(--text-dark);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ===== NAVIGATION ===== */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(248, 245, 240, 0.92);
+    backdrop-filter: blur(12px);
+    padding: 0 2rem;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 24px rgba(27, 79, 114, 0.08);
+    border-bottom: 1px solid rgba(58, 173, 168, 0.18);
+  }
+
+  .nav-logo {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    color: var(--teal-dark);
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 0.3rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .nav-links a {
+    color: var(--text-mid);
+    text-decoration: none;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+    transition: all 0.2s;
+  }
+
+  .nav-links a:hover {
+    color: var(--teal-dark);
+    background: rgba(58, 173, 168, 0.1);
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(165deg, var(--off-white) 0%, var(--teal-pale) 55%, #d4f0ef 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 6rem 2rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(ellipse at 60% 35%, rgba(255, 255, 255, 0.85) 0%, transparent 55%),
+                radial-gradient(ellipse at 20% 80%, rgba(212, 168, 67, 0.12) 0%, transparent 50%),
+                radial-gradient(ellipse at 85% 70%, rgba(58, 173, 168, 0.14) 0%, transparent 55%);
+    animation: pulse 8s ease-in-out infinite alternate;
+  }
+
+  @keyframes pulse {
+    from { transform: scale(1) rotate(0deg); }
+    to { transform: scale(1.05) rotate(2deg); }
+  }
+
+  .hero-cross {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    animation: float 4s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .hero-eyebrow {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--teal-dark);
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    color: var(--navy);
+    line-height: 1.15;
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero h1 span {
+    color: var(--teal);
+  }
+
+  .hero-sub {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    color: var(--teal-dark);
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-desc {
+    font-size: 0.9rem;
+    color: var(--text-mid);
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    position: relative;
+    z-index: 1;
+    font-weight: 400;
+  }
+
+  .hero-badges {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-badge {
+    background: rgba(255,255,255,0.75);
+    border: 1px solid rgba(58, 173, 168, 0.35);
+    border-radius: 50px;
+    padding: 0.5rem 1.2rem;
+    color: var(--teal-dark);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 12px rgba(27, 79, 114, 0.06);
+  }
+
+  /* ===== SECTIONS ===== */
+  .section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-full {
+    padding: 5rem 2rem;
+  }
+
+  .section-bg-teal {
+    background: linear-gradient(135deg, var(--teal-pale) 0%, #d4f0ef 100%);
+  }
+
+  .section-bg-navy {
+    background: linear-gradient(160deg, var(--off-white) 0%, var(--teal-pale) 100%);
+    color: var(--text-dark);
+  }
+
+  .section-bg-gold {
+    background: linear-gradient(135deg, var(--gold-pale) 0%, #fdeebb 100%);
+  }
+
+  .section-bg-dark {
+    background: linear-gradient(160deg, var(--teal-pale) 0%, var(--off-white) 60%, #e8f7f6 100%);
+    color: var(--text-dark);
+  }
+
+  .section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  /* ===== SECTION HEADERS ===== */
+  .section-label {
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 0.8rem;
+    display: block;
+  }
+
+  .section-label-gold {
+    color: var(--gold);
+  }
+
+  .section-label-light {
+    color: var(--teal-dark);
+  }
+
+  h2.section-title {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--navy);
+  }
+
+  h2.section-title-white {
+    color: var(--navy);
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    color: var(--text-mid);
+    max-width: 680px;
+    margin-bottom: 3rem;
+    font-weight: 400;
+  }
+
+  .section-subtitle-light {
+    color: var(--text-mid);
+  }
+
+  .gold-line {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    border-radius: 2px;
+    margin-bottom: 2rem;
+  }
+
+  /* ===== CARDS ===== */
+  .card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 24px var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(58, 173, 168, 0.12);
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px var(--shadow);
+  }
+
+  .card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .card-icon-img {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    margin-bottom: 0.9rem;
+    display: block;
+  }
+
+  .card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--navy);
+    margin-bottom: 0.7rem;
+    letter-spacing: -0.2px;
+  }
+
+  .card-text {
+    font-size: 0.875rem;
+    color: var(--text-mid);
+    line-height: 1.7;
+  }
+
+  .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+  .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
+  .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+
+  /* ===== SWOT ===== */
+  .swot-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .swot-card {
+    border-radius: 16px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .swot-card::before {
+    content: attr(data-letter);
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 6rem;
+    font-weight: 700;
+    opacity: 0.08;
+    line-height: 1;
+  }
+
+  .swot-s { background: linear-gradient(135deg, #e8f7f6, #c8eeec); border-left: 4px solid var(--teal); }
+  .swot-w { background: linear-gradient(135deg, #fff3e0, #ffe0b2); border-left: 4px solid #f97316; }
+  .swot-o { background: linear-gradient(135deg, #fdf5e0, #fdeebb); border-left: 4px solid var(--gold); }
+  .swot-t { background: linear-gradient(135deg, #fce8e8, #f5c6c6); border-left: 4px solid #ef4444; }
+
+  .swot-label {
+    font-size: 0.6rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  .swot-s .swot-label { color: var(--teal-dark); }
+  .swot-w .swot-label { color: #c2550a; }
+  .swot-o .swot-label { color: #9a6f00; }
+  .swot-t .swot-label { color: #c0392b; }
+
+  .swot-title {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+  }
+
+  .swot-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .swot-list li {
+    font-size: 0.85rem;
+    color: var(--text-mid);
+    padding-left: 1.2rem;
+    position: relative;
+  }
+
+  .swot-list li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--teal);
+    font-weight: 700;
+  }
+
+  /* ===== COMPETITORS ===== */
+  .competitor-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 1px solid rgba(58, 173, 168, 0.15);
+    box-shadow: 0 2px 16px var(--shadow);
+  }
+
+  .competitor-name {
+    font-weight: 800;
+    font-size: 0.95rem;
+    color: var(--navy);
+    margin-bottom: 0.3rem;
+  }
+
+  .competitor-type {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 1rem;
+  }
+
+  .competitor-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.4rem;
+    font-size: 0.8rem;
+  }
+
+  .competitor-row span:first-child { color: var(--text-light); font-weight: 600; }
+  .competitor-row span:last-child { color: var(--text-mid); text-align: right; max-width: 60%; }
+
+  .tag {
+    display: inline-block;
+    padding: 0.25rem 0.7rem;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-top: 0.8rem;
+  }
+
+  .tag-opp { background: var(--teal-pale); color: var(--teal-dark); }
+  .tag-warn { background: #fff3e0; color: #c2550a; }
+
+  /* ===== VISUAL IDENTITY ===== */
+  .palette-grid {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+
+  .color-swatch {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px var(--shadow);
+    min-width: 120px;
+    flex: 1;
+  }
+
+  .swatch-color {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+  }
+
+  .swatch-info {
+    padding: 0.8rem;
+    background: white;
+  }
+
+  .swatch-name {
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: var(--navy);
+    margin-bottom: 0.2rem;
+  }
+
+  .swatch-hex {
+    font-size: 0.7rem;
+    color: var(--text-light);
+    font-family: monospace;
+  }
+
+  .swatch-use {
+    font-size: 0.65rem;
+    color: var(--text-light);
+    margin-top: 0.2rem;
+  }
+
+  /* Typography showcase */
+  .type-showcase {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 24px var(--shadow);
+    margin-bottom: 1.5rem;
+  }
+
+  .type-label-small {
+    font-size: 0.6rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+  }
+
+  /* ===== POSITIONING ===== */
+  .positioning-core {
+    background: linear-gradient(135deg, #ffffff 0%, var(--teal-pale) 100%);
+    border: 1px solid rgba(58, 173, 168, 0.25);
+    border-radius: 20px;
+    padding: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(27, 79, 114, 0.08);
+  }
+
+  .positioning-core::before {
+    content: '🌟';
+    position: absolute;
+    font-size: 15rem;
+    opacity: 0.06;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .positioning-tag {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--teal-dark);
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .positioning-statement {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    color: var(--navy);
+    line-height: 1.4;
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .positioning-desc {
+    font-size: 0.9rem;
+    color: var(--text-mid);
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Movement pillars */
+  .movement-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 24px var(--shadow);
+    border-top: 4px solid var(--teal);
+    text-align: center;
+  }
+
+  .movement-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+
+  .movement-label {
+    font-size: 0.6rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 0.5rem;
+  }
+
+  .movement-title {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--navy);
+    margin-bottom: 0.8rem;
+  }
+
+  .movement-text {
+    font-size: 0.85rem;
+    color: var(--text-mid);
+  }
+
+  /* ===== EDITORIAL PILLARS ===== */
+  .pillar-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 1.8rem;
+    box-shadow: 0 4px 24px var(--shadow);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .pillar-number {
+    position: absolute;
+    top: -15px;
+    right: 15px;
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 5rem;
+    color: rgba(58, 173, 168, 0.08);
+    line-height: 1;
+    font-weight: 700;
+  }
+
+  .pillar-emoji { font-size: 2rem; margin-bottom: 0.8rem; display: block; }
+
+  .pillar-title {
+    font-weight: 800;
+    font-size: 0.95rem;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+  }
+
+  .pillar-desc {
+    font-size: 0.83rem;
+    color: var(--text-mid);
+    margin-bottom: 1rem;
+  }
+
+  .pillar-formats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .format-tag {
+    background: var(--teal-pale);
+    color: var(--teal-dark);
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border-radius: 50px;
+  }
+
+  /* ===== AUDIENCE ===== */
+  .persona-card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px var(--shadow);
+  }
+
+  .persona-header {
+    background: linear-gradient(135deg, var(--teal-pale) 0%, #d4f0ef 100%);
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(58, 173, 168, 0.2);
+  }
+
+  .persona-avatar {
+    font-size: 3.5rem;
+    display: block;
+    margin-bottom: 0.8rem;
+  }
+
+  .persona-name {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: var(--navy);
+    margin-bottom: 0.3rem;
+  }
+
+  .persona-age {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--teal-dark);
+    letter-spacing: 1px;
+  }
+
+  .persona-body {
+    padding: 2rem;
+  }
+
+  .persona-section-title {
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 0.7rem;
+    margin-top: 1.2rem;
+  }
+
+  .persona-text {
+    font-size: 0.85rem;
+    color: var(--text-mid);
+    line-height: 1.6;
+  }
+
+  .quote-block {
+    background: var(--teal-pale);
+    border-left: 3px solid var(--teal);
+    border-radius: 0 8px 8px 0;
+    padding: 1rem 1.2rem;
+    margin: 1rem 0;
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--navy);
+  }
+
+  /* ===== ADS ===== */
+  .ad-strategy-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 24px var(--shadow);
+    border-left: 4px solid var(--gold);
+  }
+
+  .ad-title {
+    font-weight: 800;
+    font-size: 1rem;
+    color: var(--navy);
+    margin-bottom: 0.3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .ad-subtitle {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  .ad-text {
+    font-size: 0.85rem;
+    color: var(--text-mid);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .do-dont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .do-box, .dont-box {
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .do-box {
+    background: #e8f7f6;
+    border: 1px solid var(--teal-light);
+  }
+
+  .dont-box {
+    background: #fce8e8;
+    border: 1px solid #f5c6c6;
+  }
+
+  .do-box strong { color: var(--teal-dark); font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase; }
+  .dont-box strong { color: #c0392b; font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase; }
+
+  .do-box ul, .dont-box ul { list-style: none; margin-top: 0.5rem; }
+  .do-box li, .dont-box li { margin-bottom: 0.3rem; font-size: 0.8rem; color: var(--text-mid); }
+  .do-box li::before { content: '✓ '; color: var(--teal); font-weight: 700; }
+  .dont-box li::before { content: '✗ '; color: #ef4444; font-weight: 700; }
+
+  .copy-example {
+    background: var(--teal-pale);
+    border: 1px solid rgba(58, 173, 168, 0.25);
+    border-radius: 10px;
+    padding: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  .copy-example-label {
+    font-size: 0.6rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--teal-dark);
+    margin-bottom: 0.7rem;
+  }
+
+  .copy-example-text {
+    font-size: 0.85rem;
+    color: var(--text-mid);
+    line-height: 1.7;
+    font-style: italic;
+  }
+
+  /* ===== PRODUCT LADDER ===== */
+  .ladder {
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  .ladder::before {
+    content: '';
+    position: absolute;
+    left: 0.65rem;
+    top: 20px;
+    bottom: 20px;
+    width: 2px;
+    background: linear-gradient(180deg, var(--teal-light), var(--gold), var(--navy));
+  }
+
+  .ladder-item {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+
+  .ladder-item::before {
+    content: '';
+    position: absolute;
+    left: -1.65rem;
+    top: 1.5rem;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 3px solid var(--white);
+    box-shadow: 0 0 0 3px var(--teal);
+    background: var(--teal);
+    z-index: 1;
+  }
+
+  .ladder-item.gold::before { box-shadow: 0 0 0 3px var(--gold); background: var(--gold); }
+  .ladder-item.navy::before { box-shadow: 0 0 0 3px var(--navy); background: var(--navy); }
+
+  .product-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 24px var(--shadow);
+    border: 1px solid rgba(58, 173, 168, 0.15);
+  }
+
+  .product-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--teal-pale);
+    color: var(--teal-dark);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+  }
+
+  .product-badge.badge-gold { background: var(--gold-pale); color: #7a5500; }
+  .product-badge.badge-navy { background: #e8eef4; color: var(--navy); }
+
+  .product-name {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 1.6rem;
+    color: var(--navy);
+    margin-bottom: 0.3rem;
+  }
+
+  .product-tagline {
+    font-size: 0.85rem;
+    color: var(--teal);
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .product-price-box {
+    background: linear-gradient(135deg, var(--teal-pale), #d4f0ef);
+    border-radius: 12px;
+    padding: 1.2rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .price-main {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 2rem;
+    color: var(--navy);
+    font-weight: 700;
+  }
+
+  .price-info {
+    font-size: 0.8rem;
+    color: var(--text-mid);
+  }
+
+  .product-features {
+    list-style: none;
+    margin-bottom: 1.5rem;
+  }
+
+  .product-features li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(58, 173, 168, 0.1);
+    font-size: 0.85rem;
+    color: var(--text-mid);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .product-features li::before { content: '🌟'; color: var(--teal); font-size: 0.7rem; margin-top: 0.15rem; flex-shrink: 0; }
+
+  .product-action-title {
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(58, 173, 168, 0.15);
+  }
+
+  .step-list {
+    list-style: none;
+    counter-reset: steps;
+  }
+
+  .step-list li {
+    counter-increment: steps;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+    align-items: flex-start;
+  }
+
+  .step-list li::before {
+    content: counter(steps);
+    background: var(--teal);
+    color: white;
+    font-weight: 800;
+    font-size: 0.7rem;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+
+  .step-list li span {
+    font-size: 0.85rem;
+    color: var(--text-mid);
+    line-height: 1.6;
+  }
+
+  /* ===== APP PLANS ===== */
+  .plans-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+    align-items: start;
+  }
+
+  .plan-card {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px var(--shadow);
+    transition: transform 0.3s ease;
+    position: relative;
+    border: 1px solid rgba(58, 173, 168, 0.15);
+    background: var(--white);
+  }
+
+  .plan-card:hover { transform: translateY(-6px); }
+
+  .plan-card.featured {
+    box-shadow: 0 16px 48px rgba(212, 168, 67, 0.25);
+    border: 2px solid var(--gold-light);
+  }
+
+  .plan-header {
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(58, 173, 168, 0.12);
+  }
+
+  .plan-1 .plan-header { background: linear-gradient(135deg, var(--teal-pale), #d4f0ef); }
+  .plan-2 .plan-header { background: linear-gradient(135deg, var(--gold-pale), #fdeebb); }
+  .plan-3 .plan-header { background: linear-gradient(135deg, #eef3f8, #dfe8f0); }
+
+  .plan-featured-tag {
+    display: inline-block;
+    background: var(--gold);
+    color: white;
+    font-size: 0.6rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 0.28rem 0.9rem;
+    border-radius: 50px;
+    margin-bottom: 0.8rem;
+    box-shadow: 0 4px 12px var(--shadow-gold);
+  }
+
+  .plan-icon { font-size: 2.5rem; margin-bottom: 0.6rem; }
+
+  .plan-name {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: var(--navy);
+    margin-bottom: 0.3rem;
+  }
+
+  .plan-tagline {
+    font-size: 0.75rem;
+    color: var(--text-mid);
+    font-weight: 500;
+  }
+
+  .plan-body {
+    background: var(--white);
+    padding: 1.8rem;
+  }
+
+  .plan-price-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-bottom: 1.3rem;
+    border-bottom: 1px solid rgba(58, 173, 168, 0.15);
+    margin-bottom: 1.1rem;
+  }
+
+  .plan-price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--off-white);
+    border-radius: 10px;
+    padding: 0.55rem 0.9rem;
+    border: 1px solid transparent;
+  }
+
+  .plan-price-row.best {
+    background: var(--teal-pale);
+    border-color: rgba(58, 173, 168, 0.35);
+  }
+
+  .ppr-label {
+    font-size: 0.66rem;
+    font-weight: 800;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .ppr-right { text-align: right; }
+
+  .ppr-value {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--navy);
+    line-height: 1.1;
+  }
+
+  .ppr-sub {
+    font-size: 0.6rem;
+    color: var(--teal-dark);
+    font-weight: 700;
+    display: block;
+  }
+
+  .plan-feature-block-title {
+    font-size: 0.6rem;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--teal-dark);
+    margin: 0.9rem 0 0.3rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px dashed rgba(58, 173, 168, 0.35);
+  }
+
+  .plan-feature-block-title.gold {
+    color: #9a6f00;
+    border-color: rgba(212, 168, 67, 0.45);
+  }
+
+  .plan-features {
+    list-style: none;
+  }
+
+  .plan-features li {
+    padding: 0.4rem 0;
+    font-size: 0.82rem;
+    color: var(--text-mid);
+    border-bottom: 1px solid rgba(0,0,0,0.04);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .plan-features li:last-child { border-bottom: none; }
+  .plan-features li .fi { font-size: 0.9rem; flex-shrink: 0; }
+
+  .plan-extras-box {
+    background: var(--off-white);
+    border: 1px dashed rgba(58, 173, 168, 0.4);
+    border-radius: 12px;
+    padding: 0.9rem 1rem;
+    margin-top: 1.1rem;
+  }
+
+  .plan-extras-box-title {
+    font-size: 0.6rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--teal-dark);
+    margin-bottom: 0.5rem;
+  }
+
+  .plan-extras-box ul { list-style: none; }
+
+  .plan-extras-box li {
+    font-size: 0.76rem;
+    color: var(--text-mid);
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.18rem 0;
+  }
+
+  .plan-extras-box li span:last-child {
+    font-weight: 700;
+    color: var(--navy);
+    white-space: nowrap;
+  }
+
+  .plan-cta {
+    display: block;
+    width: 100%;
+    margin-top: 1.4rem;
+    padding: 0.9rem;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s;
+  }
+
+  .plan-1 .plan-cta { background: linear-gradient(135deg, var(--teal), var(--teal-dark)); color: white; }
+  .plan-2 .plan-cta { background: linear-gradient(135deg, #C8960C, var(--gold)); color: white; }
+  .plan-3 .plan-cta { background: linear-gradient(135deg, var(--navy), var(--navy-deep)); color: white; }
+
+  .plan-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 20px var(--shadow); }
+
+  /* ===== FUNNEL ===== */
+  .funnel-container {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .funnel-step {
+    position: relative;
+    margin-bottom: 1rem;
+  }
+
+  .funnel-box {
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .funnel-1 { background: linear-gradient(135deg, var(--teal-pale), #c8eeec); border: 2px solid var(--teal-light); }
+  .funnel-2 { background: linear-gradient(135deg, #e8eef4, #d4dfe8); border: 2px solid #b0c4d8; }
+  .funnel-3 { background: linear-gradient(135deg, var(--gold-pale), #fdeebb); border: 2px solid var(--gold-light); }
+  .funnel-4 { background: linear-gradient(135deg, #ffffff, var(--teal-pale)); border: 2px solid var(--teal); }
+
+  .funnel-label {
+    font-size: 0.6rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+  }
+
+  .funnel-1 .funnel-label { color: var(--teal-dark); }
+  .funnel-2 .funnel-label { color: var(--navy); }
+  .funnel-3 .funnel-label { color: #7a5500; }
+  .funnel-4 .funnel-label { color: var(--teal-dark); }
+
+  .funnel-name {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--navy);
+    margin-bottom: 0.3rem;
+  }
+
+  .funnel-desc {
+    font-size: 0.8rem;
+    color: var(--text-mid);
+  }
+
+  .funnel-arrow {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--teal-light);
+    margin: 0.3rem 0;
+    line-height: 1;
+  }
+
+  /* ===== DIVIDER ===== */
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--teal-light), transparent);
+    margin: 0;
+  }
+
+  /* ===== INFO BOXES ===== */
+  .info-box {
+    border-radius: 12px;
+    padding: 1.2rem 1.5rem;
+    margin: 1rem 0;
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .info-box-teal { background: var(--teal-pale); border-left: 3px solid var(--teal); color: var(--text-mid); }
+  .info-box-gold { background: var(--gold-pale); border-left: 3px solid var(--gold); color: var(--text-mid); }
+  .info-box-navy { background: #e8eef4; border-left: 3px solid var(--navy); color: var(--text-mid); }
+  .info-box-alert { background: #fce8e8; border-left: 3px solid #ef4444; color: var(--text-mid); }
+
+  .info-box strong { font-weight: 700; color: var(--navy); }
+
+  /* ===== TABLE ===== */
+  .strategy-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px var(--shadow);
+    font-size: 0.85rem;
+  }
+
+  .strategy-table th {
+    background: var(--navy);
+    color: white;
+    padding: 1rem 1.2rem;
+    text-align: left;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+  }
+
+  .strategy-table td {
+    padding: 0.9rem 1.2rem;
+    border-bottom: 1px solid rgba(58, 173, 168, 0.1);
+    color: var(--text-mid);
+    vertical-align: top;
+  }
+
+  .strategy-table tr:last-child td { border-bottom: none; }
+  .strategy-table tr:hover td { background: var(--teal-pale); }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: linear-gradient(160deg, var(--teal-pale) 0%, var(--off-white) 100%);
+    color: var(--text-light);
+    text-align: center;
+    padding: 3rem 2rem;
+    font-size: 0.8rem;
+    border-top: 1px solid rgba(58, 173, 168, 0.2);
+  }
+
+  footer .footer-logo {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    color: var(--teal-dark);
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    .swot-grid { grid-template-columns: 1fr; }
+    .do-dont { grid-template-columns: 1fr; }
+    nav { height: auto; padding: 0.7rem 1rem; flex-direction: column; gap: 0.5rem; }
+    .nav-links { justify-content: center; }
+    body { padding-top: 80px; }
+    .hero { padding-top: 2rem; }
+  }
+
+  /* ===== PRINT ===== */
+  @media print {
+    nav { display: none; }
+    .section, .section-full { break-inside: avoid; }
+  }
+
+  /* ===== HIGHLIGHT TEXT ===== */
+  .highlight {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    color: var(--teal-dark);
+    font-size: 1.05em;
+  }
+
+  .highlight-gold {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    color: #9a6f00;
+    font-size: 1.05em;
+  }
+
+  /* Pills */
+  .pill {
+    display: inline-block;
+    padding: 0.2rem 0.7rem;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin: 0.2rem;
+  }
+
+  .pill-teal { background: var(--teal-pale); color: var(--teal-dark); }
+  .pill-navy { background: #e8eef4; color: var(--navy); }
+  .pill-gold { background: var(--gold-pale); color: #7a5500; }
+
+  /* Upsell flow */
+  .upsell-flow {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem 0;
+  }
+
+  .upsell-box {
+    background: var(--white);
+    border: 2px solid rgba(58, 173, 168, 0.3);
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    min-width: 140px;
+    box-shadow: 0 2px 12px var(--shadow);
+  }
+
+  .upsell-box-name {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--navy);
+    margin-bottom: 0.2rem;
+  }
+
+  .upsell-box-price {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--teal);
+  }
+
+  .upsell-arrow {
+    font-size: 1.5rem;
+    color: var(--teal-light);
+  }
+
+  /* ===== CONTENT BLOCKS (CARROSSEL / STORIES) ===== */
+  .content-block {
+    background: var(--white);
+    border-radius: 18px;
+    padding: 1.8rem;
+    box-shadow: 0 6px 30px var(--shadow);
+    border: 1px solid rgba(58, 173, 168, 0.14);
+    margin-bottom: 2rem;
+  }
+
+  .cb-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .cb-tag {
+    font-size: 0.58rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+  }
+  .cb-tag-strategy { background: var(--navy); color: #fff; }
+  .cb-tag-format { background: var(--teal-pale); color: var(--teal-dark); }
+  .cb-tag-type { background: var(--gold-pale); color: #7a5500; }
+  .cb-tag-slides { background: #eef3f8; color: var(--navy); }
+
+  .cb-title {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    color: var(--navy);
+    margin: 0.4rem 0 0.3rem;
+  }
+
+  .cb-objective {
+    font-size: 0.82rem;
+    color: var(--text-mid);
+    margin-bottom: 1.2rem;
+  }
+  .cb-objective strong { color: var(--teal-dark); }
+
+  .scroll-hint {
+    font-size: 0.68rem;
+    color: var(--text-light);
+    font-style: italic;
+    margin-bottom: 0.5rem;
+  }
+
+  /* slides row */
+  .slides-row, .stories-row {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 0.4rem 0.2rem 1.1rem;
+    scroll-snap-type: x mandatory;
+  }
+  .slides-row::-webkit-scrollbar, .stories-row::-webkit-scrollbar { height: 8px; }
+  .slides-row::-webkit-scrollbar-track, .stories-row::-webkit-scrollbar-track { background: var(--off-white); border-radius: 10px; }
+  .slides-row::-webkit-scrollbar-thumb, .stories-row::-webkit-scrollbar-thumb { background: var(--teal-light); border-radius: 10px; }
+
+  .slide-mock {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 312px;
+    border-radius: 18px;
+    padding: 1.3rem 1.25rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    scroll-snap-align: start;
+    box-shadow: 0 8px 26px rgba(27, 79, 114, 0.13);
+    border: 1px solid rgba(58, 173, 168, 0.18);
+  }
+  .slide-mock.bg-a { background: linear-gradient(160deg, #ffffff 0%, var(--teal-pale) 100%); }
+  .slide-mock.bg-b { background: linear-gradient(160deg, var(--teal-pale) 0%, #d4f0ef 100%); }
+  .slide-mock.bg-c { background: linear-gradient(160deg, var(--off-white) 0%, var(--gold-pale) 100%); }
+  .slide-mock.bg-cover { background: linear-gradient(165deg, #ffffff 0%, var(--teal-pale) 58%, #d4f0ef 100%); }
+  .slide-mock.bg-cta { background: linear-gradient(160deg, var(--teal) 0%, var(--teal-dark) 100%); border: none; }
+  .slide-mock.bg-cta .slide-eyebrow,
+  .slide-mock.bg-cta .slide-headline,
+  .slide-mock.bg-cta .slide-body { color: #fff; }
+
+  .slide-dots {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 1;
+  }
+  .slide-dots i {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: rgba(27, 79, 114, 0.18);
+  }
+  .slide-dots i.on { background: var(--teal); }
+  .slide-mock.bg-cta .slide-dots i { background: rgba(255,255,255,0.4); }
+  .slide-mock.bg-cta .slide-dots i.on { background: #fff; }
+
+  .slide-art {
+    position: absolute;
+    object-fit: contain;
+    pointer-events: none;
+  }
+  .slide-art.corner {
+    width: 50px; height: 50px;
+    top: 0.85rem; right: 0.9rem;
+  }
+  .slide-art.watermark {
+    width: 124px; height: 124px;
+    bottom: -24px; right: -20px;
+    opacity: 0.22;
+    mix-blend-mode: multiply;
+  }
+  .slide-art-big {
+    width: 88px; height: 88px;
+    object-fit: contain;
+    margin: 0 auto 0.45rem;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+
+  .slide-eyebrow {
+    font-size: 0.56rem;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--teal-dark);
+    margin-bottom: 0.4rem;
+    position: relative;
+    z-index: 1;
+  }
+  .slide-mock.bg-cover .slide-eyebrow,
+  .slide-mock.bg-cta .slide-eyebrow { text-align: center; }
+
+  .slide-headline {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 1.12rem;
+    line-height: 1.26;
+    color: var(--navy);
+    margin-bottom: 0.45rem;
+    position: relative;
+    z-index: 1;
+  }
+  .slide-mock.bg-cover .slide-headline { font-size: 1.16rem; text-align: center; }
+  .slide-mock.bg-cta .slide-headline { text-align: center; }
+
+  .slide-body {
+    font-size: 0.73rem;
+    line-height: 1.55;
+    color: var(--text-mid);
+    position: relative;
+    z-index: 1;
+  }
+  .slide-mock.bg-cover .slide-body,
+  .slide-mock.bg-cta .slide-body { text-align: center; }
+
+  .slide-foot {
+    margin-top: auto;
+    padding-top: 0.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.58rem;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    color: var(--teal-dark);
+    position: relative;
+    z-index: 1;
+  }
+  .slide-foot .sf-brand { opacity: 0.65; text-transform: lowercase; letter-spacing: 0; font-weight: 700; }
+  .slide-mock.bg-cta .slide-foot { color: rgba(255,255,255,0.9); }
+
+  .slide-comment-cta {
+    margin-top: auto;
+    background: #fff;
+    border-radius: 14px;
+    padding: 0.7rem 0.8rem;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(27, 79, 114, 0.2);
+    position: relative;
+    z-index: 1;
+  }
+  .slide-comment-cta .scc-label {
+    font-size: 0.54rem;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--text-light);
+    display: block;
+    margin-bottom: 0.1rem;
+  }
+  .slide-comment-cta .scc-word {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 1.16rem;
+    color: var(--teal-dark);
+    display: block;
+  }
+
+  /* legenda */
+  .legenda-box {
+    background: var(--off-white);
+    border-left: 3px solid var(--teal);
+    border-radius: 0 10px 10px 0;
+    padding: 1rem 1.2rem;
+  }
+  .legenda-box-title {
+    font-size: 0.6rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--teal-dark);
+    margin-bottom: 0.4rem;
+  }
+  .legenda-box p {
+    font-size: 0.8rem;
+    color: var(--text-mid);
+    line-height: 1.7;
+  }
+  .legenda-hashtags {
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    color: var(--teal-dark);
+    font-weight: 600;
+  }
+
+  /* story mockups */
+  .story-mock {
+    flex: 0 0 auto;
+    width: 180px;
+    height: 320px;
+    border-radius: 18px;
+    padding: 1rem 0.95rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    scroll-snap-align: start;
+    box-shadow: 0 6px 20px rgba(27, 79, 114, 0.12);
+    border: 1px solid rgba(58, 173, 168, 0.2);
+  }
+  .story-mock.s-a { background: linear-gradient(165deg, #ffffff, var(--teal-pale)); }
+  .story-mock.s-b { background: linear-gradient(165deg, var(--teal-pale), #d4f0ef); }
+  .story-mock.s-c { background: linear-gradient(165deg, var(--off-white), var(--gold-pale)); }
+  .story-mock.s-d { background: linear-gradient(165deg, var(--teal) 0%, var(--teal-dark) 100%); }
+  .story-mock.s-d .story-text, .story-mock.s-d .story-text .st-big { color: #fff; }
+
+  .story-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.3rem;
+    margin-bottom: 0.7rem;
+  }
+  .story-idx {
+    font-size: 0.56rem;
+    font-weight: 800;
+    color: var(--teal-dark);
+    background: rgba(255,255,255,0.78);
+    border-radius: 50px;
+    padding: 0.13rem 0.5rem;
+  }
+  .story-mock.s-d .story-idx { background: rgba(255,255,255,0.28); color:#fff; }
+
+  .story-strategy {
+    font-size: 0.5rem;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: #8a6500;
+    background: rgba(212,168,67,0.18);
+    border-radius: 50px;
+    padding: 0.13rem 0.5rem;
+  }
+  .story-mock.s-d .story-strategy { background: rgba(255,255,255,0.22); color: var(--gold-light); }
+
+  .story-text {
+    font-size: 0.73rem;
+    line-height: 1.5;
+    color: var(--text-dark);
+  }
+  .story-text .st-big {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 0.96rem;
+    color: var(--navy);
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+  .story-interaction {
+    margin-top: auto;
+    background: rgba(255,255,255,0.8);
+    border: 1px dashed rgba(58,173,168,0.5);
+    border-radius: 10px;
+    padding: 0.4rem 0.6rem;
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: var(--teal-dark);
+    text-align: center;
+  }
+  .story-mock.s-d .story-interaction { background: rgba(255,255,255,0.22); border-color: rgba(255,255,255,0.45); color:#fff; }
+
+  /* CTA para landing page */
+  .lp-cta-wrap { text-align: center; margin: 2.5rem auto 0.5rem; }
+  .lp-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: linear-gradient(135deg, var(--teal), var(--teal-dark));
+    color: #fff;
+    font-weight: 800;
+    font-size: 0.95rem;
+    padding: 1rem 2.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(58, 173, 168, 0.35);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .lp-cta:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(58, 173, 168, 0.45); }
+  .lp-cta-sub { font-size: 0.78rem; color: var(--text-light); margin-top: 0.7rem; }
+  .lp-cta-gold {
+    background: linear-gradient(135deg, var(--gold), #C8960C);
+    box-shadow: 0 10px 30px rgba(212, 168, 67, 0.35);
+  }
+  .lp-cta-gold:hover { box-shadow: 0 16px 40px rgba(212, 168, 67, 0.45); }
+  /* Grid de produtos */
+  .lp-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.6rem;
+    margin-top: 2.4rem;
+    text-align: left;
+  }
+  .lp-card {
+    background: #fff;
+    border-radius: 22px;
+    padding: 2rem 1.8rem;
+    box-shadow: 0 14px 44px rgba(27, 79, 114, 0.12);
+    border: 1px solid rgba(58, 173, 168, 0.15);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .lp-card.is-app { border-top: 4px solid var(--teal); }
+  .lp-card.is-course { border-top: 4px solid var(--gold); }
+  .lp-card-tag {
+    display: inline-block;
+    font-size: 0.6rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 0.28rem 0.8rem;
+    border-radius: 50px;
+    margin-bottom: 0.8rem;
+  }
+  .lp-card.is-app .lp-card-tag { background: var(--teal-pale); color: var(--teal-dark); }
+  .lp-card.is-course .lp-card-tag { background: var(--gold-pale); color: #9a6f00; }
+  .lp-card h3 {
+    font-family: 'DM Serif Display', serif; font-style: italic;
+    font-size: 1.45rem;
+    color: var(--navy);
+    margin-bottom: 0.4rem;
+    line-height: 1.2;
+  }
+  .lp-card .lp-card-sub { font-size: 0.86rem; color: var(--text-mid); margin-bottom: 1rem; }
+  .lp-card .lp-card-price {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.8rem;
+  }
+  .lp-card .lp-card-price strong { color: var(--gold); font-size: 1rem; }
+  .lp-card ul { list-style: none; margin-bottom: 1.2rem; }
+  .lp-card ul li {
+    font-size: 0.82rem;
+    color: var(--text-mid);
+    padding: 0.32rem 0;
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+  .lp-card ul li::before { content: '🤍'; flex-shrink: 0; font-size: 0.78rem; margin-top: 0.1rem; }
+  .lp-card .lp-card-cta { margin-top: auto; }
+  .lp-card .lp-cta { width: 100%; justify-content: center; }
+  .lp-card-file { font-size: 0.7rem; color: var(--text-light); margin-top: 0.55rem; text-align: center; }
+  .lp-card-file strong { color: var(--text-mid); }
+  .lp-update {
+    background: var(--teal-pale);
+    border-left: 3px solid var(--teal);
+    border-radius: 10px;
+    padding: 0.7rem 0.9rem;
+    margin-bottom: 1rem;
+    font-size: 0.78rem;
+    color: var(--text-mid);
+  }
+  .lp-update strong { color: var(--teal-dark); }
+
+  /* ===== SCROLL REVEAL ===== */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .art-row{display:flex;gap:12px;overflow-x:auto;padding:6px 2px 16px;-webkit-overflow-scrolling:touch;}
+  .art-row img{height:380px;width:auto;border-radius:14px;flex:0 0 auto;border:1px solid rgba(58,173,168,.18);box-shadow:0 12px 30px rgba(27,79,114,.18);background:#fff;}
+  .art-row::-webkit-scrollbar{height:8px;}
+  .art-row::-webkit-scrollbar-thumb{background:rgba(58,173,168,.45);border-radius:10px;}
+  .art-note{font-size:.78rem;color:var(--text-light,#6b8090);margin:.2rem 0 .2rem;}
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-logo">🌟 Fonte do Amor Perfeito</div>
+  <div class="nav-links">
+    <a href="#mercado">Mercado</a>
+    <a href="#identidade">ID Visual</a>
+    <a href="#posicionamento">Posicionamento</a>
+    <a href="#editorial">Editorial</a>
+    <a href="#publico">Público</a>
+    <a href="#anuncios">Anúncios</a>
+    <a href="#esteira">Esteira</a>
+    <a href="#planos">Planos</a>
+    <a href="#funil">Funil</a>
+    <a href="#conteudos">Carrosséis</a>
+    <a href="#destaques">Stories</a>
+    <a href="#app">App</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <span class="hero-cross">✝</span>
+    <div class="hero-eyebrow">Documento Estratégico Completo</div>
+    <h1>Fonte do Amor<br><span>Perfeito</span></h1>
+    <div class="hero-sub">Ecossistema Digital · 2025–2026</div>
+    <p class="hero-desc">Estratégia completa de marca, posicionamento, linha editorial, esteira de produtos e plano de ação para escalar o projeto do Pedro no digital com propósito, cuidado e conversão inteligente.</p>
+    <div class="hero-badges">
+      <div class="hero-badge">📊 Análise SWOT</div>
+      <div class="hero-badge">🎨 Identidade Visual</div>
+      <div class="hero-badge">📱 My Soul Care App</div>
+      <div class="hero-badge">🌱 Desafio Soul Care 21 Dias</div>
+      <div class="hero-badge">🚀 Plano de Ação</div>
+      <div class="hero-badge">🖼️ Carrosséis + Stories Prontos</div>
+      <div class="hero-badge">📣 Estratégia de Tráfego</div>
+    </div>
+    <div class="lp-cta-wrap" style="margin-top: 2rem;">
+      <a href="app_my_soul_care_landing_page.html" class="lp-cta" target="_blank" rel="noopener">🌟 Ver a Landing Page do App My Soul Care</a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     SEÇÃO 1: ANÁLISE DE MERCADO
+     ====================================================== -->
+<div id="mercado"></div>
+<div class="section-full section-bg-teal">
+<div class="section-inner">
+<div class="section reveal">
+  <span class="section-label">01 · Análise de Mercado</span>
+  <h2 class="section-title">O terreno onde<br>a Fonte vai fluir</h2>
+  <div class="gold-line"></div>
+  <p class="section-subtitle">O mercado de bem-estar emocional com base espiritual é um dos segmentos de maior crescimento no Brasil e no mundo — e ainda subexplorado com tecnologia de qualidade.</p>
+
+  <!-- Contexto de Mercado -->
+  <div class="grid-3" style="margin-bottom: 3rem;">
+    <div class="card reveal">
+      <span class="card-icon">📈</span>
+      <div class="card-title">Mercado de Bem-Estar Mental</div>
+      <div class="card-text">O mercado global de saúde mental digital ultrapassa <strong>US$ 5,5 bilhões</strong> e cresce em média 23% ao ano. No Brasil, 1 em cada 4 pessoas sofre de ansiedade — somos o país mais ansioso da América Latina.</div>
+    </div>
+    <div class="card reveal">
+      <span class="card-icon">✝️</span>
+      <div class="card-title">Fé + Bem-Estar: Nicho Explosivo</div>
+      <div class="card-text">Apps de oração e meditação cristã como <em>Hallow</em> e <em>YouVersion</em> somam mais de <strong>700 milhões de downloads</strong>. O público evangélico e católico brasileiro representa mais de 170 milhões de pessoas.</div>
+    </div>
+    <div class="card reveal">
+      <span class="card-icon">🤖</span>
+      <div class="card-title">IA Espiritual: Demanda Latente</div>
+      <div class="card-text">Buscas por "conversar com Deus", "conselho bíblico" e "aplicativo de fé" cresceram <strong>340%</strong> nos últimos 2 anos. O público quer conexão imediata — e a tecnologia finalmente chegou para oferecer isso.</div>
+    </div>
+  </div>
+
+  <!-- SWOT -->
+  <span class="section-label">Análise SWOT</span>
+  <div class="swot-grid reveal">
+    <div class="swot-card swot-s" data-letter="S">
+      <span class="swot-label">Forças</span>
+      <div class="swot-title">Strengths</div>
+      <ul class="swot-list">
+        <li>Conceito altamente diferenciado: avatar de Jesus com IA — único no Brasil nesse formato</li>
+        <li>Conteúdo com profundidade teológica e emocional genuína (ebook comprova qualidade)</li>
+        <li>Canal no YouTube já existente como prova social e alcance orgânico</li>
+        <li>Produto principal (app) com modelo de receita recorrente (MRR)</li>
+        <li>Ecossistema coeso: app + desafio + comunidade se alimentam mutuamente</li>
+        <li>Missão com propósito real — não é produto, é movimento de cura emocional</li>
+      </ul>
+    </div>
+    <div class="swot-card swot-w" data-letter="W">
+      <span class="swot-label">Fraquezas</span>
+      <div class="swot-title">Weaknesses</div>
+      <ul class="swot-list">
+        <li>Marca ainda em fase inicial de construção de autoridade e audiência</li>
+        <li>Tráfego pago "gray area" exige estratégia cuidadosa de copy e criativo</li>
+        <li>Dependência de tecnologia de IA de terceiros para o app</li>
+        <li>Estrutura de planos atual pode gerar confusão de compra (3 planos muito similares)</li>
+        <li>Necessidade de equipe de suporte para produto de saúde emocional</li>
+      </ul>
+    </div>
+    <div class="swot-card swot-o" data-letter="O">
+      <span class="swot-label">Oportunidades</span>
+      <div class="swot-title">Opportunities</div>
+      <ul class="swot-list">
+        <li>Mercado de IA espiritual praticamente virgem no Brasil</li>
+        <li>Epidemia de ansiedade pós-pandemia cria demanda urgente e massiva</li>
+        <li>TikTok e Reels são o canal ideal para conteúdo espiritual curto viralizar</li>
+        <li>Parcerias com igrejas, pastores e terapeutas cristãos como canal de distribuição</li>
+        <li>Expansão para língua inglesa e espanhola abre mercado global bilionário</li>
+        <li>Comunidade mensal (3º produto) cria LTV alto e previsibilidade financeira</li>
+      </ul>
+    </div>
+    <div class="swot-card swot-t" data-letter="T">
+      <span class="swot-label">Ameaças</span>
+      <div class="swot-title">Threats</div>
+      <ul class="swot-list">
+        <li>Políticas do Facebook/Instagram restritivas para conteúdo religioso e saúde mental</li>
+        <li>Risco teológico: parte do público evangélico pode reagir negativamente ao conceito</li>
+        <li>Grandes players (Hallow, YouVersion) com recursos para replicar o modelo</li>
+        <li>Regulamentação de IA no Brasil em desenvolvimento — pode afetar operação</li>
+        <li>Saturação de mercado de desafios digitais exige diferenciação clara</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CONCORRENTES -->
+  <span class="section-label" style="margin-top: 3rem; display: block;">Análise de Concorrentes</span>
+  <div class="grid-3" style="margin-top: 1rem;">
+    <div class="competitor-card reveal">
+      <div class="competitor-name">🍃 Hallow</div>
+      <div class="competitor-type">App de Meditação Cristã</div>
+      <div class="competitor-row"><span>Modelo</span><span>Assinatura global USD 8,99–69,99/ano</span></div>
+      <div class="competitor-row"><span>Pontos fortes</span><span>Produção premium, celebridades cristãs, meditações guiadas</span></div>
+      <div class="competitor-row"><span>Fraqueza</span><span>Não tem IA conversacional, não fala português nativamente, sem abordagem de saúde emocional</span></div>
+      <span class="tag tag-opp">🌟 Nossa oportunidade: conversa personalizada + PT-BR + foco em ansiedade</span>
+    </div>
+    <div class="competitor-card reveal">
+      <div class="competitor-name">📖 YouVersion Bible App</div>
+      <div class="competitor-type">App Bíblico</div>
+      <div class="competitor-row"><span>Modelo</span><span>Gratuito com conteúdo voluntário</span></div>
+      <div class="competitor-row"><span>Pontos fortes</span><span>500M usuários, maior base de usuários cristãos do mundo</span></div>
+      <div class="competitor-row"><span>Fraqueza</span><span>Zero inteligência artificial, passivo (apenas leitura), sem acompanhamento emocional</span></div>
+      <span class="tag tag-opp">🌟 Nossa oportunidade: experiência ativa, responsiva e terapêutica</span>
+    </div>
+    <div class="competitor-card reveal">
+      <div class="competitor-name">🧘 Calm / Headspace</div>
+      <div class="competitor-type">Apps de Bem-Estar Mental</div>
+      <div class="competitor-row"><span>Modelo</span><span>Assinatura USD 14,99/mês</span></div>
+      <div class="competitor-row"><span>Pontos fortes</span><span>Marca global, conteúdo de meditação secular de alto nível</span></div>
+      <div class="competitor-row"><span>Fraqueza</span><span>Sem base espiritual cristã, sem resposta personalizada, sem ancoragem bíblica</span></div>
+      <span class="tag tag-opp">🌟 Nossa oportunidade: para quem quer paz, mas com Deus no centro</span>
+    </div>
+    <div class="competitor-card reveal">
+      <div class="competitor-name">🇧🇷 Conteúdo Cristão BR (YouTube)</div>
+      <div class="competitor-type">Criadores de Conteúdo</div>
+      <div class="competitor-row"><span>Modelo</span><span>Adsense + infoprodutos</span></div>
+      <div class="competitor-row"><span>Pontos fortes</span><span>Audiência massiva, reconhecimento de marca</span></div>
+      <div class="competitor-row"><span>Fraqueza</span><span>Conteúdo genérico, sem produto de tech, sem personalização</span></div>
+      <span class="tag tag-opp">🌟 Nossa oportunidade: tecnologia + conteúdo = diferencial absoluto</span>
+    </div>
+    <div class="competitor-card reveal">
+      <div class="competitor-name">💬 ChatGPT / Claude (uso informal)</div>
+      <div class="competitor-type">IA Geral usada para questões espirituais</div>
+      <div class="competitor-row"><span>Modelo</span><span>Freemium / USD 20/mês</span></div>
+      <div class="competitor-row"><span>Pontos fortes</span><span>Altamente capaz, disponível, gratuito em versão básica</span></div>
+      <div class="competitor-row"><span>Fraqueza</span><span>Sem identidade espiritual, sem persona de Jesus, sem base bíblica curada, impessoal</span></div>
+      <span class="tag tag-opp">🌟 Nossa oportunidade: a persona, a intenção e o cuidado fazem toda a diferença</span>
+    </div>
+    <div class="competitor-card reveal">
+      <div class="competitor-name">🌸 Desafios Digitais de Autoconhecimento</div>
+      <div class="competitor-type">Infoprodutores BR</div>
+      <div class="competitor-row"><span>Modelo</span><span>R$27–197 por desafio</span></div>
+      <div class="competitor-row"><span>Pontos fortes</span><span>Alto volume de vendas, formato validado pelo mercado</span></div>
+      <div class="competitor-row"><span>Fraqueza</span><span>Sem base espiritual sólida, sem produto de recorrência, alto churn pós-desafio</span></div>
+      <span class="tag tag-warn">⚠ Atenção: nosso desafio precisa de diferencial claro na comunicação</span>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ======================================================
+     SEÇÃO 2: IDENTIDADE VISUAL
+     ====================================================== -->
+<div id="identidade"></div>
+<div class="section-full" style="background: var(--off-white);">
+<div class="section-inner">
+<div class="section reveal">
+  <span class="section-label">02 · Identidade Visual</span>
+  <h2 class="section-title">A estética que<br>traduz a paz</h2>
+  <div class="gold-line"></div>
+  <p class="section-subtitle">A identidade visual refinada a partir do ebook mantém a essência teal e a leveza espiritual, elevando para um padrão premium que transmite confiança, cuidado e profissionalismo.</p>
+
+  <!-- PALETA -->
+  <span class="section-label" style="margin-bottom: 1rem; display:block;">Paleta de Cores</span>
+  <div class="palette-grid reveal">
+    <div class="color-swatch">
+      <div class="swatch-color" style="background:#3AADA8;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Teal da Cura</div>
+        <div class="swatch-hex">#3AADA8</div>
+        <div class="swatch-use">Botões · Destaques · Sublinhados</div>
+      </div>
+    </div>
+    <div class="color-swatch">
+      <div class="swatch-color" style="background:#1B4F72;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Azul da Fé</div>
+        <div class="swatch-hex">#1B4F72</div>
+        <div class="swatch-use">Tipografia · Títulos · Texto principal</div>
+      </div>
+    </div>
+    <div class="color-swatch">
+      <div class="swatch-color" style="background:#D4A843;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Dourado da Graça</div>
+        <div class="swatch-hex">#D4A843</div>
+        <div class="swatch-use">Acento · Preços · Plano premium · CTAs especiais</div>
+      </div>
+    </div>
+    <div class="color-swatch">
+      <div class="swatch-color" style="background:#F8F5F0;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Branco Sagrado</div>
+        <div class="swatch-hex">#F8F5F0</div>
+        <div class="swatch-use">Fundo principal · Espaço em branco · Leveza</div>
+      </div>
+    </div>
+    <div class="color-swatch">
+      <div class="swatch-color" style="background:#E8F7F6;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Teal Etéreo</div>
+        <div class="swatch-hex">#E8F7F6</div>
+        <div class="swatch-use">Fundo principal · Fundos de cards · Seções suaves</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIPOGRAFIA -->
+  <span class="section-label" style="margin-top: 2rem; margin-bottom: 1rem; display:block;">Sistema Tipográfico</span>
+  <div class="grid-2 reveal">
+    <div class="type-showcase">
+      <div class="type-label-small">Fonte de Destaque · Títulos Poéticos</div>
+      <div style="font-family: 'DM Serif Display', serif; font-style: italic; font-size: 2.5rem; color: var(--navy); line-height: 1.2; margin-bottom: 0.5rem;">DM Serif Display</div>
+      <div style="font-family: 'DM Serif Display', serif; font-style: italic; font-size: 1.1rem; color: var(--teal); margin-bottom: 1rem;">"A paz que excede todo entendimento"</div>
+      <div style="font-size: 0.8rem; color: var(--text-light);">Usado em: títulos H1/H2, citações bíblicas, nomes de produtos, taglines emocionais, destaques que precisam de peso poético.</div>
+    </div>
+    <div class="type-showcase">
+      <div class="type-label-small">Fonte Funcional · Corpo e Interface</div>
+      <div style="font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.8rem; color: var(--navy); margin-bottom: 0.5rem;">Montserrat</div>
+      <div style="font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 0.9rem; color: var(--text-mid); margin-bottom: 0.5rem;">Texto regular para parágrafos e descrições de fácil leitura.</div>
+      <div style="font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.9rem; color: var(--navy); margin-bottom: 1rem;">700 para subtítulos e labels. 800 para CTAs e títulos de cards.</div>
+      <div style="font-size: 0.8rem; color: var(--text-light);">Usado em: corpo de texto, botões, labels, descrições, preços, legendas, interface do app.</div>
+    </div>
+  </div>
+
+  <!-- ELEMENTOS VISUAIS -->
+  <span class="section-label" style="margin-top: 2rem; margin-bottom: 1rem; display:block;">Símbolos e Elementos Visuais de Marca</span>
+  <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 1.5rem; max-width: 680px;">Toda a simbologia da Fonte foi escolhida para remeter ao <strong style="color: var(--teal-dark);">céu e à paz</strong> — luz, leveza, ar. Nada pesado, nada sombrio. Cada símbolo abaixo é um pedacinho dessa atmosfera.</p>
+  <div class="grid-3 reveal">
+    <div class="card">
+      <img class="card-icon-img" src="png%20site/pomba%20da%20paz.png" alt="Pomba da paz">
+      <div class="card-title">Símbolo Principal: A Pomba</div>
+      <div class="card-text">Herdada do ebook — representa paz, Espírito Santo e leveza. A pombinha com o ramo de oliveira é a assinatura mais sagrada da marca. Usar sobre os fundos suaves da paleta, nunca sobre cores fortes.</div>
+    </div>
+    <div class="card">
+      <img class="card-icon-img" src="png%20site/estrela.png" alt="Estrela cintilante">
+      <div class="card-title">Ornamento: Estrela Cintilante</div>
+      <div class="card-text">Substitui a antiga estrela de 4 pontas. A estrela maior, com as três cintilações, é o selo decorativo da marca — separador entre seções, bullet premium e assinatura visual. Transmite o "céu" da Fonte.</div>
+    </div>
+    <div class="card">
+      <img class="card-icon-img" src="png%20site/estrela%20tripla.png" alt="Trio de estrelas">
+      <div class="card-title">Trio de Estrelas</div>
+      <div class="card-text">Substitui a antiga constelação. As três estrelinhas juntas aparecem em momentos de encantamento e desejo — fim de carrossel, destaque de oferta, frases de virada. É o "brilho" da experiência.</div>
+    </div>
+    <div class="card">
+      <img class="card-icon-img" src="png%20site/folha%20com%20vento.png" alt="Folha ao vento">
+      <div class="card-title">Ícone de Seção: Folha ao Vento</div>
+      <div class="card-text">Substitui a folha estática. A folha levada pelo vento representa entrega, fé e o caminho da cura dia após dia — leveza em movimento. Abre cada nova seção e cada novo dia de conteúdo.</div>
+    </div>
+    <div class="card">
+      <img class="card-icon-img" src="png%20site/mascote%20sorrindo.png" alt="Sol mascote">
+      <div class="card-title">O Sol Acolhedor — Mascote</div>
+      <div class="card-text">O solzinho de rostinho gentil é o mascote da Fonte. Aparece sorrindo (dia) e de olhos fechados (descanso/noite), acompanhando o usuário em todos os momentos. É calor sem peso: o abraço da marca.</div>
+    </div>
+    <div class="card">
+      <img class="card-icon-img" src="png%20site/cora%C3%A7%C3%A3o%20branco.png" alt="Coração branco">
+      <div class="card-title">O Coração Branco — Selo de Cuidado</div>
+      <div class="card-text">O coração branco é o nosso selo de afeto puro, sem ruído. Usado em assinaturas, CTAs gentis e fechamentos de conteúdo. Diz "isso aqui foi feito com cuidado" sem precisar gritar.</div>
+    </div>
+    <div class="card">
+      <img class="card-icon-img" src="png%20site/Avatar%20sem%20fundo.png" alt="Avatar da marca">
+      <div class="card-title">O Avatar da Marca</div>
+      <div class="card-text">O rosto acolhedor que dá voz ao My Soul Care. Suave, sereno, luz quente — acolhimento, nunca julgamento. Aparece com fundo de campo florido nas peças principais e recortado nos detalhes.</div>
+    </div>
+    <div class="card">
+      <img class="card-icon-img" src="png%20site/r%C3%A9gua.png" alt="Régua">
+      <div class="card-title">Layout: Espaço é sagrado</div>
+      <div class="card-text">Muito espaço em branco. Linha de texto curta (60–70 caracteres). Alinhamento centralizado para frases de impacto e justificado para corpo. Bordas arredondadas em todos os elementos (12–20px).</div>
+    </div>
+    <div class="card">
+      <img class="card-icon-img" src="png%20site/onda.png" alt="Onda">
+      <div class="card-title">Gradientes: Suaves e Orgânicos</div>
+      <div class="card-text">Gradientes de Branco Sagrado → Teal Etéreo para fundos. Nunca usar fundos escuros, neon ou contrastantes demais. A paleta deve respirar paz: tudo claro, tudo céu. O escuro fica só na tipografia.</div>
+    </div>
+  </div>
+
+  <!-- Tom de voz -->
+  <span class="section-label" style="margin-top: 2rem; margin-bottom: 1rem; display:block;">Tom de Voz</span>
+  <div class="grid-2 reveal">
+    <div class="card" style="border-left: 4px solid var(--teal);">
+      <div class="card-title">✅ Como a marca fala</div>
+      <div class="card-text">
+        <ul style="list-style: none;">
+          <li style="padding: 0.4rem 0; border-bottom: 1px solid var(--teal-pale);">🕊️ <strong>Acolhedor:</strong> "Você não está sozinho. Há paz esperando por você aqui."</li>
+          <li style="padding: 0.4rem 0; border-bottom: 1px solid var(--teal-pale);">✨ <strong>Poético mas acessível:</strong> usa metáforas bíblicas sem jargão religioso difícil</li>
+          <li style="padding: 0.4rem 0; border-bottom: 1px solid var(--teal-pale);">🍃 <strong>Gentil mas firme:</strong> convida, nunca pressiona. Oferece, não impõe.</li>
+          <li style="padding: 0.4rem 0; border-bottom: 1px solid var(--teal-pale);">🌟 <strong>Segunda pessoa singular:</strong> "Tu", "você", "o teu coração" — intimidade real</li>
+          <li style="padding: 0.4rem 0;">❤️ <strong>Esperançoso:</strong> sempre aponta para a transformação possível, não para a dor</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="border-left: 4px solid #ef4444;">
+      <div class="card-title">❌ Como a marca NÃO fala</div>
+      <div class="card-text">
+        <ul style="list-style: none;">
+          <li style="padding: 0.4rem 0; border-bottom: 1px solid #fce8e8;">🚫 Linguagem de medo ou punição: "Se você não fizer isso, Deus vai..."</li>
+          <li style="padding: 0.4rem 0; border-bottom: 1px solid #fce8e8;">🚫 Promessas de cura milagrosa sem responsabilidade</li>
+          <li style="padding: 0.4rem 0; border-bottom: 1px solid #fce8e8;">🚫 Tom pregativo ou moralizante: "você precisa se arrepender"</li>
+          <li style="padding: 0.4rem 0; border-bottom: 1px solid #fce8e8;">🚫 Linguagem de vendas agressiva: "Compre agora ou vai se arrepender!"</li>
+          <li style="padding: 0.4rem 0;">🚫 Jargão técnico de saúde mental sem embasamento adequado</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ======================================================
+     SEÇÃO 3: POSICIONAMENTO E MOVIMENTO
+     ====================================================== -->
+<div id="posicionamento"></div>
+<div class="section-full section-bg-navy">
+<div class="section-inner">
+<div class="section reveal">
+  <span class="section-label section-label-light">03 · Posicionamento e Movimento</span>
+  <h2 class="section-title section-title-white">A causa que move<br>a <em style="color: var(--gold);">Fonte</em></h2>
+  <div class="gold-line"></div>
+  <p class="section-subtitle section-subtitle-light">Posicionamento não é o que você vende. É o que você representa. A Fonte do Amor Perfeito não é um app — é um movimento de cura emocional com ancoragem espiritual.</p>
+
+  <!-- Declaração de posicionamento -->
+  <div class="positioning-core reveal">
+    <div class="positioning-tag">🌟 Declaração de Posicionamento</div>
+    <div class="positioning-statement">"Para quem está cansado de carregar sozinho o peso da ansiedade, a Fonte do Amor Perfeito oferece um caminho de cura emocional com base bíblica — onde a tecnologia serve ao espírito, e cada resposta é um convite de volta à paz."</div>
+    <div class="positioning-desc">Não somos um aplicativo religioso. Somos um ecossistema de bem-estar espiritual para a geração que busca Deus com o celular na mão.</div>
+  </div>
+
+  <!-- CRIAÇÃO DE MOVIMENTO -->
+  <span class="section-label section-label-light" style="margin-top: 1rem; display: block;">Criação de Movimento de Marca</span>
+  <div class="grid-4" style="margin-top: 1.5rem;">
+    <div class="movement-card reveal">
+      <div class="movement-icon">🔥</div>
+      <div class="movement-label">A Causa</div>
+      <div class="movement-title">Acabar com a solidão emocional do cristão</div>
+      <div class="movement-text">Milhões de pessoas de fé sofrem de ansiedade em silêncio, com vergonha de falar sobre saúde mental na comunidade religiosa. Nós quebramos esse tabu.</div>
+    </div>
+    <div class="movement-card reveal">
+      <div class="movement-icon">⚔️</div>
+      <div class="movement-label">A Luta</div>
+      <div class="movement-title">Contra a fé sem ferramenta e a cura sem ancoragem</div>
+      <div class="movement-text">De um lado: a religiosidade sem suporte prático. Do outro: a psicologia sem dimensão espiritual. A Fonte do Amor Perfeito une os dois mundos com responsabilidade.</div>
+    </div>
+    <div class="movement-card reveal">
+      <div class="movement-icon">🌱</div>
+      <div class="movement-label">O Legado</div>
+      <div class="movement-title">Uma geração que cura a ansiedade sem perder a fé</div>
+      <div class="movement-text">Queremos ser lembrados como a tecnologia que ajudou pessoas a encontrarem paz — não apesar da fé, mas através dela. Um legado de almas curadas e corações em paz.</div>
+    </div>
+    <div class="movement-card reveal">
+      <div class="movement-icon">🌟</div>
+      <div class="movement-label">O Mantra</div>
+      <div class="movement-title" style="font-size: 1.1rem;">"Você não foi feito para carregar isso sozinho."</div>
+      <div class="movement-text">Esta frase é o coração da marca. Ela valida a dor, oferece pertencimento e aponta para a solução — tudo em uma linha. Usar em conteúdo, anúncios e onboarding.</div>
+    </div>
+  </div>
+
+  <!-- Pilares de Crenças -->
+  <span class="section-label section-label-light" style="margin-top: 3rem; display: block;">5 Crenças Fundamentais da Marca</span>
+  <div class="grid-2" style="margin-top: 1.5rem;">
+    <div class="card reveal">
+      <div class="card-title">🕊️ "A ansiedade não é fraqueza de fé — é um convite para ir mais fundo."</div>
+      <div class="card-text">A marca nunca faz o usuário sentir culpa pela ansiedade. Pelo contrário: transforma o sofrimento em porta de entrada para o crescimento espiritual.</div>
+    </div>
+    <div class="card reveal">
+      <div class="card-title">🤖 "A tecnologia pode ser sagrada quando está a serviço do amor."</div>
+      <div class="card-text">O uso de IA não é contraditório com a fé. É uma ferramenta que amplifica o alcance do cuidado. Deus pode usar qualquer instrumento para tocar um coração.</div>
+    </div>
+    <div class="card reveal">
+      <div class="card-title">📖 "A Bíblia é o melhor manual de saúde emocional já escrito."</div>
+      <div class="card-text">Cada resposta, cada reflexão e cada oração tem ancoragem bíblica. Não é terapia no lugar da fé — é fé que age como bálsamo terapêutico.</div>
+    </div>
+    <div class="card reveal">
+      <div class="card-title">🍃 "Cura é um processo diário, não um evento único."</div>
+      <div class="card-text">Por isso o desafio é de 21 dias, o app tem uso diário e a comunidade é mensal. A marca acredita na disciplina gentil — o hábito espiritual como medicina preventiva.</div>
+    </div>
+  </div>
+
+  <!-- Rituais de Marca -->
+  <span class="section-label section-label-light" style="margin-top: 3rem; display: block;">Rituais de Marca</span>
+  <div class="grid-3" style="margin-top: 1.5rem;">
+    <div class="card reveal">
+      <span class="card-icon">🌅</span>
+      <div class="card-title">Ritual do Amanhecer</div>
+      <div class="card-text">Todo conteúdo novo publicado pela manhã (6h–8h), horário de maior abertura espiritual. O hábito de começar o dia com a Fonte se torna parte da rotina do usuário.</div>
+    </div>
+    <div class="card reveal">
+      <span class="card-icon">📿</span>
+      <div class="card-title">A Oração da Semana</div>
+      <div class="card-text">Todo domingo, uma oração especial em áudio publicada gratuitamente. Gera hábito de visita semanal, cria expectativa e demonstra o produto premium do app.</div>
+    </div>
+    <div class="card reveal">
+      <span class="card-icon">🍃</span>
+      <div class="card-title">O Versículo do Dia</div>
+      <div class="card-text">Stories diários com um versículo + reflexão curta. Simples, replicável, compartilhável. Os seguidores passam a aguardar e compartilhar — loop de alcance orgânico.</div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ======================================================
+     SEÇÃO 4: PILARES EDITORIAIS
+     ====================================================== -->
+<div id="editorial"></div>
+<div class="section-full section-bg-teal">
+<div class="section-inner">
+<div class="section reveal">
+  <span class="section-label">04 · Linha Editorial</span>
+  <h2 class="section-title">Os 6 pilares do<br>conteúdo que cura</h2>
+  <div class="gold-line"></div>
+  <p class="section-subtitle">Cada pilar tem um papel estratégico na jornada do seguidor — da descoberta à compra, do engajamento à recorrência. O conteúdo não é decoração: é o produto em si.</p>
+
+  <div class="grid-3 reveal" style="margin-bottom: 2rem;">
+    <div class="pillar-card">
+      <span class="pillar-number">01</span>
+      <span class="pillar-emoji">📖</span>
+      <div class="pillar-title">Sabedoria Bíblica Aplicada</div>
+      <div class="pillar-desc">Reflexões que tiram o versículo do contexto religioso e colocam na vida real. "O que João 14:1 tem a ver com o seu anxiety attack na segunda-feira."</div>
+      <div class="pillar-formats">
+        <span class="format-tag">Carrossel</span>
+        <span class="format-tag">Reels 60s</span>
+        <span class="format-tag">YouTube</span>
+      </div>
+    </div>
+    <div class="pillar-card">
+      <span class="pillar-number">02</span>
+      <span class="pillar-emoji">🧠</span>
+      <div class="pillar-title">Saúde Emocional com Fé</div>
+      <div class="pillar-desc">Conteúdo educativo sobre ansiedade, depressão, pensamentos acelerados — com abordagem espiritual. Valida a ciência E a fé sem conflito.</div>
+      <div class="pillar-formats">
+        <span class="format-tag">Carrossel</span>
+        <span class="format-tag">Stories sequenciais</span>
+        <span class="format-tag">Reels</span>
+      </div>
+    </div>
+    <div class="pillar-card">
+      <span class="pillar-number">03</span>
+      <span class="pillar-emoji">🙏</span>
+      <div class="pillar-title">Orações e Práticas Espirituais</div>
+      <div class="pillar-desc">Orações guiadas, exercícios práticos do ebook, meditações bíblicas. Mostram o produto em ação e geram o hábito de buscar a Fonte diariamente.</div>
+      <div class="pillar-formats">
+        <span class="format-tag">Reels voz+visual</span>
+        <span class="format-tag">Stories áudio</span>
+        <span class="format-tag">YouTube</span>
+      </div>
+    </div>
+    <div class="pillar-card">
+      <span class="pillar-number">04</span>
+      <span class="pillar-emoji">✨</span>
+      <div class="pillar-title">Histórias de Transformação</div>
+      <div class="pillar-desc">Depoimentos reais, estudos de caso da jornada de cura, antes e depois emocionais. Prova social que converte seguidores em clientes com naturalidade.</div>
+      <div class="pillar-formats">
+        <span class="format-tag">Stories</span>
+        <span class="format-tag">Carrossel</span>
+        <span class="format-tag">Reels</span>
+      </div>
+    </div>
+    <div class="pillar-card">
+      <span class="pillar-number">05</span>
+      <span class="pillar-emoji">🔍</span>
+      <div class="pillar-title">Bastidores e Humanização</div>
+      <div class="pillar-desc">O processo de criação do app, a jornada do Pedro, os desafios de construir tecnologia com propósito espiritual. Conecta o fundador à missão e cria confiança.</div>
+      <div class="pillar-formats">
+        <span class="format-tag">Stories</span>
+        <span class="format-tag">Reels curtos</span>
+        <span class="format-tag">BTS YouTube</span>
+      </div>
+    </div>
+    <div class="pillar-card">
+      <span class="pillar-number">06</span>
+      <span class="pillar-emoji">💬</span>
+      <div class="pillar-title">Comunidade e Engajamento</div>
+      <div class="pillar-desc">Perguntas, enquetes, desafios, quizzes bíblicos. Transforma a audiência de espectadora em participante ativa — e o algoritmo ama quem gera conversa.</div>
+      <div class="pillar-formats">
+        <span class="format-tag">Stories interativos</span>
+        <span class="format-tag">Reels pergunta</span>
+        <span class="format-tag">Lives</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mix de conteúdo -->
+  <span class="section-label" style="margin-top: 2rem; display: block;">Mix Estratégico de Conteúdo Recomendado</span>
+  <div class="info-box info-box-navy reveal" style="margin-top: 1rem;">
+    <strong>Para o objetivo inicial de AUTORIDADE + ALCANCE (fase de lançamento):</strong><br><br>
+    🎓 <strong>35% Educativos</strong> — saúde emocional + bíblia aplicada<br>
+    🎭 <strong>30% Entretenimento/Conexão</strong> — histórias, bastidores, humor suave e reflexivo<br>
+    💡 <strong>20% Convencimento</strong> — prova social, demonstrações do app, diferenciais<br>
+    🌟 <strong>15% Inspiracionais</strong> — orações, versículos, afirmações de paz
+  </div>
+
+  <!-- Frequência -->
+  <div class="grid-3 reveal" style="margin-top: 2rem;">
+    <div class="card" style="text-align: center;">
+      <span class="card-icon">📱</span>
+      <div class="card-title">Instagram Feed</div>
+      <div class="card-text"><strong style="font-size: 1.5rem; color: var(--teal);">4–5x</strong><br>por semana<br><span style="font-size: 0.8rem; color: var(--text-light);">Carrossel + Reels alternados</span></div>
+    </div>
+    <div class="card" style="text-align: center;">
+      <span class="card-icon">⭕</span>
+      <div class="card-title">Stories</div>
+      <div class="card-text"><strong style="font-size: 1.5rem; color: var(--teal);">Diário</strong><br>7 dias por semana<br><span style="font-size: 0.8rem; color: var(--text-light);">Sequência de 5–9 stories</span></div>
+    </div>
+    <div class="card" style="text-align: center;">
+      <span class="card-icon">▶️</span>
+      <div class="card-title">YouTube</div>
+      <div class="card-text"><strong style="font-size: 1.5rem; color: var(--teal);">2x</strong><br>por semana<br><span style="font-size: 0.8rem; color: var(--text-light);">Vídeos do avatar + reflexões</span></div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ======================================================
+     SEÇÃO 5: PÚBLICO-ALVO
+     ====================================================== -->
+<div id="publico"></div>
+<div class="section-full" style="background: var(--off-white);">
+<div class="section-inner">
+<div class="section reveal">
+  <span class="section-label">05 · Análise de Público-Alvo</span>
+  <h2 class="section-title">Quem a Fonte<br>está chamando</h2>
+  <div class="gold-line"></div>
+  <p class="section-subtitle">Três personas principais compõem o público da Fonte do Amor Perfeito. Cada uma chega por uma porta diferente, mas busca a mesma coisa: paz que não passa quando a oração termina.</p>
+
+  <div class="grid-3 reveal">
+    <!-- Persona 1 -->
+    <div class="persona-card">
+      <div class="persona-header">
+        <span class="persona-avatar">👩‍💼</span>
+        <div class="persona-name">Ana</div>
+        <div class="persona-age">28–38 anos · Evangelica / Católica Prática</div>
+      </div>
+      <div class="persona-body">
+        <div class="persona-section-title">Quem é ela</div>
+        <div class="persona-text">Profissional, tem fé, vai à igreja, lê a Bíblia — mas ainda sofre de ansiedade e sente vergonha de admitir isso na sua comunidade religiosa. Usa o celular intensamente e busca respostas no Instagram e YouTube.</div>
+        <div class="quote-block">"Eu oro, mas o nó no peito não passa. Será que minha fé é fraca?"</div>
+        <div class="persona-section-title">O que ela precisa</div>
+        <div class="persona-text">Validação de que ansiedade e fé coexistem. Um espaço sem julgamento. Ferramentas práticas com base espiritual que ela possa usar no dia a dia.</div>
+        <div class="persona-section-title">Produto Ideal</div>
+        <div style="margin-top: 0.5rem;">
+          <span class="pill pill-teal">Desafio Soul Care</span>
+          <span class="pill pill-navy">App Plano Essencial</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Persona 2 -->
+    <div class="persona-card">
+      <div class="persona-header">
+        <span class="persona-avatar">👨‍🦳</span>
+        <div class="persona-name">Roberto</div>
+        <div class="persona-age">40–55 anos · Cristão em Crise de Sentido</div>
+      </div>
+      <div class="persona-body">
+        <div class="persona-section-title">Quem é ele</div>
+        <div class="persona-text">Viveu muito, sofreu perdas, passou por divorces ou crises financeiras. Quer se reconectar com Deus, mas sente que a linguagem da igreja tradicional não fala mais com ele. Busca profundidade, não superficialidade.</div>
+        <div class="quote-block">"Eu preciso de Deus de uma forma diferente. Algo que fale comigo de verdade."</div>
+        <div class="persona-section-title">O que ele precisa</div>
+        <div class="persona-text">Profundidade teológica com acolhimento emocional. Uma experiência personalizada. Sentir que Deus ainda fala com ele, especificamente — não com uma plateia genérica.</div>
+        <div class="persona-section-title">Produto Ideal</div>
+        <div style="margin-top: 0.5rem;">
+          <span class="pill pill-navy">App Plano Avançado</span>
+          <span class="pill pill-gold">Comunidade Mensal</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Persona 3 -->
+    <div class="persona-card">
+      <div class="persona-header">
+        <span class="persona-avatar">🧑‍🎓</span>
+        <div class="persona-name">Julia</div>
+        <div class="persona-age">18–27 anos · Gen Z Espiritual mas não Religiosa</div>
+      </div>
+      <div class="persona-body">
+        <div class="persona-section-title">Quem é ela</div>
+        <div class="persona-text">Cresceu longe da igreja, mas tem curiosidade espiritual. Usa apps de meditação, acredita em "algo maior" e sofre de ansiedade crônica. Não gosta de pregação, mas se conecta com histórias e com o cuidado genuíno.</div>
+        <div class="quote-block">"Não sou muito religiosa, mas às vezes só quero conversar com alguém que entende de verdade."</div>
+        <div class="persona-section-title">O que ela precisa</div>
+        <div class="persona-text">Entrada suave — sem gatilhos religiosos fortes. Precisa primeiro confiar na marca, sentir o cuidado, experimentar a profundidade. O conteúdo de bem-estar emocional é a porta.</div>
+        <div class="persona-section-title">Produto Ideal</div>
+        <div style="margin-top: 0.5rem;">
+          <span class="pill pill-teal">Conteúdo Gratuito</span>
+          <span class="pill pill-teal">Desafio Soul Care</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dados demográficos -->
+  <div class="grid-2" style="margin-top: 2rem;">
+    <div class="card reveal">
+      <div class="card-title">📊 Perfil Demográfico Principal</div>
+      <div class="card-text">
+        <table style="width: 100%; border-collapse: collapse; font-size: 0.83rem;">
+          <tr style="border-bottom: 1px solid var(--teal-pale);">
+            <td style="padding: 0.5rem 0; color: var(--text-light); font-weight: 600;">Idade</td>
+            <td style="padding: 0.5rem 0; color: var(--text-mid);">Primário: 25–45 anos | Secundário: 18–25 anos</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--teal-pale);">
+            <td style="padding: 0.5rem 0; color: var(--text-light); font-weight: 600;">Gênero</td>
+            <td style="padding: 0.5rem 0; color: var(--text-mid);">65% feminino / 35% masculino</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--teal-pale);">
+            <td style="padding: 0.5rem 0; color: var(--text-light); font-weight: 600;">Renda</td>
+            <td style="padding: 0.5rem 0; color: var(--text-mid);">Classes B e C — sensíveis a preço, mas pagam por valor percebido</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--teal-pale);">
+            <td style="padding: 0.5rem 0; color: var(--text-light); font-weight: 600;">Religião</td>
+            <td style="padding: 0.5rem 0; color: var(--text-mid);">Evangélicos (50%), Católicos (30%), Espiritualidade aberta (20%)</td>
+          </tr>
+          <tr>
+            <td style="padding: 0.5rem 0; color: var(--text-light); font-weight: 600;">Comportamento</td>
+            <td style="padding: 0.5rem 0; color: var(--text-mid);">Consome conteúdo espiritual, busca autoconhecimento, usa app de meditação</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="card reveal">
+      <div class="card-title">🎯 Interesses para Segmentação de Anúncios</div>
+      <div class="card-text">
+        <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.5rem;">
+          <span class="pill pill-teal">Ansiedade</span>
+          <span class="pill pill-teal">Saúde Mental</span>
+          <span class="pill pill-teal">Meditação</span>
+          <span class="pill pill-teal">Bem-estar emocional</span>
+          <span class="pill pill-teal">Mindfulness</span>
+          <span class="pill pill-navy">Bíblia</span>
+          <span class="pill pill-navy">Vida cristã</span>
+          <span class="pill pill-navy">Oração</span>
+          <span class="pill pill-navy">Aplicativos de meditação</span>
+          <span class="pill pill-navy">Hallow</span>
+          <span class="pill pill-navy">YouVersion</span>
+          <span class="pill pill-gold">Autoconhecimento</span>
+          <span class="pill pill-gold">Desenvolvimento pessoal</span>
+          <span class="pill pill-gold">Terapia</span>
+          <span class="pill pill-gold">Psicologia positiva</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ======================================================
+     SEÇÃO 6: ESTRATÉGIA DE ANÚNCIOS
+     ====================================================== -->
+<div id="anuncios"></div>
+<div class="section-full section-bg-gold">
+<div class="section-inner">
+<div class="section reveal">
+  <span class="section-label section-label-gold">06 · Estratégia de Anúncios</span>
+  <h2 class="section-title">Tráfego inteligente<br>em território <em style="color: #7a5500;">sensível</em></h2>
+  <div class="gold-line"></div>
+  <p class="section-subtitle">O nicho espiritual + saúde mental é zona de atenção nas plataformas. A estratégia correta não é driblar as regras — é comunicar de forma que o algoritmo e o usuário entendam sua mensagem sem fricção.</p>
+
+  <div class="info-box info-box-alert reveal">
+    <strong>⚠️ Por que é "gray area":</strong> Facebook e Instagram restringem anúncios que (1) fazem promessas de cura médica/psicológica, (2) usam imagem de figuras religiosas para vender produtos, e (3) exploram vulnerabilidade emocional de forma sensacionalista. A solução é abordar o bem-estar emocional como benefício central — sem prometer cura, sem usar a imagem de Jesus como elemento principal de venda.
+  </div>
+
+  <!-- Estratégia principal -->
+  <div class="ad-strategy-card reveal" style="margin-top: 2rem;">
+    <div class="ad-title">🧠 Estratégia Central: "Bem-Estar Emocional" como Categoria</div>
+    <div class="ad-subtitle">O guarda-chuva que protege e comunica</div>
+    <div class="ad-text">Em vez de anunciar "converse com Jesus" (risco de rejeição), posicionar os anúncios na categoria de <strong>saúde emocional</strong> e <strong>bem-estar mental</strong>. A base espiritual é revelada naturalmente ao longo da experiência — não é escondida, apenas não é o <em>gancho</em> do anúncio. Quem tem fé se identifica. Quem não tem, ainda assim converte pelo benefício emocional.</div>
+    <div class="do-dont">
+      <div class="do-box">
+        <strong>✅ USE nos anúncios</strong>
+        <ul>
+          <li>Palavras: paz, ansiedade, cansaço mental, peso, respirar</li>
+          <li>Benefícios: "encontre paz", "alivie a ansiedade", "descanse a mente"</li>
+          <li>Problema → solução: "Quando a preocupação não para..."</li>
+          <li>Prova social: testemunhos de resultado emocional</li>
+          <li>Número de usuários / estrelas / avaliações</li>
+          <li>Visual: pessoas em paz, natureza, luz suave</li>
+        </ul>
+      </div>
+      <div class="dont-box">
+        <strong>❌ EVITE nos anúncios</strong>
+        <ul>
+          <li>Imagem do avatar de Jesus como elemento principal</li>
+          <li>"Cura", "tratamento", "diagnóstico", "terapia" sem ressalvas</li>
+          <li>"Fale com Jesus" como headline direto</li>
+          <li>Linguagem de urgência que explora vulnerabilidade: "Antes que piore..."</li>
+          <li>Referências a suicídio, depressão grave ou crises severas</li>
+          <li>Claims como "substitui a terapia"</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3 formatos de anúncio -->
+  <span class="section-label section-label-gold" style="margin-top: 3rem; display: block;">3 Formatos de Anúncio Aprovados pelas Políticas</span>
+  <div class="grid-3" style="margin-top: 1.5rem;">
+    <div class="ad-strategy-card reveal" style="border-left-color: var(--teal);">
+      <div class="ad-title">📱 Formato 1: Reel UGC-Style</div>
+      <div class="ad-subtitle">Vídeo curto · 15–30s · Persona falando</div>
+      <div class="ad-text">Vídeo de pessoa comum (não o Pedro) falando sobre ansiedade no cotidiano. <strong>Gancho emocional</strong> → <strong>Virada com o produto</strong> → <strong>CTA simples.</strong> A aparência de conteúdo orgânico aumenta a taxa de clique em até 3x em comparação com anúncios produzidos.</div>
+      <div class="copy-example">
+        <div class="copy-example-label">🌟 Exemplo de Roteiro</div>
+        <div class="copy-example-text">"Eu dormia 8 horas e acordava exausta. Minha cabeça simplesmente não parava. Até que comecei a usar o Soul Care — uma reflexão por dia, com base bíblica, que finalmente fazia sentido pra mim. [pausa] Testa 7 dias grátis. O link tá aqui."</div>
+      </div>
+    </div>
+    <div class="ad-strategy-card reveal" style="border-left-color: var(--navy);">
+      <div class="ad-title">🎨 Formato 2: Carrossel Educativo</div>
+      <div class="ad-subtitle">Estático · 3–5 slides · Feed</div>
+      <div class="ad-text">Carrossel que ensina algo valioso sobre ansiedade (sem mencionar Jesus nos primeiros slides). Slide 1: dor/problema. Slides 2–3: insight ou solução. Slide final: apresentação do produto como ferramenta. <strong>Segmenta por interesse</strong> em saúde mental + espiritualidade.</div>
+      <div class="copy-example">
+        <div class="copy-example-label">🌟 Exemplo de Headline</div>
+        <div class="copy-example-text">Slide 1: "5 sinais de que sua mente está pedindo socorro (e ninguém te contou)"<br>Slide 5: "O Soul Care foi criado pra isso: uma pausa diária de cuidado com a sua alma."</div>
+      </div>
+    </div>
+    <div class="ad-strategy-card reveal" style="border-left-color: var(--gold);">
+      <div class="ad-title">⭐ Formato 3: Prova Social + Oferta</div>
+      <div class="ad-subtitle">Estático ou vídeo · Conversão direta</div>
+      <div class="ad-text">Imagem ou vídeo com avaliações reais de usuários + screenshot do app + oferta clara. Este formato funciona no <strong>fundo de funil</strong> — para quem já foi impactado por conteúdo orgânico ou remarketing. <strong>Não exige copy longa</strong> — a prova social fala por si.</div>
+      <div class="copy-example">
+        <div class="copy-example-label">🌟 Exemplo de Copy</div>
+        <div class="copy-example-text">"⭐⭐⭐⭐⭐ 'Pela primeira vez em anos, senti que não estava sozinha naquele momento.' — Mariana, SP. Experimente 7 dias grátis. Cancela quando quiser."</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Estrutura de campanha -->
+  <span class="section-label section-label-gold" style="margin-top: 3rem; display: block;">Estrutura de Campanha Recomendada</span>
+  <div class="card reveal" style="margin-top: 1.5rem;">
+    <table class="strategy-table" style="box-shadow: none; border: none;">
+      <thead>
+        <tr>
+          <th>Fase</th>
+          <th>Objetivo</th>
+          <th>Público</th>
+          <th>Formato</th>
+          <th>Orçamento Inicial</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Topo</strong></td>
+          <td>Alcance e reconhecimento</td>
+          <td>Interesses: ansiedade, meditação, espiritualidade</td>
+          <td>Reel UGC educativo</td>
+          <td>R$20–40/dia</td>
+        </tr>
+        <tr>
+          <td><strong>Meio</strong></td>
+          <td>Captura de lead (desafio gratuito ou baixo custo)</td>
+          <td>Engajamento com conteúdo orgânico + lookalike</td>
+          <td>Carrossel com CTA para desafio</td>
+          <td>R$15–30/dia</td>
+        </tr>
+        <tr>
+          <td><strong>Fundo</strong></td>
+          <td>Conversão para o app</td>
+          <td>Remarketing: quem assistiu 75%+ do vídeo ou clicou no site</td>
+          <td>Prova social + oferta</td>
+          <td>R$15–25/dia</td>
+        </tr>
+        <tr>
+          <td><strong>Retenção</strong></td>
+          <td>Upsell para plano anual ou comunidade</td>
+          <td>Usuários do app</td>
+          <td>Email + push notification</td>
+          <td>—</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Orçamento de criativos: TikTok x Facebook -->
+  <span class="section-label section-label-gold" style="margin-top: 3rem; display: block;">Orçamento de Criativos · TikTok x Facebook</span>
+  <div class="info-box reveal" style="margin-top: 1.5rem;">
+    <strong>🎯 Verba de partida: até R$900/mês (≈ R$30/dia).</strong> A estratégia aqui é separar as duas plataformas porque elas têm lógicas e políticas diferentes. O <strong>TikTok</strong> é mais permissivo com conteúdo espiritual/emocional e premia volume de criativos novos e orgânicos — é o nosso laboratório de testes barato. O <strong>Facebook/Instagram (Meta)</strong> é mais restritivo, mas tem o melhor remarketing e fecha a venda — é onde a gente escala o que já validou. Dividimos a verba meio a meio pra testar nos dois ao mesmo tempo.
+  </div>
+  <div class="grid-2" style="margin-top: 1.5rem;">
+    <div class="ad-strategy-card reveal" style="border-left-color: var(--navy);">
+      <div class="ad-title">🎵 TikTok Ads · laboratório de testes</div>
+      <div class="ad-subtitle">≈ R$15/dia · R$450/mês · foco em volume</div>
+      <div class="ad-text">Plataforma ideal pra <strong>queimar muitos criativos baratos</strong> e descobrir qual gancho viraliza. CPM baixo, público jovem-adulto aberto a espiritualidade. Roda em <strong>Spark Ads</strong> (impulsionar posts orgânicos que já performaram) pra manter cara de conteúdo, não de anúncio.</div>
+      <div class="copy-example">
+        <div class="copy-example-label">🌟 Recomendação de produção</div>
+        <div class="copy-example-text"><strong>6 a 8 criativos novos/mês</strong> · vídeos 9:16, 15–30s · UGC e "voz sobre tela" · gancho emocional nos 3 primeiros segundos · CTA suave pro link. Investir mais nos 2–3 que passarem de 50% de retenção.</div>
+      </div>
+    </div>
+    <div class="ad-strategy-card reveal" style="border-left-color: var(--teal);">
+      <div class="ad-title">📘 Facebook / Instagram Ads · conversão</div>
+      <div class="ad-subtitle">≈ R$15/dia · R$450/mês · foco em fechar venda</div>
+      <div class="ad-text">Plataforma de <strong>remarketing e conversão</strong>: reimpacta quem já viu o conteúdo do TikTok/orgânico e leva pra LP. Segmenta por interesse (ansiedade, meditação, fé) + públicos semelhantes. Aqui a copy fala de <strong>bem-estar emocional</strong> — a base espiritual aparece com cuidado pra respeitar as políticas da Meta.</div>
+      <div class="copy-example">
+        <div class="copy-example-label">🌟 Recomendação de produção</div>
+        <div class="copy-example-text"><strong>4 a 6 criativos novos/mês</strong> · Reels 9:16 + carrossel estático + prova social · 70% da verba em remarketing/conversão, 30% em topo de funil frio.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card reveal" style="margin-top: 1.5rem;">
+    <table class="strategy-table" style="box-shadow: none; border: none;">
+      <thead>
+        <tr>
+          <th>Plataforma</th>
+          <th>Verba/dia</th>
+          <th>Verba/mês</th>
+          <th>Criativos/mês</th>
+          <th>Formatos</th>
+          <th>Objetivo principal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>🎵 TikTok</strong></td>
+          <td>R$15</td>
+          <td>R$450</td>
+          <td>6–8</td>
+          <td>Vídeo 9:16 · UGC · Spark Ads</td>
+          <td>Testar ganchos e gerar alcance barato</td>
+        </tr>
+        <tr>
+          <td><strong>📘 Facebook / Instagram</strong></td>
+          <td>R$15</td>
+          <td>R$450</td>
+          <td>4–6</td>
+          <td>Reels · carrossel · prova social</td>
+          <td>Remarketing e conversão pra LP</td>
+        </tr>
+        <tr style="background: rgba(212,168,67,0.08);">
+          <td><strong>Total</strong></td>
+          <td><strong>R$30</strong></td>
+          <td><strong>R$900</strong></td>
+          <td><strong>10–14</strong></td>
+          <td>—</td>
+          <td>Validar e começar a escalar</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="info-box info-box-gold reveal" style="margin-top: 1.5rem;">
+    <strong>📌 Como ler esse orçamento:</strong> nas primeiras 2–3 semanas o objetivo <em>não</em> é venda — é descobrir quais criativos seguram atenção (no TikTok) e quais públicos respondem (na Meta). Conforme um criativo provar que converte, realoca verba pra ele em vez de aumentar o total. Crescer o investimento só depois de ter <strong>custo por clique e por instalação previsíveis</strong>.
+  </div>
+
+  <div class="info-box info-box-teal reveal" style="margin-top: 1.5rem;">
+    <strong>💡 Dica Importante:</strong> Antes de escalar anúncios, construa <strong>prova social real</strong> — pelo menos 20–30 avaliações genuínas de usuários do desafio e do app. No nicho espiritual/emocional, testemunhos autênticos são o ativo de marketing mais poderoso e mais respeitado pelas políticas das plataformas.
+  </div>
+</div>
+</div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ======================================================
+     SEÇÃO 7: ESTEIRA DE PRODUTOS
+     ====================================================== -->
+<div id="esteira"></div>
+<div class="section-full section-bg-dark">
+<div class="section-inner">
+<div class="section reveal">
+  <span class="section-label section-label-light">07 · Esteira de Produtos</span>
+  <h2 class="section-title section-title-white">O ecossistema completo<br>da <em style="color: var(--gold);">cura</em></h2>
+  <div class="gold-line"></div>
+  <p class="section-subtitle section-subtitle-light">Três produtos que se encaixam como uma jornada — o primeiro abre a porta, o segundo oferece a casa, o terceiro cria a família. Cada um eleva o comprometimento e o valor entregue ao usuário.</p>
+
+  <!-- Upsell flow visual -->
+  <div class="upsell-flow reveal">
+    <div class="upsell-box">
+      <div class="upsell-box-name">🌱 Desafio Soul Care</div>
+      <div class="upsell-box-price">R$27–47</div>
+    </div>
+    <div class="upsell-arrow">→</div>
+    <div class="upsell-box" style="border-color: var(--gold);">
+      <div class="upsell-box-name">📱 My Soul Care App</div>
+      <div class="upsell-box-price">R$39,90–69,90/mês</div>
+    </div>
+    <div class="upsell-arrow">→</div>
+    <div class="upsell-box" style="border-color: #b0c4d8;">
+      <div class="upsell-box-name">👑 Círculo de Paz</div>
+      <div class="upsell-box-price">R$37/mês</div>
+    </div>
+  </div>
+
+  <!-- Produto 1 -->
+  <div class="ladder reveal">
+    <div class="ladder-item">
+      <div class="product-card">
+        <span class="product-badge">🌱 Produto de Entrada · Isca de Alto Valor</span>
+        <div class="product-name">Desafio Soul Care</div>
+        <div class="product-tagline">21 Dias para Curar a Ansiedade com Jesus</div>
+        <div class="product-price-box">
+          <div>
+            <div class="price-main">R$37</div>
+            <div class="price-info">Preço de lançamento<br><span style="text-decoration: line-through; opacity: 0.6;">De R$97</span></div>
+          </div>
+          <div style="font-size: 0.82rem; color: var(--text-mid);">
+            Produto de entrada estratégico. Baixo preço → alta conversão → alimenta o app com usuários qualificados. <strong>Meta: 200–500 alunos no primeiro lançamento.</strong>
+          </div>
+        </div>
+        <ul class="product-features">
+          <li>21 dias de conteúdo diário na plataforma (baseado no ebook de 30 dias, condensado e aprimorado)</li>
+          <li>Reflexão + versículo + oração guiada + exercício prático para cada dia</li>
+          <li>Acesso a área de membros com conteúdo em vídeo e áudio do avatar</li>
+          <li>Comunidade privada no Telegram para suporte entre participantes</li>
+          <li>Certificado digital de conclusão</li>
+          <li>Bônus: 3 orações em áudio exclusivas do My Soul Care</li>
+          <li>Oferta de upsell para o app com 50% de desconto no primeiro mês (dentro da plataforma)</li>
+        </ul>
+
+        <div class="product-action-title">🌟 Plano de Implementação e Vendas</div>
+        <ol class="step-list">
+          <li><span><strong>Semanas 1–2:</strong> Produção do conteúdo dos 21 dias na plataforma (Hotmart, Kiwify ou Teachable). Gravar áudios com o avatar + criar materiais de apoio em PDF com a identidade visual.</span></li>
+          <li><span><strong>Semana 3:</strong> Construir a página de vendas com copy focado em bem-estar emocional + prova social do ebook (comentários, avaliações do conteúdo gratuito do YouTube).</span></li>
+          <li><span><strong>Semana 4:</strong> Pré-lançamento com lista de espera. 7 dias de conteúdo gratuito de aquecimento no feed + stories com o Dia 1 do desafio liberado de graça.</span></li>
+          <li><span><strong>Semana 5 (Lançamento):</strong> Abertura de carrinho por 7 dias. Anúncios de conversão + email marketing + lives de apresentação.</span></li>
+          <li><span><strong>Semana 6 em diante:</strong> Desafio passa a ter lançamentos recorrentes a cada 45–60 dias, ou versão sempre-verde (evergreen) com automação de e-mail.</span></li>
+        </ol>
+
+        <div class="info-box info-box-teal" style="margin-top: 1rem;">
+          <strong>Sugestão de nome alternativo para maior alcance secular:</strong> "Desafio Soul Care: 21 Dias de Paz Interior" — mantém a essência espiritual sem tornar obrigatório o contexto cristão no título.
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 2 -->
+    <div class="ladder-item gold">
+      <div class="product-card" style="border-color: rgba(212, 168, 67, 0.3);">
+        <span class="product-badge badge-gold">📱 Produto Principal · Receita Recorrente (MRR)</span>
+        <div class="product-name" style="color: #7a5500;">My Soul Care</div>
+        <div class="product-tagline" style="color: var(--gold);">Seu companheiro espiritual com inteligência artificial</div>
+        <div class="product-price-box" style="background: linear-gradient(135deg, var(--gold-pale), #fdeebb);">
+          <div>
+            <div class="price-main" style="color: #7a5500;">R$39,90</div>
+            <div class="price-info">a partir de / mês<br>Até R$69,90/mês</div>
+          </div>
+          <div style="font-size: 0.82rem; color: var(--text-mid);">
+            O coração do ecossistema. Receita previsível, alto LTV, baixo custo marginal por usuário. <strong>Meta de estabilização: 500 assinantes ativos = R$20–35k/mês.</strong>
+          </div>
+        </div>
+
+        <div class="product-action-title">🌟 Estrutura de Planos do App</div>
+        <div class="info-box info-box-gold" style="margin-bottom: 1.5rem;">
+          <strong>A lógica dos 3 planos:</strong> cada plano é uma porta para um nível de profundidade. O <strong>Essencial</strong> acolhe quem está chegando, o <strong>Completo</strong> aprofunda o cuidado (é o nosso "mais escolhido" — ancoragem visual sempre nele), e o <strong>Avançado</strong> entrega presença total para quem fez da Fonte um hábito diário. Em todos, o plano <strong>anual</strong> carrega o melhor custo-benefício — e nos planos Completo e Avançado, ainda libera benefícios extras exclusivos.
+        </div>
+
+        <div id="planos"></div>
+        <div class="plans-container">
+
+          <!-- PLANO ESSENCIAL -->
+          <div class="plan-card plan-1">
+            <div class="plan-header">
+              <div class="plan-icon">💙</div>
+              <div class="plan-name">Plano Essencial</div>
+              <div class="plan-tagline">Para começar seu cuidado com a alma</div>
+            </div>
+            <div class="plan-body">
+              <div class="plan-price-grid">
+                <div class="plan-price-row">
+                  <span class="ppr-label">Mensal</span>
+                  <span class="ppr-right"><span class="ppr-value">R$39,90</span><span class="ppr-sub">por mês</span></span>
+                </div>
+                <div class="plan-price-row">
+                  <span class="ppr-label">Trimestral</span>
+                  <span class="ppr-right"><span class="ppr-value">R$99,00</span><span class="ppr-sub">R$33/mês</span></span>
+                </div>
+                <div class="plan-price-row best">
+                  <span class="ppr-label">Anual 🤍</span>
+                  <span class="ppr-right"><span class="ppr-value">R$297,00</span><span class="ppr-sub">R$24,75/mês · melhor preço</span></span>
+                </div>
+              </div>
+              <div class="plan-feature-block-title">✨ O que inclui</div>
+              <ul class="plan-features">
+                <li><span class="fi">💬</span>Até 10 mensagens por dia</li>
+                <li><span class="fi">🤍</span>Respostas acolhedoras e personalizadas</li>
+                <li><span class="fi">📋</span>Acesso ao histórico de conversas</li>
+                <li><span class="fi">🎧</span>2 orações em áudio por mês</li>
+                <li><span class="fi">📖</span>Respostas completas</li>
+              </ul>
+              <div class="plan-extras-box">
+                <div class="plan-extras-box-title">🍃 Itens avulsos (qualquer plano)</div>
+                <ul>
+                  <li><span>Oração em áudio · até 1 min</span><span>R$9,90</span></li>
+                  <li><span>Oração em áudio · até 5 min</span><span>R$19,90</span></li>
+                  <li><span>Oração em áudio · até 10 min</span><span>R$29,90</span></li>
+                  <li><span>Resposta avulsa</span><span>R$4,90</span></li>
+                </ul>
+              </div>
+              <button class="plan-cta">Começar com o Essencial</button>
+            </div>
+          </div>
+
+          <!-- PLANO COMPLETO -->
+          <div class="plan-card plan-2 featured">
+            <div class="plan-header">
+              <div class="plan-featured-tag">🌟 Mais Escolhido</div>
+              <div class="plan-icon">✨</div>
+              <div class="plan-name">Plano Completo ⭐</div>
+              <div class="plan-tagline">Para aprofundar o cuidado todos os dias</div>
+            </div>
+            <div class="plan-body">
+              <div class="plan-price-grid">
+                <div class="plan-price-row">
+                  <span class="ppr-label">Mensal</span>
+                  <span class="ppr-right"><span class="ppr-value">R$49,90</span><span class="ppr-sub">por mês</span></span>
+                </div>
+                <div class="plan-price-row">
+                  <span class="ppr-label">Trimestral</span>
+                  <span class="ppr-right"><span class="ppr-value">R$129,00</span><span class="ppr-sub">≈ R$43/mês</span></span>
+                </div>
+                <div class="plan-price-row best">
+                  <span class="ppr-label">Anual 🤍</span>
+                  <span class="ppr-right"><span class="ppr-value">R$397,00</span><span class="ppr-sub">≈ R$33/mês · benefício extra</span></span>
+                </div>
+              </div>
+              <div class="plan-feature-block-title">✨ Mensal / Trimestral</div>
+              <ul class="plan-features">
+                <li><span class="fi">💬</span>15 mensagens por dia</li>
+                <li><span class="fi">📖</span>Respostas mais profundas e cuidadosas</li>
+                <li><span class="fi">📋</span>Histórico completo</li>
+                <li><span class="fi">🎧</span>3 orações em áudio por mês</li>
+                <li><span class="fi">💌</span>1 resposta especial por mês</li>
+              </ul>
+              <div class="plan-feature-block-title gold">💎 Anual — benefício extra</div>
+              <ul class="plan-features">
+                <li><span class="fi">💬</span>25 mensagens por dia</li>
+                <li><span class="fi">📖</span>Respostas mais profundas</li>
+                <li><span class="fi">📋</span>Histórico completo</li>
+                <li><span class="fi">🎧</span>3 orações em áudio por mês</li>
+              </ul>
+              <button class="plan-cta">Quero o Completo</button>
+            </div>
+          </div>
+
+          <!-- PLANO AVANÇADO -->
+          <div class="plan-card plan-3">
+            <div class="plan-header">
+              <div class="plan-icon">👑</div>
+              <div class="plan-name">Plano Avançado</div>
+              <div class="plan-tagline">Para quem fez da Fonte um hábito diário</div>
+            </div>
+            <div class="plan-body">
+              <div class="plan-price-grid">
+                <div class="plan-price-row">
+                  <span class="ppr-label">Mensal</span>
+                  <span class="ppr-right"><span class="ppr-value">R$69,90</span><span class="ppr-sub">por mês</span></span>
+                </div>
+                <div class="plan-price-row">
+                  <span class="ppr-label">Trimestral</span>
+                  <span class="ppr-right"><span class="ppr-value">R$177,00</span><span class="ppr-sub">R$59/mês</span></span>
+                </div>
+                <div class="plan-price-row best">
+                  <span class="ppr-label">Anual 🤍</span>
+                  <span class="ppr-right"><span class="ppr-value">R$597,00</span><span class="ppr-sub">R$49/mês · benefício extra</span></span>
+                </div>
+              </div>
+              <div class="plan-feature-block-title">✨ Mensal / Trimestral</div>
+              <ul class="plan-features">
+                <li><span class="fi">💬</span>25 mensagens por dia</li>
+                <li><span class="fi">📖</span>Respostas mais profundas e detalhadas</li>
+                <li><span class="fi">📋</span>Histórico completo</li>
+                <li><span class="fi">🎧</span>6 orações em áudio por mês</li>
+                <li><span class="fi">💌</span>3 respostas especiais por mês</li>
+                <li><span class="fi">⚡</span>Prioridade de resposta</li>
+              </ul>
+              <div class="plan-feature-block-title gold">💎 Anual — benefício extra</div>
+              <ul class="plan-features">
+                <li><span class="fi">💬</span>40 mensagens por dia ⭐</li>
+                <li><span class="fi">📖</span>Respostas mais completas</li>
+                <li><span class="fi">📋</span>Histórico completo</li>
+                <li><span class="fi">🎧</span>6 orações em áudio por mês</li>
+                <li><span class="fi">👥</span>Grupo de WhatsApp</li>
+              </ul>
+              <button class="plan-cta">Quero o Avançado</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-box info-box-teal" style="margin-top: 1.5rem;">
+          <strong>💡 Estratégia de conversão para planos anuais:</strong> em todos os planos, o anual é a melhor compra — e nos planos Completo e Avançado ele ainda libera <strong>benefícios extras exclusivos</strong> (mais mensagens por dia, Grupo de WhatsApp). No checkout, mostrar a economia em R$ de forma clara: <em>"No anual, seu cuidado sai por menos de R$1 por dia."</em> Ancoragem visual sempre no <strong>Plano Completo</strong> em destaque — é o "mais escolhido".
+        </div>
+
+        <div class="lp-cta-wrap" style="margin-top: 1.8rem;">
+          <a href="app_my_soul_care_landing_page.html" class="lp-cta" target="_blank" rel="noopener">🌟 Ver a página de vendas do App My Soul Care</a>
+          <div class="lp-cta-sub">A landing page completa, pronta pra receber o tráfego dos seus conteúdos.</div>
+        </div>
+
+        <div class="product-action-title">🌟 Plano de Implementação e Vendas do App</div>
+        <ol class="step-list">
+          <li><span><strong>Fase 1 – MVP (Mês 1–2):</strong> Lançar versão beta do app com plano único (Completo). Coletar feedback dos primeiros 50 usuários (vindos do desafio). Refinar a persona de IA e a qualidade das respostas.</span></li>
+          <li><span><strong>Fase 2 – Lançamento Oficial (Mês 3):</strong> Introduzir os 3 planos (Essencial, Completo e Avançado) com a estrutura Mensal/Trimestral/Anual. Criar a landing page de vendas com vídeo de demonstração do produto em uso. Anunciar o lançamento para a base do desafio com oferta exclusiva.</span></li>
+          <li><span><strong>Fase 3 – Escala (Mês 4–6):</strong> Ativar tráfego pago com os formatos de anúncio mapeados na seção anterior. Criar programa de afiliados para pastores, terapeutas cristãos e criadores de conteúdo espiritual.</span></li>
+          <li><span><strong>Fase 4 – Retenção (Ongoing):</strong> Email e push notification com conteúdo de valor semanal. Gamificação suave: "você completou 30 dias no Soul Care" + celebração. Reativação de usuários inativos com oração exclusiva.</span></li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Produto 3 (novo) -->
+    <div class="ladder-item navy">
+      <div class="product-card" style="border-color: rgba(27, 79, 114, 0.3);">
+        <span class="product-badge badge-navy">👑 Produto 3 · Novo · Alta Retenção</span>
+        <div class="product-name">Círculo de Paz</div>
+        <div class="product-tagline">Comunidade mensal de cura emocional com base espiritual</div>
+        <div class="product-price-box" style="background: linear-gradient(135deg, #e8eef4, #d4dfe8);">
+          <div>
+            <div class="price-main" style="color: var(--navy);">R$37</div>
+            <div class="price-info">por mês<br>Cancela quando quiser</div>
+          </div>
+          <div style="font-size: 0.82rem; color: var(--text-mid);">
+            Comunidade com curadoria ativa, baixo preço de entrada, alto valor percebido. Complementa o app sem canibalizar. <strong>Meta: 100 membros no mês 1 = R$3.700/mês adicional.</strong>
+          </div>
+        </div>
+        <ul class="product-features">
+          <li>Comunidade privada (Telegram ou Circle) com moderação ativa e conteúdo exclusivo semanal</li>
+          <li>2 lives mensais ao vivo com Pedro + convidados (pastores, terapeutas, psicólogos cristãos)</li>
+          <li>Desafio mensal temático: cada mês tem um tema de cura (perdão, autoestima, relacionamentos, medo)</li>
+          <li>Acesso prioritário a novos recursos do app antes de todos os outros usuários</li>
+          <li>Biblioteca de orações em áudio exclusivas (acumulativas mês a mês)</li>
+          <li>Sessão mensal de "Perguntas para Jesus" — os membros enviam perguntas, o avatar responde ao vivo</li>
+        </ul>
+
+        <div class="info-box info-box-navy" style="margin-top: 1rem;">
+          <strong>Por que criar esse produto agora:</strong> O Círculo de Paz resolve o maior problema de churn (cancelamento) do app: a sensação de solidão no processo. Quando o usuário tem comunidade + app, o LTV (valor vitalício) triplica. Além disso, é o produto mais fácil de vender — o desafio alimenta a comunidade, a comunidade alimenta o app, e o app retém o usuário no longo prazo.
+        </div>
+
+        <div class="product-action-title">🌟 Plano de Implementação e Vendas</div>
+        <ol class="step-list">
+          <li><span><strong>Pré-lançamento:</strong> Oferecer o Círculo de Paz como bônus premium para quem comprar o plano "Presença Total" do app. Gera primeiros 20–30 membros sem esforço adicional de marketing.</span></li>
+          <li><span><strong>Lançamento independente (Mês 4–5):</strong> Criar página própria e anunciar para a base de e-mail existente. Oferecer primeiro mês por R$9,90 como campanha de entrada.</span></li>
+          <li><span><strong>Programa de Indicação:</strong> Cada membro que indica 3 amigos recebe 1 mês grátis. Cria loop viral dentro de comunidades cristãs.</span></li>
+          <li><span><strong>Parcerias com igrejas:</strong> Oferecer plano coletivo para grupos de células e pequenos grupos — preço diferenciado para grupos de 10+ pessoas.</span></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ======================================================
+     SEÇÃO 8: FUNIL COMPLETO
+     ====================================================== -->
+<div id="funil"></div>
+<div class="section-full section-bg-teal">
+<div class="section-inner">
+<div class="section reveal">
+  <span class="section-label">08 · Jornada do Cliente</span>
+  <h2 class="section-title">Da descoberta<br>à recorrência</h2>
+  <div class="gold-line"></div>
+  <p class="section-subtitle">O funil da Fonte do Amor Perfeito foi desenhado para que cada passo seja natural, gentil e irresistível. Ninguém é empurrado — cada pessoa é convidada a ir mais fundo quando está pronta.</p>
+
+  <div class="funnel-container reveal">
+    <div class="funnel-step">
+      <div class="funnel-box funnel-1">
+        <div class="funnel-label">Topo de Funil · Descoberta</div>
+        <div class="funnel-name">Conteúdo Gratuito</div>
+        <div class="funnel-desc">Instagram, YouTube, TikTok — reflexões bíblicas, conteúdo de saúde emocional, orações gratuitas. O usuário descobre a marca e começa a confiar.</div>
+      </div>
+    </div>
+    <div class="funnel-arrow">↓</div>
+    <div class="funnel-step">
+      <div class="funnel-box funnel-2">
+        <div class="funnel-label">Meio de Funil · Engajamento</div>
+        <div class="funnel-name">Lead Magnet + Desafio</div>
+        <div class="funnel-desc">O Dia 1 do desafio liberado grátis como isca digital → captura de e-mail → oferta do Desafio Soul Care 21 Dias por R$37.</div>
+      </div>
+    </div>
+    <div class="funnel-arrow">↓</div>
+    <div class="funnel-step">
+      <div class="funnel-box funnel-3">
+        <div class="funnel-label">Fundo de Funil · Conversão</div>
+        <div class="funnel-name">App My Soul Care</div>
+        <div class="funnel-desc">No Dia 18 do desafio, oferta especial do app com 50% de desconto no primeiro mês. O usuário já está aquecido, já confia na marca, já sentiu o resultado.</div>
+      </div>
+    </div>
+    <div class="funnel-arrow">↓</div>
+    <div class="funnel-step">
+      <div class="funnel-box funnel-4">
+        <div class="funnel-label">Pós-Venda · Recorrência e Comunidade</div>
+        <div class="funnel-name">Círculo de Paz</div>
+        <div class="funnel-desc">Após 30 dias no app, convite para a comunidade. Usuário engajado, resultados visíveis, desejo de pertencimento. Upsell natural, não forçado.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Métricas -->
+  <span class="section-label" style="margin-top: 3rem; display: block;">Metas de Performance — Primeiros 6 Meses</span>
+  <div class="grid-4" style="margin-top: 1.5rem;">
+    <div class="card reveal" style="text-align: center;">
+      <div style="font-family: 'DM Serif Display', serif; font-style: italic; font-size: 2.5rem; color: var(--teal); margin-bottom: 0.3rem;">500</div>
+      <div class="card-title">Alunos no Desafio</div>
+      <div class="card-text" style="font-size: 0.8rem;">Meta: primeiros 3 lançamentos. Receita gerada: R$18.500</div>
+    </div>
+    <div class="card reveal" style="text-align: center;">
+      <div style="font-family: 'DM Serif Display', serif; font-style: italic; font-size: 2.5rem; color: var(--teal); margin-bottom: 0.3rem;">200</div>
+      <div class="card-title">Assinantes do App</div>
+      <div class="card-text" style="font-size: 0.8rem;">MRR alvo: R$8–12k/mês. Com conversão de 40% do desafio.</div>
+    </div>
+    <div class="card reveal" style="text-align: center;">
+      <div style="font-family: 'DM Serif Display', serif; font-style: italic; font-size: 2.5rem; color: var(--teal); margin-bottom: 0.3rem;">80</div>
+      <div class="card-title">Membros do Círculo</div>
+      <div class="card-text" style="font-size: 0.8rem;">Receita adicional: R$2.960/mês. Alta retenção esperada.</div>
+    </div>
+    <div class="card reveal" style="text-align: center;">
+      <div style="font-family: 'DM Serif Display', serif; font-style: italic; font-size: 2.5rem; color: var(--gold); margin-bottom: 0.3rem;">R$25k</div>
+      <div class="card-title">Receita Mensal Alvo</div>
+      <div class="card-text" style="font-size: 0.8rem;">Combinando recorrência do app + círculo + novos lançamentos do desafio.</div>
+    </div>
+  </div>
+
+  <!-- Roadmap -->
+  <span class="section-label" style="margin-top: 3rem; display: block;">Roadmap de Lançamento — Cronograma</span>
+  <div class="card reveal" style="margin-top: 1.5rem;">
+    <table class="strategy-table" style="box-shadow: none; border: none;">
+      <thead>
+        <tr>
+          <th>Período</th>
+          <th>Foco Principal</th>
+          <th>Produto</th>
+          <th>Meta</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Mês 1–2</strong></td>
+          <td>Construção da base: identidade visual, conteúdo orgânico, página de vendas</td>
+          <td>Desafio Soul Care (produção)</td>
+          <td>500 seguidores + lista de e-mail</td>
+        </tr>
+        <tr>
+          <td><strong>Mês 3</strong></td>
+          <td>1º Lançamento do Desafio Soul Care</td>
+          <td>Desafio R$37</td>
+          <td>100–200 alunos</td>
+        </tr>
+        <tr>
+          <td><strong>Mês 4</strong></td>
+          <td>Beta do App com alunos do desafio</td>
+          <td>App Beta (grátis ou simbólico)</td>
+          <td>50 usuários beta + feedback</td>
+        </tr>
+        <tr>
+          <td><strong>Mês 5</strong></td>
+          <td>Lançamento oficial do App</td>
+          <td>My Soul Care — planos completos</td>
+          <td>100 assinantes pagos</td>
+        </tr>
+        <tr>
+          <td><strong>Mês 6</strong></td>
+          <td>Lançamento do Círculo de Paz + escala com tráfego pago</td>
+          <td>Círculo R$37/mês</td>
+          <td>50 membros + R$15k MRR total</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ======================================================
+     SEÇÃO 9: CARROSSÉIS PRONTOS
+     ====================================================== -->
+<div id="conteudos"></div>
+<div class="section-full section-bg-teal">
+<div class="section-inner">
+<div class="section reveal">
+  <span class="section-label">09 · Conteúdos Prontos</span>
+  <h2 class="section-title">4 carrosséis pra<br>copiar, colar e brilhar</h2>
+  <div class="gold-line"></div>
+  <p class="section-subtitle">Aqui não tem "[insira o tema aqui]". Tem copy escrita de ponta a ponta — cada carrossel guiado por uma estratégia do Direcionamento, cada slide já pensado em 1080&times;1350px, cada legenda pronta pra postar. Os quatro apresentam o <strong>App My Soul Care</strong> e foram desenhados pra gerar desejo sem soar vendedora. É o app sendo apresentado do jeito que ele merece: com alma.</p>
+
+  <!-- CARROSSEL 1 -->
+  <div class="content-block reveal">
+    <div class="cb-head">
+      <span class="cb-tag cb-tag-strategy">Estratégia · Erro x Problema</span>
+      <span class="cb-tag cb-tag-format">Formato · Carrossel</span>
+      <span class="cb-tag cb-tag-slides">6 slides · 1080×1350px</span>
+      <span class="cb-tag cb-tag-type">Tipo · Educativo</span>
+    </div>
+    <div class="cb-title">Carrossel 1 — "Você acha que o erro é sentir ansiedade"</div>
+    <div class="cb-objective"><strong>Objetivo da estratégia:</strong> separar o que a audiência chama de "erro" (não conseguir controlar a ansiedade) do problema de verdade (carregar isso sozinha). Tira a culpa do colo de quem sofre e abre espaço pro app entrar como ponte — não como remédio milagroso.</div>
+    <div class="scroll-hint">→ arraste para ver os 6 slides — cada quadrinho é uma arte pronta pro feed</div>
+    <div class="art-note">🖼️ Artes finais — arraste para o lado para ver todas:</div>
+    <div class="art-row"><img src="Artes%20Redes%20Sociais/Carrosseis%20Posts/Carrossel%201%20-%20Erro%20x%20Problema/slide-1.png" alt="Carrossel 1 slide 1" loading="lazy"><img src="Artes%20Redes%20Sociais/Carrosseis%20Posts/Carrossel%201%20-%20Erro%20x%20Problema/slide-2.png" alt="Carrossel 1 slide 2" loading="lazy"><img src="Artes%20Redes%20Sociais/Carrosseis%20Posts/Carrossel%201%20-%20Erro%20x%20Problema/slide-3.png" alt="Carrossel 1 slide 3" loading="lazy"><img src="Artes%20Redes%20Sociais/Carrosseis%20Posts/Carrossel%201%20-%20Erro%20x%20Problema/slide-4.png" alt="Carrossel 1 slide 4" loading="lazy"><img src="Artes%20Redes%20Sociais/Carrosseis%20Posts/Carrossel%201%20-%20Erro%20x%20Problema/slide-5.png" alt="Carrossel 1 slide 5" loading="lazy"><img src="Artes%20Redes%20Sociais/Carrosseis%20Posts/Carrossel%201%20-%20Erro%20x%20Problema/slide-6.png" alt="Carrossel 1 slide 6" loading="lazy"></div>
+    <div class="legenda-box">
+      <div class="legenda-box-title">📝 Legenda completa</div>
+      <p>Tem uma frase que eu queria desinstalar da cabeça de todo mundo: <em>"se eu tivesse mais fé, eu não sentiria isso."</em><br><br>
+      Porque não é assim que funciona. Sentir ansiedade não é o seu erro — é a sua alma avisando que precisa de cuidado. O erro (se é que existe um) é achar que pra ser forte você tem que carregar tudo calada, sozinha — de dia ou de madrugada.<br><br>
+      O My Soul Care nasceu pra essas horas. Pra quando ler a Bíblia inteira parece demais e você só precisa de um direcionamento com base bíblica pra clarear os pensamentos e ouvir "respira, eu tô aqui, vamos juntos". 🍃<br><br>
+      <strong>Comenta "PONTE"</strong> aqui embaixo que eu te mando no directo o caminho pra conhecer o app. 🤍<br>
+      <span class="legenda-hashtags">#MySoulCare #FonteDoAmorPerfeito #ansiedade #saúdeemocional #féecuidado #cuidadocomaalma</span></p>
+    </div>
+  </div>
+
+  <!-- CARROSSEL 2 -->
+  <div class="content-block reveal">
+    <div class="cb-head">
+      <span class="cb-tag cb-tag-strategy">Estratégia · O que é [a oferta]</span>
+      <span class="cb-tag cb-tag-format">Formato · Carrossel</span>
+      <span class="cb-tag cb-tag-slides">6 slides · 1080×1350px</span>
+      <span class="cb-tag cb-tag-type">Tipo · Convencimento</span>
+    </div>
+    <div class="cb-title">Carrossel 2 — "Afinal, o que é o My Soul Care?"</div>
+    <div class="cb-objective"><strong>Objetivo da estratégia:</strong> apresentar o produto com clareza absoluta. Desfazer o pré-conceito de "IA fria" e mostrar, sem jargão, exatamente o que a pessoa recebe ao baixar o app. Quem entende, deseja.</div>
+    <div class="scroll-hint">→ arraste para ver os 6 slides — cada quadrinho é uma arte pronta pro feed</div>
+    <div class="art-note">🖼️ Artes finais — arraste para o lado para ver todas:</div>
+    <div class="art-row"><img src="Artes%20Redes%20Sociais/Carrosseis%20Posts/Carrossel%202%20-%20O%20que%20%C3%A9%20o%20My%20Soul%20Care/slide-1.png" alt="Carrossel 2 slide 1" loading="lazy"><img src="Artes%20Redes%20Sociais/Carrosseis%20Posts/Carrossel%202%20-%20O%20que%20%C3%A9%20o%20My%20Soul%20Care/slide-2.png" alt="Carrossel 2 slide 2" loading="lazy"><img src="Artes%20Redes%20Sociais/Carrosseis%20Posts/Carrossel%202%20-%20O%20que%20%C3%A9%20o%20My%20Soul%20Care/slide-3.png" alt="Carrossel 2 slide 3" loading="lazy"><img src="Artes%20Redes%20Sociais/Carrosseis%20Posts/Carrossel%202%20-%20O%20que%20%C3%A9%20o%20My%20Soul%20Care/slide-4.png" alt="Carrossel 2 slide 4" loading="lazy"><img src="Artes%20Redes%20Sociais/Carrosseis%20Posts/Carrossel%202%20-%20O%20que%20%C3%A9%20o%20My%20Soul%20Care/slide-5.png" alt="Carrossel 2 slide 5" loading="lazy"><img src="Artes%20Redes%20Sociais/Carrosseis%20Posts/Carrossel%202%20-%20O%20que%20%C3%A9%20o%20My%20Soul%20Care/slide-6.png" alt="Carrossel 2 slide 6" loading="lazy"></div>
+    <div class="legenda-box">
+      <div class="legenda-box-title">📝 Legenda completa</div>
+      <p>Toda vez que eu falo "app com inteligência artificial", alguém faz aquela cara. Eu entendo. A gente associa IA a coisa fria, robótica, sem alma.<br><br>
+      Só que o My Soul Care não foi feito pra ser inteligente — foi feito pra ser <em>presente</em>. 🍃<br><br>
+      É simples assim: você abre, escreve o que tá sentindo, e recebe de volta acolhimento com base bíblica. Não é terapia, não é a sua igreja, não é o seu pastor — é um companheiro pro entre. Pro momento em que você não consegue chamar ninguém, mas também não quer ficar sozinha.<br><br>
+      <strong>Comenta "QUERO"</strong> que eu te mando o acesso no directo. 🤍<br>
+      <span class="legenda-hashtags">#MySoulCare #FonteDoAmorPerfeito #appcristão #oração #féecuidado #companheiroespiritual</span></p>
+    </div>
+  </div>
+
+  <!-- CARROSSEL 3 -->
+  <div class="content-block reveal">
+    <div class="cb-head">
+      <span class="cb-tag cb-tag-strategy">Estratégia · Desejo Latente</span>
+      <span class="cb-tag cb-tag-format">Formato · Carrossel</span>
+      <span class="cb-tag cb-tag-slides">6 slides · 1080×1350px</span>
+      <span class="cb-tag cb-tag-type">Tipo · Inspiracional</span>
+    </div>
+    <div class="cb-title">Carrossel 3 — "E se a sua segunda-feira começasse leve?"</div>
+    <div class="cb-objective"><strong>Objetivo da estratégia:</strong> acordar o desejo que já existe, mas tá adormecido. Fazer a audiência <em>visualizar</em> a vida com mais paz — sentir o "depois" antes de comprar — e amarrar essa imagem ao app, mostrando que o desejo tem um caminho real.</div>
+    <div class="scroll-hint">→ arraste para ver os 6 slides — cada quadrinho é uma arte pronta pro feed</div>
+    <div class="art-note">🖼️ Artes finais — arraste para o lado para ver todas:</div>
+    <div class="art-row"><img src="Artes%20Redes%20Sociais/Carrosseis%20Posts/Carrossel%203%20-%20Desejo%20Latente/slide-1.png" alt="Carrossel 3 slide 1" loading="lazy"><img src="Artes%20Redes%20Sociais/Carrosseis%20Posts/Carrossel%203%20-%20Desejo%20Latente/slide-2.png" alt="Carrossel 3 slide 2" loading="lazy"><img src="Artes%20Redes%20Sociais/Carrosseis%20Posts/Carrossel%203%20-%20Desejo%20Latente/slide-3.png" alt="Carrossel 3 slide 3" loading="lazy"><img src="Artes%20Redes%20Sociais/Carrosseis%20Posts/Carrossel%203%20-%20Desejo%20Latente/slide-4.png" alt="Carrossel 3 slide 4" loading="lazy"><img src="Artes%20Redes%20Sociais/Carrosseis%20Posts/Carrossel%203%20-%20Desejo%20Latente/slide-5.png" alt="Carrossel 3 slide 5" loading="lazy"><img src="Artes%20Redes%20Sociais/Carrosseis%20Posts/Carrossel%203%20-%20Desejo%20Latente/slide-6.png" alt="Carrossel 3 slide 6" loading="lazy"></div>
+    <div class="legenda-box">
+      <div class="legenda-box-title">📝 Legenda completa</div>
+      <p>Faz um teste comigo: lê de novo o slide 2 e repara no que aconteceu no seu corpo. Provavelmente você suspirou. Talvez tenha desejado aquilo por um segundo.<br><br>
+      Esse suspiro é importante. Ele é a prova de que a paz não é algo distante que você precisa <em>merecer</em> — é algo que você já <em>quer</em>, e que só estava esperando um caminho. 🍃<br><br>
+      O My Soul Care é esse caminho. Não é mágica, não é promessa de cura instantânea. É um cuidado diário, pequeno, possível — do tamanho de 1 minuto antes do mundo acordar.<br><br>
+      <strong>Comenta "ROTINA"</strong> que eu te mando no directo como começar a sua. 🤍<br>
+      <span class="legenda-hashtags">#MySoulCare #FonteDoAmorPerfeito #pazinterior #rotinadecuidado #saúdeemocional #féediária</span></p>
+    </div>
+  </div>
+
+  <!-- CARROSSEL 4 -->
+  <div class="content-block reveal">
+    <div class="cb-head">
+      <span class="cb-tag cb-tag-strategy">Estratégia · Prova Social</span>
+      <span class="cb-tag cb-tag-format">Formato · Carrossel</span>
+      <span class="cb-tag cb-tag-slides">6 slides · 1080×1350px</span>
+      <span class="cb-tag cb-tag-type">Tipo · Convencimento</span>
+    </div>
+    <div class="cb-title">Carrossel 4 — "Pela primeira vez em anos, não me senti sozinha"</div>
+    <div class="cb-objective"><strong>Objetivo da estratégia:</strong> reduzir o risco percebido mostrando que outras pessoas já vivem a transformação. <em>Importante:</em> assim que houver usuários reais, troque os depoimentos abaixo por prints e falas verdadeiras — prova social autêntica é o ativo mais poderoso desse nicho.</div>
+    <div class="scroll-hint">→ arraste para ver os 6 slides — cada quadrinho é uma arte pronta pro feed</div>
+    <div class="art-note">🖼️ Artes finais — arraste para o lado para ver todas:</div>
+    <div class="art-row"><img src="Artes%20Redes%20Sociais/Carrosseis%20Posts/Carrossel%204%20-%20Prova%20Social/slide-1.png" alt="Carrossel 4 slide 1" loading="lazy"><img src="Artes%20Redes%20Sociais/Carrosseis%20Posts/Carrossel%204%20-%20Prova%20Social/slide-2.png" alt="Carrossel 4 slide 2" loading="lazy"><img src="Artes%20Redes%20Sociais/Carrosseis%20Posts/Carrossel%204%20-%20Prova%20Social/slide-3.png" alt="Carrossel 4 slide 3" loading="lazy"><img src="Artes%20Redes%20Sociais/Carrosseis%20Posts/Carrossel%204%20-%20Prova%20Social/slide-4.png" alt="Carrossel 4 slide 4" loading="lazy"><img src="Artes%20Redes%20Sociais/Carrosseis%20Posts/Carrossel%204%20-%20Prova%20Social/slide-5.png" alt="Carrossel 4 slide 5" loading="lazy"><img src="Artes%20Redes%20Sociais/Carrosseis%20Posts/Carrossel%204%20-%20Prova%20Social/slide-6.png" alt="Carrossel 4 slide 6" loading="lazy"></div>
+    <div class="legenda-box">
+      <div class="legenda-box-title">📝 Legenda completa</div>
+      <p>Eu podia ficar aqui listando funcionalidade por funcionalidade. Mas reparei numa coisa lendo o que as pessoas dizem sobre o My Soul Care: <strong>ninguém comenta a tecnologia.</strong><br><br>
+      Elas falam de café da manhã. De madrugada. De colo. De não estar sozinha. 🍃<br><br>
+      É isso que me faz acreditar nesse projeto — ele não vende um app, ele devolve companhia e um direcionamento com base bíblica pra cada área da vida. E companhia, no fim, é a coisa que mais falta pra quem carrega ansiedade em silêncio.<br><br>
+      <strong>Comenta "EU"</strong> se algum desses depoimentos parece que foi escrito por você — eu quero te responder. 🤍<br>
+      <span class="legenda-hashtags">#MySoulCare #FonteDoAmorPerfeito #depoimento #saúdeemocional #vocênãoestásó #féecuidado</span></p>
+    </div>
+  </div>
+
+</div>
+</div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ======================================================
+     SEÇÃO 10: STORIES PARA OS DESTAQUES
+     ====================================================== -->
+<div id="destaques"></div>
+<div class="section-full" style="background: var(--off-white);">
+<div class="section-inner">
+<div class="section reveal">
+  <span class="section-label">10 · Stories para os Destaques</span>
+  <h2 class="section-title">As sequências que ficam<br>fixas no seu perfil</h2>
+  <div class="gold-line"></div>
+  <p class="section-subtitle">Destaque não é enfeite — é a vitrine do perfil. Quem chega novo bate o olho ali primeiro. Por isso montei duas sequências completas, cada story guiado por uma das 39 estratégias do Direcionamento, com a copy inteira escrita. É só gravar/postar na ordem e fixar. Cada sequência tem 9 stories — o mínimo pra contar uma história inteira sem pressa.</p>
+
+  <!-- DESTAQUE 1: QUEM SOMOS -->
+  <div class="content-block reveal">
+    <div class="cb-head">
+      <span class="cb-tag cb-tag-strategy">Destaque · Quem Somos</span>
+      <span class="cb-tag cb-tag-format">Formato · Sequência de Stories</span>
+      <span class="cb-tag cb-tag-slides">9 stories · 1080×1920px</span>
+    </div>
+    <div class="cb-title">Destaque "Quem Somos" — a apresentação da marca</div>
+    <div class="cb-objective"><strong>Objetivo:</strong> em 9 telas, fazer quem nunca ouviu falar da Fonte do Amor Perfeito entender o que somos, no que acreditamos e por que existir — e sair querendo ficar por perto.</div>
+    <div class="scroll-hint">→ arraste para ver os 9 stories</div>
+    <div class="art-note">🖼️ Artes finais — arraste para o lado para ver todas:</div>
+    <div class="art-row"><img src="Artes%20Redes%20Sociais/Stories%20e%20Destaques/Destaque%201%20-%20Quem%20Somos/story-1.png" alt="Story 1" loading="lazy"><img src="Artes%20Redes%20Sociais/Stories%20e%20Destaques/Destaque%201%20-%20Quem%20Somos/story-2.png" alt="Story 2" loading="lazy"><img src="Artes%20Redes%20Sociais/Stories%20e%20Destaques/Destaque%201%20-%20Quem%20Somos/story-3.png" alt="Story 3" loading="lazy"><img src="Artes%20Redes%20Sociais/Stories%20e%20Destaques/Destaque%201%20-%20Quem%20Somos/story-4.png" alt="Story 4" loading="lazy"><img src="Artes%20Redes%20Sociais/Stories%20e%20Destaques/Destaque%201%20-%20Quem%20Somos/story-5.png" alt="Story 5" loading="lazy"><img src="Artes%20Redes%20Sociais/Stories%20e%20Destaques/Destaque%201%20-%20Quem%20Somos/story-6.png" alt="Story 6" loading="lazy"><img src="Artes%20Redes%20Sociais/Stories%20e%20Destaques/Destaque%201%20-%20Quem%20Somos/story-7.png" alt="Story 7" loading="lazy"><img src="Artes%20Redes%20Sociais/Stories%20e%20Destaques/Destaque%201%20-%20Quem%20Somos/story-8.png" alt="Story 8" loading="lazy"><img src="Artes%20Redes%20Sociais/Stories%20e%20Destaques/Destaque%201%20-%20Quem%20Somos/story-9.png" alt="Story 9" loading="lazy"></div>
+  </div>
+
+  <!-- DESTAQUE 2: NOSSOS PRODUTOS -->
+  <div class="content-block reveal">
+    <div class="cb-head">
+      <span class="cb-tag cb-tag-strategy">Destaque · Nossos Produtos</span>
+      <span class="cb-tag cb-tag-format">Formato · Sequência de Stories</span>
+      <span class="cb-tag cb-tag-slides">9 stories · 1080×1920px</span>
+    </div>
+    <div class="cb-title">Destaque "Nossos Produtos" — o App My Soul Care na vitrine</div>
+    <div class="cb-objective"><strong>Objetivo:</strong> em 9 telas, apresentar o App My Soul Care com clareza e desejo — da dor que ele resolve até os planos — guiando quem assiste direto para a página de vendas.</div>
+    <div class="scroll-hint">→ arraste para ver os 9 stories</div>
+    <div class="art-note">🖼️ Artes finais — arraste para o lado para ver todas:</div>
+    <div class="art-row"><img src="Artes%20Redes%20Sociais/Stories%20e%20Destaques/Destaque%202%20-%20Nossos%20Produtos/story-1.png" alt="Story 1" loading="lazy"><img src="Artes%20Redes%20Sociais/Stories%20e%20Destaques/Destaque%202%20-%20Nossos%20Produtos/story-2.png" alt="Story 2" loading="lazy"><img src="Artes%20Redes%20Sociais/Stories%20e%20Destaques/Destaque%202%20-%20Nossos%20Produtos/story-3.png" alt="Story 3" loading="lazy"><img src="Artes%20Redes%20Sociais/Stories%20e%20Destaques/Destaque%202%20-%20Nossos%20Produtos/story-4.png" alt="Story 4" loading="lazy"><img src="Artes%20Redes%20Sociais/Stories%20e%20Destaques/Destaque%202%20-%20Nossos%20Produtos/story-5.png" alt="Story 5" loading="lazy"><img src="Artes%20Redes%20Sociais/Stories%20e%20Destaques/Destaque%202%20-%20Nossos%20Produtos/story-6.png" alt="Story 6" loading="lazy"><img src="Artes%20Redes%20Sociais/Stories%20e%20Destaques/Destaque%202%20-%20Nossos%20Produtos/story-7.png" alt="Story 7" loading="lazy"><img src="Artes%20Redes%20Sociais/Stories%20e%20Destaques/Destaque%202%20-%20Nossos%20Produtos/story-8.png" alt="Story 8" loading="lazy"><img src="Artes%20Redes%20Sociais/Stories%20e%20Destaques/Destaque%202%20-%20Nossos%20Produtos/story-9.png" alt="Story 9" loading="lazy"></div>
+  </div>
+
+</div>
+</div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ======================================================
+     SEÇÃO 11: PÁGINAS DE VENDAS (APP + CURSO)
+     ====================================================== -->
+<div id="app"></div>
+<div class="section-full section-bg-gold">
+<div class="section-inner">
+<div class="section reveal" style="text-align: center;">
+  <span class="section-label section-label-gold">11 · Páginas de Vendas</span>
+  <h2 class="section-title" style="margin-left:auto;margin-right:auto;">Os destinos<br>da nossa estratégia</h2>
+  <div class="gold-line" style="margin-left:auto;margin-right:auto;"></div>
+  <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Toda essa estratégia precisa de destino — um lugar pra onde os carrosséis, os reels e os stories empurram a audiência. Hoje a Fonte do Amor Perfeito tem <strong>dois destinos</strong>: a página do app My Soul Care (recorrência) e a página do curso 30 dias com Jesus (entrada e ticket único). Cada uma tem o papel dela no funil.</p>
+
+  <div class="lp-products">
+
+    <!-- App MySoulCare -->
+    <div class="lp-card is-app reveal">
+      <span class="lp-card-tag">🍃 Produto principal · Recorrência</span>
+      <h3>App My Soul Care</h3>
+      <p class="lp-card-sub">Uma IA equipada com os ensinamentos de Jesus pra orientar o dia a dia da audiência.</p>
+      <p class="lp-card-price">A partir de <strong>R$ 24,75/mês</strong> (plano anual)</p>
+      <div class="lp-update">
+        <strong>🆕 Versão atualizada:</strong> a página foi reescrita pra posicionar o app como <strong>"IA equipada com os ensinamentos de Jesus"</strong> (e não "conversa com Jesus IA"). Foco ampliado pra direção espiritual, decisões e proximidade — não só ansiedade. Disclaimer legal no rodapé, mascotes sol/lua removidos, seção de planos com toggle Mensal/Trimestral/Anual e botão flutuante de WhatsApp pro suporte.
+      </div>
+      <ul>
+        <li>Hero com gancho "Já imaginou os ensinamentos de Jesus orientando o seu dia?"</li>
+        <li>Galeria com as telas reais do app (Tela inicial, mockup notebook, menu lateral)</li>
+        <li>3 planos com toggle de período (Mensal padrão) e selo "★ mais escolhido"</li>
+        <li>FAQ, depoimentos placeholder e CTA final</li>
+        <li>WhatsApp de suporte fixo (botão flutuante)</li>
+      </ul>
+      <div class="lp-card-cta">
+        <a href="app_my_soul_care_landing_page.html" class="lp-cta" target="_blank" rel="noopener">🌟 Abrir a página do App</a>
+        <a href="app_my_soul_care_landing_page_EN.html" class="lp-cta" target="_blank" rel="noopener" style="margin-top:0.5rem;">🌐 Open the App page (EN)</a>
+        <div class="lp-card-file">Arquivo: <strong>app_my_soul_care_landing_page.html</strong></div>
+      </div>
+    </div>
+
+    <!-- Curso 30 dias com Jesus -->
+    <div class="lp-card is-course reveal">
+      <span class="lp-card-tag">📕 Curso · Ticket único</span>
+      <h3>30 dias com Jesus</h3>
+      <p class="lp-card-sub">Travessia diária baseada no ebook "30 dias para vencer a ansiedade com Jesus", da Fonte do Amor Perfeito.</p>
+      <p class="lp-card-price">De R$ 227,90 por <strong>R$ 97,00</strong> à vista no Pix</p>
+      <ul>
+        <li>4 fases (Despertar, Cura da Percepção, Curando as Raízes, Vida na Presença)</li>
+        <li>30 reflexões + 30 orações em áudio (entregues dentro do MySoulCare)</li>
+        <li>Bônus: 7 dias grátis no MySoulCare + cartões "Repete Hoje"</li>
+        <li>Garantia de 7 dias e acesso vitalício</li>
+        <li>Ponta de entrada barata pra escalar e qualificar o lead pro app</li>
+      </ul>
+      <div class="lp-card-cta">
+        <a href="curso_30_dias_landing_page.html" class="lp-cta lp-cta-gold" target="_blank" rel="noopener">📕 Abrir a página do Curso</a>
+        <a href="curso_30_dias_landing_page_EN.html" class="lp-cta lp-cta-gold" target="_blank" rel="noopener" style="margin-top:0.5rem;">🌐 Open the Course page (EN)</a>
+        <div class="lp-card-file">Arquivo: <strong>curso_30_dias_landing_page.html</strong></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="info-box info-box-gold" style="margin-top: 2rem; text-align: left;">
+    <strong>💡 Como usar os dois destinos no funil:</strong> use a página do <strong>curso (R$ 97,00)</strong> como porta de entrada nos anúncios pagos e nos conteúdos de topo de funil — ticket baixo, decisão rápida, gera prova social. Use a página do <strong>app (assinatura)</strong> como destino dos conteúdos de meio/fundo de funil (autoridade, prova, transformação) e como upsell automático pra quem já comprou o curso. Os dois links viram a sua bio do Instagram, os "arraste pra cima" dos stories e os CTAs dos vídeos.
+  </div>
+</div>
+</div>
+</div>
+
+<!-- ======================================================
+     SEÇÃO 12: CENTRAL DE ENTREGAS + KIT DO PEDRO
+     ====================================================== -->
+<div id="entregas"></div>
+<div class="section-full" style="background: var(--off-white);">
+<div class="section-inner">
+<div class="section reveal">
+  <span class="section-label">12 · Central de Entregas &amp; Kit do Pedro</span>
+  <h2 class="section-title">Tudo num lugar só:<br>baixe, use e gerencie</h2>
+  <div class="gold-line"></div>
+  <p class="section-subtitle">Aqui ficam os atalhos pra tudo que foi produzido: as landing pages, o banco completo de artes pras redes, o projeto inteiro zipado pra subir no Claude — e um kit de skills "prontas" pra Claude do Pedro ajudar a produzir conteúdo, rodar anúncios e gerir o negócio.</p>
+
+  <div class="content-block reveal" style="text-align:center; border:2px solid var(--gold-light);">
+    <div class="cb-title" style="margin-bottom:0.4rem;">📦 Baixar o pacote do projeto</div>
+    <p style="max-width:660px;margin:0 auto 1.2rem;color:var(--text-mid);">Pacote com landing pages, todas as artes, estratégia, copies, docs do curso e o kit de skills — pronto pra conectar no Claude.</p>
+    <div class="lp-card-file" style="margin-top:0.4rem;">📦 <strong>Pacote completo do projeto</strong> — enviado à parte (Google Drive), por ser grande demais pro site.</div>
+  </div>
+
+  <h3 style="margin:2.4rem 0 1rem;">🌐 Landing Pages</h3>
+  <div class="lp-products">
+    <div class="lp-card reveal">
+      <span class="lp-card-tag">🍃 App · Recorrência</span>
+      <h3>App My Soul Care</h3>
+      <p class="lp-card-sub">Página de vendas do app, com vídeo, planos e checkouts Stripe ligados.</p>
+      <div class="lp-card-cta">
+        <a href="app_my_soul_care_landing_page.html" class="lp-cta" target="_blank" rel="noopener">Abrir (PT)</a>
+        <a href="app_my_soul_care_landing_page_EN.html" class="lp-cta" target="_blank" rel="noopener" style="margin-top:0.5rem;">Open (EN)</a>
+      </div>
+    </div>
+    <div class="lp-card reveal">
+      <span class="lp-card-tag">📕 Curso · Ticket único</span>
+      <h3>30 dias com Jesus</h3>
+      <p class="lp-card-sub">Página do curso por <strong>R$ 97,00</strong>, com checkout Hotmart e garantia de 7 dias.</p>
+      <div class="lp-card-cta">
+        <a href="curso_30_dias_landing_page.html" class="lp-cta lp-cta-gold" target="_blank" rel="noopener">Abrir (PT)</a>
+        <a href="curso_30_dias_landing_page_EN.html" class="lp-cta lp-cta-gold" target="_blank" rel="noopener" style="margin-top:0.5rem;">Open (EN)</a>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="margin:2.4rem 0 1rem;">🎨 Banco de Artes pras Redes</h3>
+  <div class="lp-products">
+    <div class="lp-card reveal">
+      <span class="lp-card-tag">🖼️ Feed</span>
+      <h3>4 Carrosséis (24 artes)</h3>
+      <p class="lp-card-sub">Erro x Problema · O que é o app · Desejo Latente · Prova Social.</p>
+      <div class="lp-card-cta"><a href="Artes%20Redes%20Sociais/Carrosseis%20Posts/Carrossel%201%20-%20Erro%20x%20Problema/slide-1.png" class="lp-cta" target="_blank" rel="noopener">Ver exemplo</a></div>
+    </div>
+    <div class="lp-card reveal">
+      <span class="lp-card-tag">📱 Stories</span>
+      <h3>Stories &amp; Destaques</h3>
+      <p class="lp-card-sub">2 sequências de 9 stories + 2 capas de destaque.</p>
+      <div class="lp-card-cta"><a href="Artes%20Redes%20Sociais/Stories%20e%20Destaques/Destaque%201%20-%20Quem%20Somos/story-1.png" class="lp-cta" target="_blank" rel="noopener">Ver exemplo</a></div>
+    </div>
+    <div class="lp-card reveal">
+      <span class="lp-card-tag">🔥 Conversão</span>
+      <h3>Posts de Conversão</h3>
+      <p class="lp-card-sub">Carrosséis de desejo + CTA, pro App e pro Curso.</p>
+      <div class="lp-card-cta"><a href="Artes%20Redes%20Sociais/Posts%20de%20Conversao/App%20My%20Soul%20Care/App-01/slide-1.png" class="lp-cta" target="_blank" rel="noopener">Ver exemplo</a></div>
+    </div>
+  </div>
+
+  <h3 style="margin:2.4rem 0 0.4rem;">🤖 Kit de Skills pro Claude do Pedro</h3>
+  <p class="section-subtitle" style="margin-bottom:1.2rem;">Skills "prontas" pra instalar no Claude (Cowork). Passo a passo no arquivo <strong>COMO USAR.md</strong>.</p>
+  <div class="lp-products">
+    <div class="lp-card reveal"><span class="lp-card-tag">✍️ Conteúdo</span><h3>Criação de copies</h3><p class="lp-card-sub">Gera copies de posts, carrosséis, stories e anúncios no tom da marca.</p></div>
+    <div class="lp-card reveal"><span class="lp-card-tag">📊 Tráfego</span><h3>Métricas de anúncios</h3><p class="lp-card-sub">Interpreta CPM, CTR, CPA, ROAS e diz o que otimizar.</p></div>
+    <div class="lp-card reveal"><span class="lp-card-tag">🖼️ Visual</span><h3>Banco de imagens/posts</h3><p class="lp-card-sub">Organiza referências e gera artes no padrão da marca.</p></div>
+    <div class="lp-card reveal"><span class="lp-card-tag">🎯 Gestão</span><h3>Metas &amp; estratégia</h3><p class="lp-card-sub">Metas, funil, calendário e acompanhamento de resultados.</p></div>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-logo">Fonte do Amor Perfeito</span>
+  <p style="margin-bottom: 0.3rem;">Documento Estratégico Completo — Produzido para Pedro · My Soul Care</p>
+  <p style="opacity: 0.5; font-size: 0.75rem;">🌟 Estratégia Digital · Marca · Produtos · Editorial · Tráfego 🌟</p>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

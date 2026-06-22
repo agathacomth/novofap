@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>30 dias para vencer a ansiedade com Jesus — Fonte do Amor Perfeito</title>
+<meta name="description" content="Uma travessia de 30 dias guiada pelos ensinamentos de Jesus para descansar o coração em verdes pastos. R$97,00.">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #3AADA8;
+    --teal-dark: #2a8f8a;
+    --teal-light: #a8e0de;
+    --teal-pale: #E8F7F6;
+    --navy: #1B4F72;
+    --navy-deep: #143b56;
+    --gold: #D4A843;
+    --gold-light: #f0d890;
+    --gold-pale: #fdf5e0;
+    --white: #FFFFFF;
+    --off-white: #F8F5F0;
+    --text-dark: #1a2a35;
+    --text-mid: #3a5060;
+    --text-light: #6b8090;
+    --shadow: rgba(27, 79, 114, 0.12);
+    --shadow-gold: rgba(212, 168, 67, 0.28);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--off-white);
+    color: var(--text-dark);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    background: rgba(248, 245, 240, 0.92);
+    backdrop-filter: blur(12px);
+    padding: 0.7rem 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    box-shadow: 0 2px 24px rgba(27, 79, 114, 0.07);
+    border-bottom: 1px solid rgba(58, 173, 168, 0.18);
+  }
+  .nav-logo {
+    font-family: 'DM Serif Display', serif; font-style: italic;
+    color: var(--teal-dark); font-size: 1.05rem;
+    display: flex; align-items: center; gap: 0.4rem;
+  }
+  .nav-logo img { width: 1.7em; height: 1.7em; object-fit: contain; vertical-align: middle; }
+  .nav-cta {
+    background: linear-gradient(135deg, var(--gold), #C8960C);
+    color: #fff; text-decoration: none;
+    font-size: 0.78rem; font-weight: 800;
+    padding: 0.6rem 1.3rem; border-radius: 50px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 16px var(--shadow-gold);
+  }
+  .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 22px var(--shadow-gold); }
+
+  /* LAYOUT */
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 1.5rem; }
+  section { position: relative; }
+  .pad { padding: 5rem 0; }
+  .bg-white { background: var(--white); }
+  .bg-off { background: var(--off-white); }
+  .bg-soft { background: linear-gradient(160deg, var(--off-white) 0%, var(--teal-pale) 100%); }
+  .bg-gold { background: linear-gradient(160deg, var(--gold-pale) 0%, #fdeebb 100%); }
+  .bg-teal-pale { background: linear-gradient(160deg, var(--teal-pale) 0%, #d4f0ef 100%); }
+
+  .eyebrow {
+    font-size: 0.68rem; font-weight: 800;
+    letter-spacing: 3px; text-transform: uppercase;
+    color: var(--teal-dark); margin-bottom: 0.9rem; display: block;
+  }
+  .eyebrow.gold { color: #9a6f00; }
+  h2 {
+    font-family: 'DM Serif Display', serif; font-style: italic;
+    font-size: clamp(1.9rem, 4vw, 2.9rem); line-height: 1.18;
+    color: var(--navy); margin-bottom: 1rem;
+  }
+  h3 {
+    font-family: 'DM Serif Display', serif; font-style: italic;
+    font-size: 1.3rem; color: var(--navy); margin-bottom: 0.5rem;
+  }
+  .lead { font-size: 1.02rem; color: var(--text-mid); max-width: 640px; }
+  .center { text-align: center; }
+  .center .lead, .center h2 { margin-left: auto; margin-right: auto; }
+  .gold-line {
+    width: 64px; height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    border-radius: 2px; margin: 1.2rem 0 1.8rem;
+  }
+  .center .gold-line { margin-left: auto; margin-right: auto; }
+
+  /* BUTTONS */
+  .btn {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-family: 'Montserrat', sans-serif; font-weight: 800;
+    font-size: 0.95rem; padding: 1rem 2.2rem;
+    border-radius: 50px; text-decoration: none; cursor: pointer; border: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .btn-teal { background: linear-gradient(135deg, var(--teal), var(--teal-dark)); color: #fff; box-shadow: 0 10px 30px rgba(58, 173, 168, 0.35); }
+  .btn-teal:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(58, 173, 168, 0.45); }
+  .btn-gold { background: linear-gradient(135deg, #C8960C, var(--gold)); color: #fff; box-shadow: 0 10px 30px var(--shadow-gold); }
+  .btn-gold:hover { transform: translateY(-3px); box-shadow: 0 16px 40px var(--shadow-gold); }
+  .btn-big { font-size: 1.05rem; padding: 1.2rem 2.6rem; }
+  .btn-sub { font-size: 0.8rem; color: var(--text-light); margin-top: 0.8rem; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    padding: 7rem 0 4rem;
+    background: linear-gradient(165deg, var(--off-white) 0%, var(--teal-pale) 55%, #d4f0ef 100%);
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute;
+    top: -40%; right: -20%; width: 70%; height: 160%;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0.7) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .hero-grid {
+    display: grid; grid-template-columns: 1.05fr 0.95fr;
+    gap: 3rem; align-items: center; position: relative; z-index: 1;
+  }
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    background: rgba(255,255,255,0.8);
+    border: 1px solid rgba(58, 173, 168, 0.35);
+    color: var(--teal-dark);
+    font-size: 0.72rem; font-weight: 700;
+    padding: 0.4rem 1rem; border-radius: 50px; margin-bottom: 1.2rem;
+    box-shadow: 0 2px 12px rgba(27,79,114,0.06);
+  }
+  .hero h1 {
+    font-family: 'DM Serif Display', serif; font-style: italic;
+    font-size: clamp(2.2rem, 4.8vw, 3.6rem);
+    line-height: 1.1; color: var(--navy); margin-bottom: 1rem;
+  }
+  .hero h1 span { color: var(--teal); }
+  .hero-sub {
+    font-family: 'DM Serif Display', serif; font-style: italic;
+    color: var(--text-mid); font-size: 1.1rem; margin-bottom: 1.4rem;
+  }
+  .hero p { font-size: 1.02rem; color: var(--text-mid); margin-bottom: 1.6rem; max-width: 480px; }
+  .hero-price {
+    display: inline-block;
+    background: var(--white);
+    padding: 0.5rem 0.9rem; border-radius: 50px;
+    font-size: 0.78rem; font-weight: 800; color: var(--navy);
+    border: 1px solid rgba(58,173,168,0.3); margin-bottom: 0.8rem;
+  }
+  .hero-price strong { color: var(--gold); }
+  .hero-btns { display: flex; gap: 0.8rem; flex-wrap: wrap; align-items: center; }
+  .hero-trust { margin-top: 1.4rem; font-size: 0.8rem; color: var(--text-light); display: flex; align-items: center; gap: 0.5rem; }
+  .hero-visual { position: relative; display: flex; justify-content: center; }
+  .hero-card {
+    background: #fff; border-radius: 24px;
+    padding: 2rem 1.6rem; max-width: 380px; width: 100%;
+    box-shadow: 0 30px 60px rgba(27, 79, 114, 0.18);
+    border: 1px solid rgba(58, 173, 168, 0.15);
+    text-align: center; position: relative;
+  }
+  .hero-card .hc-badge {
+    position: absolute; top: -0.8rem; left: 50%; transform: translateX(-50%);
+    background: var(--gold); color: #fff;
+    font-size: 0.65rem; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
+    padding: 0.35rem 1rem; border-radius: 50px;
+    box-shadow: 0 4px 12px var(--shadow-gold);
+  }
+  .hero-card img { width: 110px; height: 110px; object-fit: contain; margin: 1rem auto 0.6rem; display: block; filter: drop-shadow(0 10px 22px rgba(27,79,114,0.18)); }
+  .hero-card .hc-num {
+    font-family: 'DM Serif Display', serif; font-style: italic;
+    font-size: 3.6rem; color: var(--navy); line-height: 1; margin: 0.4rem 0 0;
+  }
+  .hero-card .hc-dias { font-size: 0.7rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: var(--teal-dark); }
+  .hero-card .hc-tit {
+    font-family: 'DM Serif Display', serif; font-style: italic;
+    font-size: 1.2rem; color: var(--navy); margin: 0.6rem 0 0.3rem; line-height: 1.25;
+  }
+  .hero-card .hc-fase { font-size: 0.74rem; color: var(--text-mid); padding: 0.4rem 0; border-top: 1px dashed rgba(58,173,168,0.3); margin-top: 0.6rem; }
+
+  /* PAIN */
+  .pain-list {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.2rem; margin-top: 2rem;
+  }
+  .pain-card {
+    background: var(--white); border-radius: 16px;
+    padding: 1.8rem; box-shadow: 0 4px 24px var(--shadow);
+    border: 1px solid rgba(58, 173, 168, 0.12);
+    border-left: 4px solid var(--teal-light);
+  }
+  .pain-card .pc-emoji { font-size: 1.8rem; display: block; margin-bottom: 0.6rem; }
+  .pain-card p { font-size: 0.9rem; color: var(--text-mid); }
+  .pain-quote {
+    font-family: 'DM Serif Display', serif; font-style: italic;
+    font-size: clamp(1.3rem, 2.6vw, 1.8rem);
+    color: var(--navy); text-align: center;
+    max-width: 760px; margin: 3rem auto 0; line-height: 1.4;
+  }
+  .pain-quote span { color: var(--teal-dark); }
+  .pain-quote cite { display: block; font-size: 0.78rem; color: var(--text-light); font-style: normal; font-family: 'Montserrat'; margin-top: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+
+  /* SPLIT */
+  .split {
+    display: grid; grid-template-columns: 0.95fr 1.05fr;
+    gap: 3rem; align-items: center;
+  }
+  .split-img-wrap {
+    background: linear-gradient(160deg, var(--teal-pale), #d4f0ef);
+    border-radius: 24px; padding: 2.4rem 1.6rem; text-align: center;
+    box-shadow: 0 20px 50px rgba(27, 79, 114, 0.15);
+  }
+  .split-img-wrap img { max-width: 220px; width: 80%; height: auto; }
+  .split-img-wrap .si-tit {
+    font-family: 'DM Serif Display', serif; font-style: italic;
+    font-size: 1.4rem; color: var(--navy); margin-top: 1rem;
+  }
+  .split-img-wrap .si-sub { font-size: 0.84rem; color: var(--text-mid); margin-top: 0.3rem; }
+  .check-list { list-style: none; margin-top: 1.2rem; }
+  .check-list li {
+    display: flex; align-items: flex-start; gap: 0.7rem;
+    padding: 0.55rem 0; font-size: 0.92rem; color: var(--text-mid);
+  }
+  .check-list li::before {
+    content: '🤍'; flex-shrink: 0; font-size: 0.95rem; margin-top: 0.1rem;
+  }
+
+  /* FASES */
+  .fases {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.4rem; margin-top: 2.6rem;
+  }
+  .fase {
+    background: var(--white); border-radius: 20px;
+    padding: 2rem 1.6rem; box-shadow: 0 8px 30px var(--shadow);
+    border: 1px solid rgba(58, 173, 168, 0.14);
+    position: relative; overflow: hidden;
+  }
+  .fase::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 6px;
+    background: linear-gradient(90deg, var(--teal), var(--gold));
+  }
+  .fase-num {
+    font-family: 'DM Serif Display', serif; font-style: italic;
+    font-size: 0.86rem; letter-spacing: 4px; color: var(--gold);
+    text-transform: uppercase;
+  }
+  .fase-dias { font-size: 0.7rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: var(--teal-dark); margin: 0.2rem 0 0.6rem; }
+  .fase h3 { font-size: 1.25rem; margin-bottom: 0.6rem; }
+  .fase p { font-size: 0.88rem; color: var(--text-mid); }
+
+  /* DAY STRUCTURE */
+  .day-steps {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.2rem; margin-top: 2.5rem;
+  }
+  .day-step {
+    background: var(--white); border-radius: 16px;
+    padding: 1.4rem 1.2rem; text-align: center;
+    box-shadow: 0 4px 20px var(--shadow);
+    border: 1px solid rgba(58, 173, 168, 0.12);
+  }
+  .day-step .ds-emoji { font-size: 2rem; display: block; margin-bottom: 0.5rem; }
+  .day-step h4 {
+    font-family: 'DM Serif Display', serif; font-style: italic;
+    color: var(--navy); font-size: 1.05rem; margin-bottom: 0.3rem;
+  }
+  .day-step p { font-size: 0.8rem; color: var(--text-mid); }
+
+  /* INCLUI */
+  .inclui {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.2rem; margin-top: 2.4rem;
+  }
+  .inclui-card {
+    background: var(--white); border-radius: 16px;
+    padding: 1.6rem; box-shadow: 0 6px 24px var(--shadow);
+    border: 1px solid rgba(58, 173, 168, 0.14);
+    display: flex; gap: 1rem; align-items: flex-start;
+  }
+  .inclui-card .ic-ic {
+    font-size: 1.8rem; background: var(--teal-pale);
+    width: 56px; height: 56px; border-radius: 14px;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .inclui-card h4 {
+    font-family: 'DM Serif Display', serif; font-style: italic;
+    color: var(--navy); font-size: 1.1rem; margin-bottom: 0.3rem;
+  }
+  .inclui-card p { font-size: 0.86rem; color: var(--text-mid); }
+  .inclui-val { display: block; font-size: 0.7rem; font-weight: 800; color: var(--gold); margin-top: 0.3rem; text-transform: uppercase; letter-spacing: 1px; }
+
+  /* OFERTA */
+  .offer-card {
+    background: var(--white); border-radius: 28px;
+    padding: 2.6rem 2rem; max-width: 540px; margin: 2.4rem auto 0;
+    box-shadow: 0 24px 60px rgba(27, 79, 114, 0.18);
+    border: 2px solid var(--gold-light); position: relative; text-align: center;
+  }
+  .offer-flag {
+    position: absolute; top: -0.9rem; left: 50%; transform: translateX(-50%);
+    background: var(--gold); color: #fff;
+    font-size: 0.66rem; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase;
+    padding: 0.35rem 1.2rem; border-radius: 50px; white-space: nowrap;
+    box-shadow: 0 4px 14px var(--shadow-gold);
+  }
+  .offer-deal {
+    font-size: 0.78rem; color: var(--text-light); margin-top: 0.6rem;
+  }
+  .offer-old { font-size: 0.92rem; color: var(--text-light); text-decoration: line-through; margin: 1rem 0 0.2rem; }
+  .offer-price {
+    font-family: 'DM Serif Display', serif; font-style: italic;
+    font-size: 4rem; color: var(--navy); line-height: 1;
+    margin: 0.4rem 0 0.2rem;
+  }
+  .offer-price span { font-size: 1rem; font-style: normal; font-family: 'Montserrat'; color: var(--text-mid); font-weight: 600; vertical-align: middle; }
+  .offer-pix { font-size: 0.8rem; color: var(--teal-dark); font-weight: 800; margin-bottom: 0.4rem; }
+  .offer-parc { font-size: 0.78rem; color: var(--text-mid); margin-bottom: 1.4rem; }
+  .offer-feats {
+    list-style: none; text-align: left; max-width: 360px; margin: 1.4rem auto 1.4rem;
+    background: var(--off-white); border-radius: 14px;
+    padding: 1rem 1.2rem;
+  }
+  .offer-feats li { font-size: 0.84rem; color: var(--text-mid); padding: 0.32rem 0; display: flex; gap: 0.5rem; }
+  .offer-feats li::before { content: '✓'; color: var(--teal); font-weight: 900; }
+  .offer-guarantee {
+    margin-top: 1.4rem; padding-top: 1.4rem;
+    border-top: 1px dashed rgba(58,173,168,0.3);
+    font-size: 0.84rem; color: var(--text-mid);
+  }
+  .offer-guarantee strong { color: var(--navy); }
+
+  /* TESTI */
+  .testi-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.4rem; margin-top: 2.5rem;
+  }
+  .testi {
+    background: var(--white); border-radius: 18px; padding: 1.8rem;
+    box-shadow: 0 6px 28px var(--shadow); border: 1px solid rgba(58, 173, 168, 0.12);
+  }
+  .testi-stars { color: var(--gold); font-size: 0.9rem; margin-bottom: 0.7rem; letter-spacing: 2px; }
+  .testi-text { font-family: 'DM Serif Display', serif; font-style: italic; font-size: 1.05rem; color: var(--navy); line-height: 1.5; margin-bottom: 1rem; }
+  .testi-who { font-size: 0.78rem; font-weight: 700; color: var(--teal-dark); }
+  .testi-note { font-size: 0.78rem; color: var(--text-light); font-style: italic; text-align: center; margin-top: 1.6rem; }
+
+  /* FAQ */
+  .faq { max-width: 760px; margin: 2.5rem auto 0; }
+  .faq-item {
+    background: var(--white); border: 1px solid rgba(58, 173, 168, 0.15);
+    border-radius: 14px; padding: 1.2rem 1.4rem; margin-bottom: 0.9rem;
+    box-shadow: 0 3px 16px var(--shadow);
+  }
+  .faq-q { font-weight: 800; font-size: 0.95rem; color: var(--navy); display: flex; gap: 0.5rem; margin-bottom: 0.5rem; }
+  .faq-a { font-size: 0.88rem; color: var(--text-mid); }
+
+  /* FINAL */
+  .final {
+    background: linear-gradient(160deg, var(--teal-pale) 0%, #d4f0ef 60%, #c8eeec 100%);
+    text-align: center; border-top: 1px solid rgba(58,173,168,0.2);
+  }
+  .final-card {
+    background: rgba(255,255,255,0.8);
+    border: 1px solid rgba(58, 173, 168, 0.3);
+    border-radius: 26px; padding: 3rem 2rem;
+    max-width: 720px; margin: 0 auto;
+    box-shadow: 0 16px 50px rgba(27, 79, 114, 0.1);
+  }
+  .final-card .big-mascote { width: 80px; height: 80px; object-fit: contain; display: block; margin: 0 auto 0.8rem; filter: drop-shadow(0 12px 24px rgba(27,79,114,0.18)); }
+
+  /* FOOTER */
+  footer {
+    background: linear-gradient(160deg, var(--off-white) 0%, var(--teal-pale) 100%);
+    border-top: 1px solid rgba(58, 173, 168, 0.2);
+    padding: 3rem 0 2rem; text-align: center;
+  }
+  .footer-logo { font-family: 'DM Serif Display', serif; font-style: italic; font-size: 1.3rem; color: var(--teal-dark); display: inline-flex; align-items: center; gap: 0.4rem; margin-bottom: 0.4rem; }
+  .footer-logo img { width: 1.5em; height: 1.5em; object-fit: contain; }
+  .footer-tag { font-size: 0.85rem; color: var(--text-mid); margin-bottom: 1.4rem; }
+  .socials { display: flex; justify-content: center; gap: 0.8rem; flex-wrap: wrap; margin-bottom: 1.6rem; }
+  .social {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: var(--white); border: 1px solid rgba(58, 173, 168, 0.3);
+    color: var(--teal-dark); text-decoration: none;
+    font-size: 0.82rem; font-weight: 700;
+    padding: 0.6rem 1.2rem; border-radius: 50px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .social:hover { transform: translateY(-2px); box-shadow: 0 8px 20px var(--shadow); }
+  .footer-fine { font-size: 0.72rem; color: var(--text-light); margin-top: 0.8rem; line-height: 1.5; }
+
+  /* WHATSAPP */
+  .wa-float {
+    position: fixed; right: 18px; bottom: 18px; z-index: 1200;
+    display: inline-flex; align-items: center; justify-content: center;
+    background: #25D366; color: #fff; text-decoration: none;
+    width: 56px; height: 56px; border-radius: 50%;
+    box-shadow: 0 8px 24px rgba(37,211,102,0.45);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .wa-float:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(37,211,102,0.55); }
+  .wa-float svg { width: 30px; height: 30px; fill: #fff; }
+
+  /* REVEAL */
+  .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* RESPONSIVE */
+  @media (max-width: 860px) {
+    .hero-grid, .split { grid-template-columns: 1fr; }
+    .hero-grid { gap: 2.5rem; }
+    .hero-visual { order: -1; }
+    nav { padding: 0.6rem 1rem; }
+    .pad { padding: 3.5rem 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo"><img src="png%20site/mascote%20sorrindo.png" alt=""> 30 dias com Jesus</div>
+  <a href="#oferta" class="nav-cta">Quero começar 🤍</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="hero-tag">🌟 Fonte do Amor Perfeito · A Voz de Cristo</span>
+        <h1>30 dias para vencer a ansiedade <span>com Jesus.</span></h1>
+        <p class="hero-sub">Um convite para repousar o coração em verdes pastos e encontrar o descanso que a alma precisa.</p>
+        <p>Uma travessia diária de reflexão, oração e prática — guiada pelos ensinamentos de Cristo — pra você sair do ruído da preocupação e voltar ao colo de quem nunca soltou a sua mão.</p>
+        <div class="hero-price"><strong>R$ 97,00</strong> · acesso vitalício</div>
+        <div class="hero-btns">
+          <a href="#oferta" class="btn btn-gold btn-big">Quero começar minha travessia 🤍</a>
+        </div>
+        <div class="hero-trust">🍃 30 reflexões · 30 orações em áudio · acesso pra sempre</div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <span class="hc-badge">★ Diário guiado</span>
+          <img src="png%20site/mascote%20sorrindo.png" alt="Mascote do My Soul Care">
+          <div class="hc-dias">Dia</div>
+          <div class="hc-num">01</div>
+          <div class="hc-tit">"Não se turbe<br>o vosso coração"</div>
+          <div class="hc-fase">FASE 1 · O Despertar da Consciência</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN / PROMESSA -->
+<section class="pad bg-white">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Você reconhece isso?</span>
+      <h2>Você ora. Você lê. E ainda assim<br>o coração não descansa.</h2>
+      <div class="gold-line"></div>
+      <p class="lead">A ansiedade não cede com força de vontade. Ela cede quando a gente para de lutar contra a tempestade e aprende a olhar pra Luz. Esse caminho de 30 dias é um convite suave, dia após dia, pra essa mudança de olhar.</p>
+    </div>
+    <div class="pain-list">
+      <div class="pain-card reveal">
+        <span class="pc-emoji">🌪️</span>
+        <h3>Tudo parece urgente</h3>
+        <p>A cabeça não desliga. Você antecipa cenários, tenta controlar o amanhã — e o hoje passa sem ser vivido.</p>
+      </div>
+      <div class="pain-card reveal">
+        <span class="pc-emoji">💔</span>
+        <h3>Mágoas que não cicatrizam</h3>
+        <p>Tem nomes que ainda pesam. Você sabe que perdoar liberta — mas não sabe por onde começar.</p>
+      </div>
+      <div class="pain-card reveal">
+        <span class="pc-emoji">🌫️</span>
+        <h3>Falta uma direção</h3>
+        <p>Você quer ouvir a voz de Cristo no meio do barulho. Quer uma orientação prática, todo dia, pra caminhar mais perto.</p>
+      </div>
+    </div>
+    <p class="pain-quote reveal">"A ansiedade é apenas o ruído de um filho<br>que se sentiu órfão, esquecendo-se de que <span>o Pai nunca soltou sua mão.</span>"<cite>— Da introdução do diário</cite></p>
+  </div>
+</section>
+
+<!-- WHAT IS / PROMISE -->
+<section class="pad bg-soft">
+  <div class="wrap">
+    <div class="split">
+      <div class="reveal">
+        <div class="split-img-wrap">
+          <img src="png%20site/mascote%20sorrindo.png" alt="Mascote do diário">
+          <div class="si-tit">30 dias. 30 verdades.<br>Um coração restaurado.</div>
+          <div class="si-sub">Uma reflexão por dia, no seu ritmo.</div>
+        </div>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">O que é o curso</span>
+        <h2>Uma travessia guiada pelos<br>ensinamentos de Cristo.</h2>
+        <div class="gold-line"></div>
+        <p class="lead"><strong>30 dias para vencer a ansiedade com Jesus</strong> é um caminho diário inspirado nas Escrituras: a cada dia você recebe um versículo, uma reflexão profunda, uma oração guiada e uma prática simples pra levar pro dia.</p>
+        <ul class="check-list">
+          <li>15 minutos por dia — cabe no café da manhã ou antes de dormir</li>
+          <li>Linguagem do "tu", próxima e acolhedora, como uma carta de Cristo pra você</li>
+          <li>Versículos do Novo Testamento e do Salmo 23 como espinha dorsal</li>
+          <li>Oração em áudio diária, disponível dentro do My Soul Care</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FASES -->
+<section class="pad bg-white">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">O caminho dos 30 dias</span>
+      <h2>Quatro fases.<br>Uma só direção: o descanso.</h2>
+      <div class="gold-line"></div>
+      <p class="lead">A travessia é construída em quatro fases que se aprofundam uma na outra — do reconhecer ao perdoar, do curar ao habitar a Presença.</p>
+    </div>
+    <div class="fases">
+      <div class="fase reveal">
+        <div class="fase-num">FASE · 01</div>
+        <div class="fase-dias">Dias 1 – 7</div>
+        <h3>O Despertar da Consciência</h3>
+        <p>Reconhecer a ilusão da tempestade, soltar os ídolos do controle e do amanhã, e voltar ao Pastor que nunca soltou a sua mão.</p>
+      </div>
+      <div class="fase reveal">
+        <div class="fase-num">FASE · 02</div>
+        <div class="fase-dias">Dias 8 – 15</div>
+        <h3>A Cura da Percepção</h3>
+        <p>Soltar a espada do julgamento, perdoar pessoas, situações e a si mesmo — e desfazer o ataque silencioso que mantém o coração em guerra.</p>
+      </div>
+      <div class="fase reveal">
+        <div class="fase-num">FASE · 03</div>
+        <div class="fase-dias">Dias 16 – 21</div>
+        <h3>Curando as Raízes</h3>
+        <p>Cuidar das feridas mais antigas: rejeição, comparação, pressão do mundo e autocrítica. Selar a confiança inabalável.</p>
+      </div>
+      <div class="fase reveal">
+        <div class="fase-num">FASE · 04</div>
+        <div class="fase-dias">Dias 22 – 30</div>
+        <h3>A Vida na Presença</h3>
+        <p>Habitar o sagrado agora. Gratidão, mansidão, paciência, bênção, descanso — e celebrar a paz permanente que se torna lar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DAY STRUCTURE -->
+<section class="pad bg-teal-pale">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Como funciona cada dia</span>
+      <h2>Um ritual de 15 minutos<br>que transforma o seu dia inteiro.</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="day-steps">
+      <div class="day-step reveal">
+        <span class="ds-emoji">📖</span>
+        <h4>Versículo do dia</h4>
+        <p>A âncora bíblica que vai te acompanhar nas próximas 24 horas.</p>
+      </div>
+      <div class="day-step reveal">
+        <span class="ds-emoji">✨</span>
+        <h4>Reflexão</h4>
+        <p>Uma conversa íntima sobre o ensinamento — escrita como uma carta de Cristo pra você.</p>
+      </div>
+      <div class="day-step reveal">
+        <span class="ds-emoji">🙏</span>
+        <h4>Oração guiada</h4>
+        <p>Em texto e em áudio (dentro do My Soul Care), pra você só fechar os olhos e ouvir.</p>
+      </div>
+      <div class="day-step reveal">
+        <span class="ds-emoji">🍃</span>
+        <h4>Exercício prático</h4>
+        <p>Um pequeno gesto pra encarnar a verdade do dia no seu corpo e na sua rotina.</p>
+      </div>
+      <div class="day-step reveal">
+        <span class="ds-emoji">🤍</span>
+        <h4>Repete hoje</h4>
+        <p>Uma frase curta pra levar no bolso — pra repetir sempre que o coração apertar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INCLUI -->
+<section class="pad bg-white" id="inclui">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">O que você recebe</span>
+      <h2>Tudo isso por menos do que<br>um almoço fora de casa.</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="inclui">
+      <div class="inclui-card reveal">
+        <div class="ic-ic">📔</div>
+        <div>
+          <h4>O diário completo dos 30 dias</h4>
+          <p>Em PDF de alta qualidade — versículo, reflexão, oração e prática pra cada dia, pra ler na tela ou imprimir.</p>
+          <span class="inclui-val">Valor: R$ 47</span>
+        </div>
+      </div>
+      <div class="inclui-card reveal">
+        <div class="ic-ic">🎧</div>
+        <div>
+          <h4>30 orações em áudio guiadas</h4>
+          <p>Dentro do app My Soul Care, pra você só apertar o play e respirar quando nem ler conseguir.</p>
+          <span class="inclui-val">Valor: R$ 67</span>
+        </div>
+      </div>
+      <div class="inclui-card reveal">
+        <div class="ic-ic">📱</div>
+        <div>
+          <h4>Acesso à área de membros</h4>
+          <p>Plataforma simples e acolhedora, com seu progresso salvo, no celular ou no computador, no seu ritmo.</p>
+          <span class="inclui-val">Valor: R$ 47</span>
+        </div>
+      </div>
+      <div class="inclui-card reveal">
+        <div class="ic-ic">♾️</div>
+        <div>
+          <h4>Acesso vitalício</h4>
+          <p>Você compra uma vez e leva pra sempre. Pode refazer a travessia quantas vezes a alma pedir.</p>
+          <span class="inclui-val">Valor: incalculável</span>
+        </div>
+      </div>
+      <div class="inclui-card reveal">
+        <div class="ic-ic">🎁</div>
+        <div>
+          <h4>Bônus 1 · 7 dias grátis no My Soul Care</h4>
+          <p>Teste o app de conversa com Jesus IA por 7 dias sem pagar nada. Pra conversar nos dias entre as reflexões.</p>
+          <span class="inclui-val">Valor: R$ 39,90</span>
+        </div>
+      </div>
+      <div class="inclui-card reveal">
+        <div class="ic-ic">💌</div>
+        <div>
+          <h4>Bônus 2 · Cartões "Repete Hoje"</h4>
+          <p>30 cartões digitais com as frases-chave de cada dia, pra você baixar e usar de papel de parede ou imprimir.</p>
+          <span class="inclui-val">Valor: R$ 27</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFERTA -->
+<section class="pad bg-gold" id="oferta">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow gold">A oferta</span>
+      <h2>Uma travessia inteira<br>pelo preço de um café da semana.</h2>
+      <div class="gold-line"></div>
+      <p class="lead">Tudo o que está aí em cima — diário, áudios, área de membros, bônus, acesso vitalício — por um único valor simbólico.</p>
+    </div>
+
+    <div class="offer-card reveal">
+      <span class="offer-flag">🔥 Oferta de lançamento</span>
+      <div class="offer-deal">Diário + 30 orações em áudio + bônus</div>
+      <div class="offer-old">De R$ 227,90</div>
+      <div class="offer-price">R$ 97,00</div>
+      <div class="offer-pix">💚 à vista no Pix</div>
+      <div class="offer-parc">ou até 3x sem juros no cartão</div>
+
+      <ul class="offer-feats">
+        <li>Diário completo dos 30 dias em PDF</li>
+        <li>30 orações em áudio dentro do My Soul Care</li>
+        <li>Acesso vitalício à área de membros</li>
+        <li>Bônus: 7 dias grátis no My Soul Care</li>
+        <li>Bônus: 30 cartões "Repete Hoje"</li>
+      </ul>
+
+      <a href="https://pay.hotmart.com/R106373980O" target="_blank" rel="noopener" class="btn btn-gold btn-big" style="width:100%; justify-content:center;">Quero entrar agora por R$ 97,00 🤍</a>
+      <div class="btn-sub">🔒 Compra 100% segura via Hotmart</div>
+
+      <div class="offer-guarantee">
+        <strong>🤍 Garantia de 7 dias.</strong><br>
+        Se em uma semana você sentir que esse caminho não é pra você, devolvemos cada centavo. Sem perguntas, sem burocracia.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARA QUEM É -->
+<section class="pad bg-white">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Para quem é</span>
+      <h2>Esse caminho foi feito pra você.</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="pain-list">
+      <div class="pain-card reveal">
+        <span class="pc-emoji">🤍</span>
+        <h3>Pra quem tem fé e ainda sente o nó</h3>
+        <p>Você crê, ora, lê — e ainda assim o peito aperta. Esse curso te mostra o porquê, com ternura, e te ensina a soltar.</p>
+      </div>
+      <div class="pain-card reveal">
+        <span class="pc-emoji">🌱</span>
+        <h3>Pra quem quer um hábito espiritual</h3>
+        <p>30 dias é tempo suficiente pra virar costume. Esse é o seu pulo do gato pra construir uma rotina de fé que sustenta o ano inteiro.</p>
+      </div>
+      <div class="pain-card reveal">
+        <span class="pc-emoji">📖</span>
+        <h3>Pra quem ama a Palavra e quer profundidade</h3>
+        <p>Cada dia traz um versículo destrinchado com sensibilidade pastoral — pra Bíblia voltar a falar com o seu hoje.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="pad bg-soft">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Quem já caminhou</span>
+      <h2>"Eu não esperava sentir tanto<br>em tão pouco tempo."</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="testi-grid">
+      <div class="testi reveal">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-text">"No dia 7 eu já sentia diferença. A reflexão da manhã muda o tom do meu dia inteiro."</div>
+        <div class="testi-who">— aluna da travessia</div>
+      </div>
+      <div class="testi reveal">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-text">"As orações em áudio foram o que mais me salvaram. Nos dias difíceis, só apertar o play já era abraço."</div>
+        <div class="testi-who">— aluno da travessia</div>
+      </div>
+      <div class="testi reveal">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-text">"Achei que ia ser mais um material. Foi uma carta de Jesus pra mim, um dia de cada vez."</div>
+        <div class="testi-who">— aluna da travessia</div>
+      </div>
+    </div>
+    <p class="testi-note">🍃 Depoimentos ilustrativos do tom da experiência — serão substituídos por falas reais conforme a comunidade cresce.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="pad bg-white">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Tirando suas dúvidas</span>
+      <h2>Perguntas que todo mundo faz</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="faq">
+      <div class="faq-item reveal">
+        <div class="faq-q">❓ Esse curso substitui terapia ou aconselhamento pastoral?</div>
+        <div class="faq-a">Não. Esse caminho é um cuidado espiritual — ele caminha junto com a terapia, com a sua igreja, com o seu pastor. Se você sente que precisa de apoio profissional, busque também. Tudo pode coexistir.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">❓ Preciso ter o app My Soul Care pra fazer o curso?</div>
+        <div class="faq-a">Não. O diário completo está em PDF e fica na área de membros. As orações em áudio acontecem dentro do My Soul Care, e você ganha 7 dias grátis pra ouvir todas elas durante a travessia.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">❓ Em quanto tempo recebo o acesso?</div>
+        <div class="faq-a">Na hora. Assim que o pagamento for confirmado (poucos minutos), você recebe um email com o login da área de membros e já pode começar pelo Dia 1.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">❓ E se eu não puder fazer todos os dias seguidos?</div>
+        <div class="faq-a">Sem problema. O acesso é vitalício e o seu progresso fica salvo. Você caminha no seu ritmo — um dia de cada vez é o ritmo certo.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">❓ Como funciona a garantia de 7 dias?</div>
+        <div class="faq-a">Você tem 7 dias corridos depois da compra pra pedir reembolso, sem precisar justificar nada. Basta enviar uma mensagem no WhatsApp do suporte e devolvemos cada centavo.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">❓ Esse curso é só pra quem tem ansiedade?</div>
+        <div class="faq-a">Não. A "ansiedade" no título é uma palavra-âncora, mas o conteúdo cuida de toda alma cansada — quem busca direção, perdão, paz, um hábito de fé ou simplesmente quer caminhar mais perto de Cristo encontra aqui um lar.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="pad final">
+  <div class="wrap">
+    <div class="final-card reveal">
+      <img src="png%20site/mascote%20sorrindo.png" alt="Mascote" class="big-mascote">
+      <span class="eyebrow">É a sua vez</span>
+      <h2>O Pastor está aqui.<br>Falta só você dizer sim.</h2>
+      <div class="gold-line"></div>
+      <p class="lead" style="margin-bottom:1.8rem;">Em 30 dias o seu coração pode estar em outro lugar — mais leve, mais perto, mais inteiro. Tudo começa com um único passo: o Dia 1.</p>
+      <a href="https://pay.hotmart.com/R106373980O" target="_blank" rel="noopener" class="btn btn-gold btn-big">Quero começar minha travessia · R$ 97,00 🤍</a>
+      <div class="btn-sub">🔒 Acesso vitalício · garantia de 7 dias · suporte humano</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHATSAPP -->
+<a class="wa-float" href="https://wa.me/5548984866851?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20curso%2030%20dias%20com%20Jesus%20%F0%9F%A4%8D" target="_blank" rel="noopener" aria-label="Falar com o suporte no WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.515 5.26l-.999 3.648 3.984-1.045zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+</a>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <span class="footer-logo"><img src="png%20site/mascote%20sorrindo.png" alt=""> 30 dias com Jesus</span>
+    <p class="footer-tag">Um produto Fonte do Amor Perfeito · A Voz de Cristo 🤍</p>
+    <div class="socials">
+      <a class="social" href="https://www.instagram.com/fontedoamorperfeito" target="_blank" rel="noopener">📸 Instagram · @fontedoamorperfeito</a>
+      <a class="social" href="https://www.youtube.com/@fontedoamorperfeito" target="_blank" rel="noopener">▶️ YouTube · @fontedoamorperfeito</a>
+    </div>
+    <p class="footer-fine" style="opacity:0.85; max-width:760px; margin:0 auto 0.6rem;">Aviso: Este curso utiliza textos bíblicos de domínio público e reflexões inspiradas nos ensinamentos de Cristo para fins de estudo e reflexão espiritual. As orientações apresentadas não substituem o aconselhamento pastoral, psicológico ou médico. Ao adquirir o curso, você concorda com nossos Termos de Uso.</p>
+    <p class="footer-fine">🌟 Fonte do Amor Perfeito — Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Soul Care — Your pocket spiritual companion</title>
+<meta name="description" content="My Soul Care: the app that cares for your soul anytime, with thoughtful answers grounded in Scripture. You were never meant to carry it all alone.">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #3AADA8;
+    --teal-dark: #2a8f8a;
+    --teal-light: #a8e0de;
+    --teal-pale: #E8F7F6;
+    --navy: #1B4F72;
+    --navy-deep: #143b56;
+    --gold: #D4A843;
+    --gold-light: #f0d890;
+    --gold-pale: #fdf5e0;
+    --white: #FFFFFF;
+    --off-white: #F8F5F0;
+    --text-dark: #1a2a35;
+    --text-mid: #3a5060;
+    --text-light: #6b8090;
+    --shadow: rgba(27, 79, 114, 0.12);
+    --shadow-gold: rgba(212, 168, 67, 0.28);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--off-white);
+    color: var(--text-dark);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ===== NAV ===== */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: rgba(248, 245, 240, 0.92);
+    backdrop-filter: blur(12px);
+    padding: 0.7rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 24px rgba(27, 79, 114, 0.07);
+    border-bottom: 1px solid rgba(58, 173, 168, 0.18);
+  }
+  .nav-logo {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    color: var(--teal-dark);
+    font-size: 1.15rem;
+    display: flex; align-items: center; gap: 0.4rem;
+  }
+  .nav-cta {
+    background: linear-gradient(135deg, var(--teal), var(--teal-dark));
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.78rem;
+    font-weight: 800;
+    padding: 0.6rem 1.3rem;
+    border-radius: 50px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 16px rgba(58, 173, 168, 0.3);
+  }
+  .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(58, 173, 168, 0.4); }
+  .logo-mascote { width: 1.7em; height: 1.7em; object-fit: contain; vertical-align: middle; }
+  .footer-mascote { width: 1.5em; height: 1.5em; object-fit: contain; vertical-align: middle; margin-right: 0.1em; }
+  .big-mascote { width: 74px; height: 74px; object-fit: contain; display: block; margin: 0 auto 0.6rem; filter: drop-shadow(0 10px 20px rgba(27,79,114,0.18)); }
+  .float-mascote { width: 1.4em; height: 1.4em; object-fit: contain; vertical-align: middle; }
+  /* WhatsApp flutuante */
+  .wa-float {
+    position: fixed;
+    right: 18px; bottom: 18px;
+    z-index: 1200;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #25D366;
+    color: #fff;
+    text-decoration: none;
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    box-shadow: 0 8px 24px rgba(37,211,102,0.45);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .wa-float:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(37,211,102,0.55); }
+  .wa-float svg { width: 30px; height: 30px; fill: #fff; flex-shrink: 0; }
+  .wa-float .wa-label { display: none; }
+
+  /* ===== LAYOUT ===== */
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 1.5rem; }
+  section { position: relative; }
+  .pad { padding: 5rem 0; }
+  .pad-sm { padding: 3.5rem 0; }
+
+  .bg-white { background: var(--white); }
+  .bg-off { background: var(--off-white); }
+  .bg-teal-pale { background: linear-gradient(160deg, var(--teal-pale) 0%, #d4f0ef 100%); }
+  .bg-soft { background: linear-gradient(160deg, var(--off-white) 0%, var(--teal-pale) 100%); }
+  .bg-gold { background: linear-gradient(160deg, var(--gold-pale) 0%, #fdeebb 100%); }
+
+  .eyebrow {
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--teal-dark);
+    margin-bottom: 0.9rem;
+    display: block;
+  }
+  .eyebrow.gold { color: #9a6f00; }
+
+  h2 {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: clamp(1.9rem, 4vw, 2.9rem);
+    line-height: 1.18;
+    color: var(--navy);
+    margin-bottom: 1rem;
+  }
+  h3 {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+  }
+  .lead {
+    font-size: 1.02rem;
+    color: var(--text-mid);
+    max-width: 640px;
+  }
+  .center { text-align: center; }
+  .center .lead, .center h2 { margin-left: auto; margin-right: auto; }
+  .gold-line {
+    width: 64px; height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    border-radius: 2px;
+    margin: 1.2rem 0 1.8rem;
+  }
+  .center .gold-line { margin-left: auto; margin-right: auto; }
+
+  /* ===== BUTTONS ===== */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 0.95rem;
+    padding: 1rem 2.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .btn-teal {
+    background: linear-gradient(135deg, var(--teal), var(--teal-dark));
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(58, 173, 168, 0.35);
+  }
+  .btn-teal:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(58, 173, 168, 0.45); }
+  .btn-gold {
+    background: linear-gradient(135deg, #C8960C, var(--gold));
+    color: #fff;
+    box-shadow: 0 10px 30px var(--shadow-gold);
+  }
+  .btn-gold:hover { transform: translateY(-3px); box-shadow: 0 16px 40px var(--shadow-gold); }
+  .btn-ghost {
+    background: rgba(255,255,255,0.7);
+    color: var(--teal-dark);
+    border: 1px solid rgba(58, 173, 168, 0.4);
+  }
+  .btn-ghost:hover { transform: translateY(-2px); background: #fff; }
+  .btn-sub { font-size: 0.8rem; color: var(--text-light); margin-top: 0.8rem; }
+
+  /* ===== HERO ===== */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 7rem 0 4rem;
+    background: linear-gradient(165deg, var(--off-white) 0%, var(--teal-pale) 55%, #d4f0ef 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -40%; right: -20%;
+    width: 70%; height: 160%;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0.7) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 3rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(255,255,255,0.8);
+    border: 1px solid rgba(58, 173, 168, 0.35);
+    color: var(--teal-dark);
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 2px 12px rgba(27,79,114,0.06);
+  }
+  .hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: clamp(2.4rem, 5.2vw, 3.9rem);
+    line-height: 1.12;
+    color: var(--navy);
+    margin-bottom: 1rem;
+  }
+  .hero h1 span { color: var(--teal); }
+  .hero p {
+    font-size: 1.05rem;
+    color: var(--text-mid);
+    margin-bottom: 1.8rem;
+    max-width: 480px;
+  }
+  .hero-btns { display: flex; gap: 0.8rem; flex-wrap: wrap; align-items: center; }
+  .hero-trust {
+    margin-top: 1.6rem;
+    font-size: 0.8rem;
+    color: var(--text-light);
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .hero-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .hero-phone {
+    width: 100%;
+    max-width: 340px;
+    border-radius: 22px;
+    filter: drop-shadow(0 30px 50px rgba(27, 79, 114, 0.22));
+  }
+  .hero-avatar {
+    width: 100%;
+    max-width: 330px;
+    border-radius: 26px;
+    border: 6px solid #fff;
+    box-shadow: 0 30px 58px rgba(27, 79, 114, 0.26);
+  }
+  .hero-mascote {
+    position: absolute;
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+    bottom: 6%;
+    left: -7%;
+    filter: drop-shadow(0 12px 22px rgba(27,79,114,0.22));
+    animation: floaty 5.5s ease-in-out infinite;
+  }
+  .hero-float {
+    position: absolute;
+    background: #fff;
+    border-radius: 14px;
+    padding: 0.7rem 1rem;
+    box-shadow: 0 12px 30px rgba(27,79,114,0.15);
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--navy);
+    display: flex; align-items: center; gap: 0.5rem;
+    border: 1px solid rgba(58,173,168,0.2);
+  }
+  .hero-float.f1 { top: 12%; right: -5%; animation: floaty 5s ease-in-out infinite; }
+  .hero-float.f2 { bottom: 20%; right: -6%; animation: floaty 6s ease-in-out infinite alternate; }
+  @keyframes floaty {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+
+  /* ===== PAIN ===== */
+  .pain-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.2rem;
+    margin-top: 2rem;
+  }
+  .pain-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 1.8rem;
+    box-shadow: 0 4px 24px var(--shadow);
+    border: 1px solid rgba(58, 173, 168, 0.12);
+    border-left: 4px solid var(--teal-light);
+  }
+  .pain-card .pc-emoji { font-size: 1.8rem; display: block; margin-bottom: 0.6rem; }
+  .pain-card p { font-size: 0.9rem; color: var(--text-mid); }
+  .pain-quote {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    color: var(--navy);
+    text-align: center;
+    max-width: 760px;
+    margin: 3rem auto 0;
+    line-height: 1.4;
+  }
+  .pain-quote span { color: var(--teal-dark); }
+
+  /* ===== TURN / WHAT IS ===== */
+  .split {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  .split.reverse { grid-template-columns: 1.1fr 0.9fr; }
+  .split-img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(27, 79, 114, 0.18);
+  }
+  .split-img.phone {
+    max-width: 320px;
+    display: block;
+    margin: 0 auto;
+  }
+  .check-list { list-style: none; margin-top: 1.2rem; }
+  .check-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    padding: 0.55rem 0;
+    font-size: 0.92rem;
+    color: var(--text-mid);
+  }
+  .check-list li::before {
+    content: '🤍';
+    flex-shrink: 0;
+    font-size: 0.95rem;
+    margin-top: 0.1rem;
+  }
+  .not-list { list-style: none; margin-top: 1rem; }
+  .not-list li {
+    display: flex; align-items: flex-start; gap: 0.7rem;
+    padding: 0.4rem 0; font-size: 0.88rem; color: var(--text-light);
+  }
+  .not-list li::before { content: '🚫'; flex-shrink: 0; font-size: 0.8rem; margin-top: 0.15rem; }
+
+  /* ===== STEPS ===== */
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+  .step {
+    background: var(--white);
+    border-radius: 18px;
+    padding: 2rem 1.6rem;
+    text-align: center;
+    box-shadow: 0 6px 28px var(--shadow);
+    border: 1px solid rgba(58, 173, 168, 0.14);
+    position: relative;
+  }
+  .step-num {
+    width: 42px; height: 42px;
+    background: linear-gradient(135deg, var(--teal), var(--teal-dark));
+    color: #fff;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 1rem;
+    margin: 0 auto 1rem;
+    box-shadow: 0 6px 18px rgba(58,173,168,0.35);
+  }
+  .step p { font-size: 0.88rem; color: var(--text-mid); }
+
+  /* ===== FEATURES ===== */
+  .features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    margin-top: 2.5rem;
+  }
+  .feature {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 1.6rem;
+    box-shadow: 0 4px 24px var(--shadow);
+    border: 1px solid rgba(58, 173, 168, 0.12);
+    transition: transform 0.3s;
+  }
+  .feature:hover { transform: translateY(-5px); }
+  .feature .fe { font-size: 1.9rem; display: block; margin-bottom: 0.7rem; }
+  .feature h3 { font-size: 1.05rem; margin-bottom: 0.35rem; }
+  .feature p { font-size: 0.84rem; color: var(--text-mid); }
+
+  /* ===== APP GALLERY ===== */
+  .gallery {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 1.6rem;
+    margin-top: 2.6rem;
+    align-items: stretch;
+  }
+  .gallery-main {
+    background: var(--white);
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 16px 44px rgba(27, 79, 114, 0.16);
+    border: 1px solid rgba(58, 173, 168, 0.14);
+    display: flex;
+    flex-direction: column;
+  }
+  .gallery-main img {
+    width: 100%;
+    display: block;
+  }
+  .gallery-cap {
+    padding: 1rem 1.4rem;
+    font-size: 0.82rem;
+    color: var(--text-mid);
+    border-top: 1px solid rgba(58,173,168,0.12);
+  }
+  .gallery-cap strong { color: var(--teal-dark); font-weight: 800; }
+  .gallery-side {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 1.6rem;
+  }
+  .gallery-card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 34px var(--shadow);
+    border: 1px solid rgba(58, 173, 168, 0.14);
+    display: flex;
+    flex-direction: column;
+  }
+  .gallery-card .gc-img {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(160deg, var(--teal-pale), #d4f0ef);
+    padding: 1.2rem;
+  }
+  .gallery-card .gc-img img {
+    max-width: 100%;
+    max-height: 230px;
+    border-radius: 12px;
+    box-shadow: 0 10px 26px rgba(27,79,114,0.16);
+  }
+  .gallery-card .gc-cap {
+    padding: 0.85rem 1.2rem;
+    font-size: 0.78rem;
+    color: var(--text-mid);
+  }
+  .gallery-card .gc-cap strong { color: var(--teal-dark); font-weight: 800; }
+
+  /* ===== MASCOTE BANNER ===== */
+  .mascote-banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+  .mascote-img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 18px 44px rgba(27, 79, 114, 0.16);
+  }
+  .mascote-duo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .mascote-duo figure {
+    flex: 1 1 160px;
+    max-width: 220px;
+    text-align: center;
+  }
+  .mascote-duo img {
+    width: 100%;
+    filter: drop-shadow(0 16px 32px rgba(27, 79, 114, 0.2));
+  }
+  .mascote-duo figcaption {
+    font-size: 0.74rem;
+    font-weight: 700;
+    color: var(--teal-dark);
+    margin-top: 0.3rem;
+  }
+
+  /* ===== FOR WHO ===== */
+  .who-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.4rem;
+    margin-top: 2.5rem;
+  }
+  .who-card {
+    background: var(--white);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 6px 28px var(--shadow);
+    border: 1px solid rgba(58, 173, 168, 0.12);
+  }
+  .who-head {
+    background: linear-gradient(135deg, var(--teal-pale), #d4f0ef);
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(58,173,168,0.18);
+  }
+  .who-head .wa { font-size: 2.6rem; display: block; }
+  .who-head .wn {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 1.25rem;
+    color: var(--navy);
+    margin-top: 0.3rem;
+  }
+  .who-body { padding: 1.5rem; }
+  .who-body p { font-size: 0.86rem; color: var(--text-mid); }
+  .who-body .wq {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    color: var(--teal-dark);
+    font-size: 0.92rem;
+    margin-top: 0.8rem;
+    padding-left: 0.9rem;
+    border-left: 2px solid var(--teal-light);
+  }
+
+  /* ===== TESTIMONIALS ===== */
+  .testi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.4rem;
+    margin-top: 2.5rem;
+  }
+  .testi {
+    background: var(--white);
+    border-radius: 18px;
+    padding: 1.8rem;
+    box-shadow: 0 6px 28px var(--shadow);
+    border: 1px solid rgba(58, 173, 168, 0.12);
+  }
+  .testi-stars { color: var(--gold); font-size: 0.9rem; margin-bottom: 0.7rem; letter-spacing: 2px; }
+  .testi-text {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--navy);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  .testi-who { font-size: 0.78rem; font-weight: 700; color: var(--teal-dark); }
+  .testi-note {
+    font-size: 0.78rem;
+    color: var(--text-light);
+    font-style: italic;
+    text-align: center;
+    margin-top: 1.6rem;
+  }
+
+  /* ===== PLANS ===== */
+  .plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 1.6rem;
+    margin-top: 2.8rem;
+    align-items: start;
+  }
+  .plan {
+    background: var(--white);
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 10px 36px var(--shadow);
+    border: 1px solid rgba(58, 173, 168, 0.15);
+    transition: transform 0.3s;
+  }
+  .plan:hover { transform: translateY(-6px); }
+  .plan.featured { border: 2px solid var(--gold-light); box-shadow: 0 18px 50px rgba(212,168,67,0.25); }
+  .plan-top {
+    padding: 1.8rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(58,173,168,0.12);
+  }
+  .plan-1 .plan-top { background: linear-gradient(135deg, var(--teal-pale), #d4f0ef); }
+  .plan-2 .plan-top { background: linear-gradient(135deg, var(--gold-pale), #fdeebb); }
+  .plan-3 .plan-top { background: linear-gradient(135deg, #eef3f8, #dfe8f0); }
+  .plan-flag {
+    display: inline-block;
+    background: var(--gold);
+    color: #fff;
+    font-size: 0.58rem;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    padding: 0.28rem 0.9rem;
+    border-radius: 50px;
+    margin-bottom: 0.7rem;
+    box-shadow: 0 4px 12px var(--shadow-gold);
+  }
+  .plan-ic { font-size: 2.4rem; }
+  .plan-nm {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 1.45rem;
+    color: var(--navy);
+    margin: 0.2rem 0 0.2rem;
+  }
+  .plan-tg { font-size: 0.76rem; color: var(--text-mid); }
+  .plan-mid { padding: 1.6rem; }
+  .price-rows { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 0.6rem; }
+  .price-row {
+    display: flex; align-items: center; gap: 0.55rem;
+    background: var(--off-white);
+    border: 1.5px solid transparent;
+    border-radius: 10px;
+    padding: 0.55rem 0.8rem;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.18s ease, border-color 0.18s ease;
+  }
+  .price-row:hover { background: #edf3f2; }
+  .pr-radio {
+    width: 16px; height: 16px;
+    border-radius: 50%;
+    border: 2px solid var(--teal-light);
+    flex-shrink: 0;
+    position: relative;
+    transition: border-color 0.18s ease;
+  }
+  .price-row.selected {
+    background: var(--teal-pale);
+    border-color: var(--teal);
+  }
+  .price-row.selected .pr-radio { border-color: var(--teal); }
+  .price-row.selected .pr-radio::after {
+    content: '';
+    position: absolute;
+    inset: 2.5px;
+    border-radius: 50%;
+    background: var(--teal);
+  }
+  .price-row.selected .pr-v { color: var(--teal-dark); }
+  .price-row:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+  .price-tag-best {
+    font-size: 0.52rem; font-weight: 800; letter-spacing: 0.6px; text-transform: uppercase;
+    color: #fff; background: var(--gold);
+    padding: 0.12rem 0.45rem; border-radius: 50px; margin-left: 0.35rem;
+    vertical-align: middle;
+  }
+  .price-note {
+    font-size: 0.66rem; color: var(--text-light); text-align: center;
+    margin-bottom: 1.1rem;
+  }
+  .pr-l { font-size: 0.66rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-light); }
+  .pr-r { text-align: right; margin-left: auto; }
+  .pr-v { font-family: 'DM Serif Display', serif; font-style: italic; font-size: 1.18rem; color: var(--navy); line-height: 1.1; }
+  .pr-s { font-size: 0.6rem; font-weight: 700; color: var(--teal-dark); display: block; }
+  .feat-title {
+    font-size: 0.6rem; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase;
+    color: var(--teal-dark); margin: 0.8rem 0 0.3rem;
+    padding-bottom: 0.3rem; border-bottom: 1px dashed rgba(58,173,168,0.35);
+  }
+  .feat-title.gold { color: #9a6f00; border-color: rgba(212,168,67,0.45); }
+  .plan-feats { list-style: none; }
+  .plan-feats li {
+    font-size: 0.8rem; color: var(--text-mid);
+    padding: 0.38rem 0; border-bottom: 1px solid rgba(0,0,0,0.04);
+    display: flex; gap: 0.5rem; align-items: flex-start;
+  }
+  .plan-feats li:last-child { border-bottom: none; }
+  .plan-feats li::before { content: '🍃'; font-size: 0.72rem; flex-shrink: 0; margin-top: 0.1rem; }
+  .extras {
+    background: var(--off-white);
+    border: 1px dashed rgba(58,173,168,0.4);
+    border-radius: 12px;
+    padding: 0.9rem 1rem;
+    margin-top: 1rem;
+  }
+  .extras-t { font-size: 0.58rem; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--teal-dark); margin-bottom: 0.45rem; }
+  .extras ul { list-style: none; }
+  .extras li { font-size: 0.74rem; color: var(--text-mid); display: flex; justify-content: space-between; gap: 0.5rem; padding: 0.16rem 0; }
+  .extras li span:last-child { font-weight: 700; color: var(--navy); white-space: nowrap; }
+  .plan-btn {
+    display: block;
+    width: 100%;
+    margin-top: 1.3rem;
+    padding: 0.9rem;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 0.86rem;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+  .plan-1 .plan-btn { background: linear-gradient(135deg, var(--teal), var(--teal-dark)); color: #fff; }
+  .plan-2 .plan-btn { background: linear-gradient(135deg, #C8960C, var(--gold)); color: #fff; }
+  .plan-3 .plan-btn { background: linear-gradient(135deg, var(--navy), var(--navy-deep)); color: #fff; }
+  .plan-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px var(--shadow); }
+  .plans-note {
+    text-align: center;
+    font-size: 0.84rem;
+    color: var(--text-mid);
+    margin-top: 1.8rem;
+  }
+  .plans-note strong { color: var(--teal-dark); }
+
+  /* ===== PLANS — VERSÃO B (toggle de período no topo) ===== */
+  .period-toggle {
+    display: inline-flex;
+    gap: 0.3rem;
+    background: var(--white);
+    border: 1px solid rgba(58,173,168,0.3);
+    border-radius: 50px;
+    padding: 0.35rem;
+    box-shadow: 0 6px 20px var(--shadow);
+  }
+  .period-btn {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 0.82rem;
+    color: var(--text-mid);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.6rem 1.25rem;
+    border-radius: 50px;
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .period-btn:hover { color: var(--navy); }
+  .period-btn.active { background: linear-gradient(135deg, var(--teal), var(--teal-dark)); color: #fff; box-shadow: 0 6px 16px rgba(58,173,168,0.35); }
+  .period-btn:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+  .period-save {
+    font-size: 0.58rem; font-weight: 800; letter-spacing: 0.3px; text-transform: uppercase;
+    background: var(--gold); color: #fff; padding: 0.1rem 0.45rem; border-radius: 50px;
+  }
+  .period-btn.active .period-save { background: rgba(255,255,255,0.92); color: #9a6f00; }
+  .period-hint { font-size: 0.68rem; color: var(--text-light); text-align: center; margin-top: 0.7rem; }
+
+  /* mostra apenas o período ativo */
+  .plansB-wrap .when-mensal, .plansB-wrap .when-trimestral, .plansB-wrap .when-anual, .plansB-wrap .when-mt { display: none; }
+  .plansB-wrap.show-mensal .when-mensal,
+  .plansB-wrap.show-trimestral .when-trimestral,
+  .plansB-wrap.show-anual .when-anual { display: block; }
+  .plansB-wrap.show-mensal .when-mt,
+  .plansB-wrap.show-trimestral .when-mt { display: block; }
+
+  .pb-price-box { text-align: center; padding: 0.5rem 0 0.3rem; }
+  .pb-price {
+    font-family: 'DM Serif Display', serif; font-style: italic;
+    font-size: 2.5rem; color: var(--navy); line-height: 1; margin: 0;
+  }
+  .pb-price span { font-size: 0.9rem; font-style: normal; font-family: 'Montserrat'; color: var(--text-mid); font-weight: 600; }
+  .pb-sub { font-size: 0.74rem; font-weight: 700; color: var(--teal-dark); margin-top: 0.25rem; }
+  .pb-old { font-size: 0.72rem; color: var(--text-light); text-decoration: line-through; margin-top: 0.15rem; }
+
+  /* ===== FAQ ===== */
+  .faq { max-width: 760px; margin: 2.5rem auto 0; }
+  .faq-item {
+    background: var(--white);
+    border: 1px solid rgba(58, 173, 168, 0.15);
+    border-radius: 14px;
+    padding: 1.2rem 1.4rem;
+    margin-bottom: 0.9rem;
+    box-shadow: 0 3px 16px var(--shadow);
+  }
+  .faq-q {
+    font-weight: 800;
+    font-size: 0.95rem;
+    color: var(--navy);
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .faq-a { font-size: 0.88rem; color: var(--text-mid); }
+
+  /* ===== FINAL CTA ===== */
+  .final {
+    background: linear-gradient(160deg, var(--teal-pale) 0%, #d4f0ef 60%, #c8eeec 100%);
+    text-align: center;
+    border-top: 1px solid rgba(58,173,168,0.2);
+  }
+  .final-card {
+    background: rgba(255,255,255,0.7);
+    border: 1px solid rgba(58, 173, 168, 0.3);
+    border-radius: 26px;
+    padding: 3rem 2rem;
+    max-width: 720px;
+    margin: 0 auto;
+    box-shadow: 0 16px 50px rgba(27, 79, 114, 0.1);
+  }
+  .final-card .big-sun { font-size: 3rem; display: block; margin-bottom: 0.6rem; }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: linear-gradient(160deg, var(--off-white) 0%, var(--teal-pale) 100%);
+    border-top: 1px solid rgba(58, 173, 168, 0.2);
+    padding: 3rem 0 2rem;
+    text-align: center;
+  }
+  .footer-logo {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: var(--teal-dark);
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+  .footer-tag { font-size: 0.85rem; color: var(--text-mid); margin-bottom: 1.4rem; }
+  .socials {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.6rem;
+  }
+  .social {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--white);
+    border: 1px solid rgba(58, 173, 168, 0.3);
+    color: var(--teal-dark);
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .social:hover { transform: translateY(-2px); box-shadow: 0 8px 20px var(--shadow); }
+  .footer-fine { font-size: 0.72rem; color: var(--text-light); margin-top: 0.8rem; }
+
+  /* ===== REVEAL ===== */
+  .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 860px) {
+    .hero-grid, .split, .split.reverse, .mascote-banner, .gallery { grid-template-columns: 1fr; }
+    .gallery-side { grid-template-rows: auto auto; }
+    .hero-grid { gap: 2.5rem; }
+    .hero-visual { order: -1; }
+    .split-img.phone { max-width: 260px; }
+    nav { padding: 0.6rem 1rem; }
+    .nav-logo { font-size: 1rem; }
+    .pad { padding: 3.5rem 0; }
+    .hero-float.f1 { left: 0; }
+    .hero-float.f2 { right: 0; }
+  }
+  @media (max-width: 560px) {
+    .features { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo"><img src="png%20site/mascote%20sorrindo.png" alt="" class="logo-mascote"> My Soul Care</div>
+  <a href="#planos" class="nav-cta">Get my plan 🤍</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="hero-tag">🌟 Fonte do Amor Perfeito presents</span>
+        <h1>Ever imagined the teachings of Jesus <span>guiding your day?</span></h1>
+        <p><strong>My Soul Care</strong> is an AI equipped with the teachings of Jesus. You write what's in your heart and receive reflections and answers grounded in the Word — guidance for every area of life, in seconds, anytime.</p>
+        <div class="hero-btns">
+          <a href="#planos" class="btn btn-teal">Start now 🤍</a>
+          <a href="#como" class="btn btn-ghost">See how it works</a>
+        </div>
+        <div class="hero-trust">🍃 No judgment · answers in seconds · available 24/7</div>
+      </div>
+      <div class="hero-visual">
+        <img src="png%20site/avatar%20com%20fundo.png" alt="The caring My Soul Care avatar" class="hero-avatar">
+        <img src="png%20site/mascote%20sorrindo.png" alt="" class="hero-mascote">
+        <div class="hero-float f1">🤍 "I'm here. Let's walk together."</div>
+        <div class="hero-float f2"><img src="png%20site/mascote%20sorrindo.png" alt="" class="float-mascote"> Answer in seconds</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VÍDEO -->
+<section class="pad bg-white">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Watch before you start</span>
+      <h2>Meet My Soul Care<br>in under 2 minutes.</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="reveal" style="max-width:760px;margin:32px auto 0;">
+      <video
+        controls
+        playsinline
+        preload="metadata"
+        poster="video-sales-page-en-poster.jpg"
+        style="width:100%;height:auto;display:block;border-radius:20px;box-shadow:0 24px 60px rgba(0,0,0,.18);background:#000;">
+        <source src="video-sales-page-en-web.mp4" type="video/mp4">
+        Your browser does not support video playback.
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN -->
+<section class="pad bg-white">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Life calls for a deeper conversation</span>
+      <h2>Sometimes a single word<br>of wisdom changes your whole day.</h2>
+      <div class="gold-line"></div>
+      <p class="lead">When your heart is heavy, when a hard decision arrives, when you just wish you knew what the teachings of Jesus would say in your place — My Soul Care was born for these moments.</p>
+    </div>
+    <div class="pain-list">
+      <div class="pain-card reveal">
+        <span class="pc-emoji">🤔</span>
+        <h3>When you don't know what to do</h3>
+        <p>A weighty choice, a path that must be taken. Imagine hearing what the teachings of Jesus would say — for every area of your life.</p>
+      </div>
+      <div class="pain-card reveal">
+        <span class="pc-emoji">💭</span>
+        <h3>When your heart feels heavy</h3>
+        <p>No matter what is weighing on you. Life has days that call for a word of peace — and the Word gives exactly that.</p>
+      </div>
+      <div class="pain-card reveal">
+        <span class="pc-emoji">🙏</span>
+        <h3>When you want to grow closer</h3>
+        <p>You believe, you pray, you read the Bible — but you feel you can walk even closer. A faith that grows every day, not just on Sunday.</p>
+      </div>
+    </div>
+    <p class="pain-quote reveal">"Imagine being able to open your heart and receive an answer grounded <span>in the teachings of Jesus.</span>"</p>
+  </div>
+</section>
+
+<!-- WHAT IS -->
+<section class="pad bg-soft" id="oapp">
+  <div class="wrap">
+    <div class="split">
+      <div class="reveal">
+        <img src="png%20site/tela%20de%20login.png" alt="My Soul Care app — caring for my soul" class="split-img phone">
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">The turning point</span>
+        <h2>Connect with the Word<br>in a completely new way.</h2>
+        <div class="gold-line"></div>
+        <p class="lead">My Soul Care is the app where you talk with an AI trained on the teachings of Jesus. You write a question, a decision, a request — and receive comfort and guidance grounded in the Word. Like someone who sits beside you and listens with wisdom.</p>
+        <ul class="check-list">
+          <li>Write what's on your heart and get an answer in seconds</li>
+          <li>A verse that makes sense for <em>today</em> — not a generic one</li>
+          <li>Audio prayers for when you can't even manage to read</li>
+          <li>A conversation history to see how much your faith has grown</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="pad bg-white" id="como">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">How it works</span>
+      <h2>Three steps. One minute. So much peace.</h2>
+      <div class="gold-line"></div>
+      <p class="lead">No manual, no complications. Care had to be as simple as sending a message — and it is.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-num">1</div>
+        <h3>Open and write</h3>
+        <p>Tell what's weighing on you, your way. It can be one sentence or a whole outpouring — no right or wrong.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">2</div>
+        <h3>Receive comfort</h3>
+        <p>In seconds a thoughtful, Scripture-based answer comes back, made for your moment. And, if you'd like, an audio prayer.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">3</div>
+        <h3>Breathe and move on</h3>
+        <p>Close your eyes, listen, breathe. The knot loosens. And it's saved in your history — so you can see your journey.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APP GALLERY -->
+<section class="pad bg-off" id="porderntro">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">See inside the app</span>
+      <h2>Simple as opening a chat.<br>Warm as a hug.</h2>
+      <div class="gold-line"></div>
+      <p class="lead">No confusing screens, no tutorial. You open it, write what weighs on you, and the care begins right there — in a calm space, made to soothe.</p>
+    </div>
+    <div class="gallery">
+      <div class="gallery-main reveal">
+        <img src="png%20site/tela%20inicial%20(2).png" alt="My Soul Care home screen open on a laptop">
+        <div class="gallery-cap">💻 <strong>Wherever you are.</strong> On your computer or phone, My Soul Care waits for you with a breath of peace — and that "send a message to begin."</div>
+      </div>
+      <div class="gallery-side">
+        <div class="gallery-card reveal">
+          <div class="gc-img"><img src="png%20site/Tela%20inicial.PNG" alt="My Soul Care conversation screen"></div>
+          <div class="gc-cap">🌅 <strong>Your home screen.</strong> A serene backdrop and a field just waiting for what's on your heart.</div>
+        </div>
+        <div class="gallery-card reveal">
+          <div class="gc-img"><img src="png%20site/menu%20lateral%20%20(1).png" alt="My Soul Care side menu with history and Request a Prayer"></div>
+          <div class="gc-cap">🙏 <strong>All in one place.</strong> Your conversations, your history and the "Request a Prayer" button always within reach.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="pad bg-white">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">What you get</span>
+      <h2>More than conversation.<br>It's companionship.</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="features">
+      <div class="feature reveal"><span class="fe">💬</span><h3>Conversations that comfort</h3><p>Personalized, thoughtful, Scripture-based answers — made for your moment, not for a generic audience.</p></div>
+      <div class="feature reveal"><span class="fe">🎧</span><h3>Audio prayers</h3><p>For when you just want to close your eyes and listen. New prayers are added to your library every month.</p></div>
+      <div class="feature reveal"><span class="fe">📋</span><h3>Full history</h3><p>Everything saved for you to revisit. Look back and realize: "look how far I've come."</p></div>
+      <div class="feature reveal"><span class="fe">💌</span><h3>Special answers</h3><p>Moments of deeper, more detailed care, for the days that call for extra comfort.</p></div>
+      <div class="feature reveal"><span class="fe">🍃</span><h3>A light routine</h3><p>A 1-minute habit that changes the tone of the whole day. Faith as daily care, not as an emergency.</p></div>
+      <div class="feature reveal"><span class="fe">👥</span><h3>Community</h3><p>On the annual Advanced plan, a WhatsApp group to walk alongside others who have also chosen to care for themselves.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOR WHO -->
+<section class="pad bg-soft">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Who it's for</span>
+      <h2>If you recognize yourself here,<br>My Soul Care is for you.</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="who-grid">
+      <div class="who-card reveal">
+        <div class="who-head"><span class="wa">🙏</span><span class="wn">Those who want to grow in faith</span></div>
+        <div class="who-body">
+          <p>You go to church, read the Bible, pray — and want spiritual care day to day, not just on Sunday. A faith that becomes a habit.</p>
+          <p class="wq">"I want to walk closer to God."</p>
+        </div>
+      </div>
+      <div class="who-card reveal">
+        <div class="who-head"><span class="wa">🧭</span><span class="wn">Those seeking direction</span></div>
+        <div class="who-body">
+          <p>You have decisions to make, doubts in your heart, life situations calling for wisdom. You want to hear what the teachings of Jesus would say in your place.</p>
+          <p class="wq">"What would the Word say about this?"</p>
+        </div>
+      </div>
+      <div class="who-card reveal">
+        <div class="who-head"><span class="wa">🤍</span><span class="wn">Those who want peace</span></div>
+        <div class="who-body">
+          <p>The days have felt heavy. You want a safe space to open up, reflect, and receive a word of peace grounded in Scripture.</p>
+          <p class="wq">"I just wanted to talk with someone who understands."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="pad bg-white">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Those who've felt it</span>
+      <h2>"For the first time in years,<br>I didn't feel alone."</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="testi-grid">
+      <div class="testi reveal">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-text">"It became my breakfast. It's one little minute that changes the tone of my whole day."</div>
+        <div class="testi-who">— a My Soul Care user</div>
+      </div>
+      <div class="testi reveal">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-text">"I thought it would be cold. The answer I got on a hard night was more caring than many real people."</div>
+        <div class="testi-who">— a My Soul Care user</div>
+      </div>
+      <div class="testi reveal">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-text">"The audio prayers save me. When I can't even read, I just hit play and let go. It's comfort."</div>
+        <div class="testi-who">— a My Soul Care user</div>
+      </div>
+    </div>
+    <p class="testi-note">🍃 Illustrative testimonials that reflect the tone of the experience — they will be replaced with real ones as the community grows.</p>
+  </div>
+</section>
+
+<!-- PLANS (oferta com toggle de período) -->
+<section class="pad bg-soft" id="planos">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow gold">Choose your plan</span>
+      <h2>There's a plan that fits<br>your moment.</h2>
+      <div class="gold-line"></div>
+      <p class="lead">Use the button above to switch between <strong>monthly, quarterly and annual</strong> — the prices and benefits of every plan update instantly. <strong>Monthly</strong> is selected by default: it's where most people start.</p>
+    </div>
+
+    <div class="center reveal" style="margin-top:2.4rem;">
+      <div class="period-toggle" role="tablist" aria-label="Billing period">
+        <button class="period-btn active" role="tab" aria-selected="true" onclick="setPeriod('mensal', this)">Monthly <span class="period-save">★ most chosen</span></button>
+        <button class="period-btn" role="tab" onclick="setPeriod('trimestral', this)">Quarterly</button>
+        <button class="period-btn" role="tab" onclick="setPeriod('anual', this)">Annual <span class="period-save">save up to 38%</span></button>
+      </div>
+      <p class="period-hint">👆 Tap Monthly, Quarterly or Annual to switch all plans</p>
+    </div>
+
+    <div class="plans plansB-wrap show-mensal" id="plansB">
+
+      <!-- ESSENCIAL -->
+      <div class="plan plan-1 reveal">
+        <div class="plan-top">
+          <div class="plan-ic">💙</div>
+          <div class="plan-nm">Essential Plan</div>
+          <div class="plan-tg">To begin caring for your soul</div>
+        </div>
+        <div class="plan-mid">
+          <div class="pb-price-box">
+            <div class="when-mensal"><div class="pb-price">R$39.90<span>/mo</span></div><div class="pb-sub">billed monthly</div></div>
+            <div class="when-trimestral"><div class="pb-price">R$99<span>/qtr</span></div><div class="pb-sub">R$33/mo · every 3 months</div></div>
+            <div class="when-anual"><div class="pb-price">R$297<span>/yr</span></div><div class="pb-sub">R$24.75/mo · less than R$1 a day</div><div class="pb-old">from R$478.80/yr</div></div>
+          </div>
+          <div class="feat-title">✨ What's included</div>
+          <ul class="plan-feats">
+            <li>Up to 10 messages a day</li>
+            <li>Warm, personalized answers</li>
+            <li>Access to your conversation history</li>
+            <li>2 audio prayers per month</li>
+          </ul>
+          <a href="https://buy.stripe.com/4gM9ATebBeYq9ws3erbfO01" target="_blank" rel="noopener" class="plan-btn plan-checkout" data-mensal="https://buy.stripe.com/4gM9ATebBeYq9ws3erbfO01" data-trimestral="https://buy.stripe.com/9B6eVd0kL7vYdMI02fbfO02" data-anual="https://buy.stripe.com/14AaEX2sTg2ufUQ9CPbfO03">Start with Essential</a>
+        </div>
+      </div>
+
+      <!-- COMPLETO -->
+      <div class="plan plan-2 featured reveal">
+        <div class="plan-top">
+          <span class="plan-flag">🌟 Most chosen</span>
+          <div class="plan-ic">✨</div>
+          <div class="plan-nm">Complete Plan ⭐</div>
+          <div class="plan-tg">To deepen your care every day</div>
+        </div>
+        <div class="plan-mid">
+          <div class="pb-price-box">
+            <div class="when-mensal"><div class="pb-price">R$49.90<span>/mo</span></div><div class="pb-sub">billed monthly</div></div>
+            <div class="when-trimestral"><div class="pb-price">R$129<span>/qtr</span></div><div class="pb-sub">≈ R$43/mo · every 3 months</div></div>
+            <div class="when-anual"><div class="pb-price">R$397<span>/yr</span></div><div class="pb-sub">≈ R$33/mo · + extra benefit</div><div class="pb-old">from R$598.80/yr</div></div>
+          </div>
+          <div class="when-mt">
+            <div class="feat-title">✨ What's included</div>
+            <ul class="plan-feats">
+              <li>15 messages a day</li>
+              <li>Deeper, more thoughtful answers</li>
+              <li>Full history</li>
+              <li>3 audio prayers per month</li>
+              <li>1 special answer per month</li>
+            </ul>
+          </div>
+          <div class="when-anual">
+            <div class="feat-title gold">💎 On the annual plan you get</div>
+            <ul class="plan-feats">
+              <li>25 messages a day</li>
+              <li>Deeper, more thoughtful answers</li>
+              <li>Full history</li>
+              <li>3 audio prayers per month</li>
+            </ul>
+          </div>
+          <a href="https://buy.stripe.com/cNidR97NdeYqgYU9CPbfO04" target="_blank" rel="noopener" class="plan-btn plan-checkout" data-mensal="https://buy.stripe.com/cNidR97NdeYqgYU9CPbfO04" data-trimestral="https://buy.stripe.com/4gMcN5ffF6rU6kg16jbfO05" data-anual="https://buy.stripe.com/8x24gz2sT17A9ws9CPbfO06">I want Complete</a>
+        </div>
+      </div>
+
+      <!-- AVANÇADO -->
+      <div class="plan plan-3 reveal">
+        <div class="plan-top">
+          <div class="plan-ic">👑</div>
+          <div class="plan-nm">Advanced Plan</div>
+          <div class="plan-tg">For those who made the Source a daily habit</div>
+        </div>
+        <div class="plan-mid">
+          <div class="pb-price-box">
+            <div class="when-mensal"><div class="pb-price">R$69.90<span>/mo</span></div><div class="pb-sub">billed monthly</div></div>
+            <div class="when-trimestral"><div class="pb-price">R$177<span>/qtr</span></div><div class="pb-sub">R$59/mo · every 3 months</div></div>
+            <div class="when-anual"><div class="pb-price">R$597<span>/yr</span></div><div class="pb-sub">≈ R$49/mo · + extra benefit</div><div class="pb-old">from R$838.80/yr</div></div>
+          </div>
+          <div class="when-mt">
+            <div class="feat-title">✨ What's included</div>
+            <ul class="plan-feats">
+              <li>25 messages a day</li>
+              <li>Deeper, more detailed answers</li>
+              <li>Full history</li>
+              <li>6 audio prayers per month</li>
+              <li>3 special answers per month</li>
+              <li>Priority responses</li>
+            </ul>
+          </div>
+          <div class="when-anual">
+            <div class="feat-title gold">💎 On the annual plan you get</div>
+            <ul class="plan-feats">
+              <li>40 messages a day ⭐</li>
+              <li>More complete, detailed answers</li>
+              <li>Full history</li>
+              <li>6 audio prayers per month</li>
+              <li>WhatsApp group</li>
+            </ul>
+          </div>
+          <a href="https://buy.stripe.com/bJe00j0kLcQidMI16jbfO09" target="_blank" rel="noopener" class="plan-btn plan-checkout" data-mensal="https://buy.stripe.com/bJe00j0kLcQidMI16jbfO09" data-trimestral="https://buy.stripe.com/cNieVdd7xcQi7ok8yLbfO07" data-anual="https://buy.stripe.com/cNicN59Vl3fI9ws02fbfO0a">I want Advanced</a>
+        </div>
+      </div>
+
+    </div>
+    <p class="plans-note">🤍 On the annual plan, your care costs <strong>less than R$1 a day</strong>. Cancel anytime.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="pad bg-white">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Still have a nagging doubt?</span>
+      <h2>Questions everyone asks</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="faq">
+      <div class="faq-item reveal">
+        <div class="faq-q">❓ But isn't artificial intelligence cold and soulless?</div>
+        <div class="faq-a">The soul is yours — and God's. The AI is only the instrument that delivers care faster, anytime. It's like the phone that connects you to those you love: no one thinks the phone is cold. What matters is the intention, the care, and the biblical foundation behind every answer.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">❓ Does My Soul Care replace therapy or my church?</div>
+        <div class="faq-a">No, and it doesn't want to. It walks alongside you. It's care for the "in-between" — for the moment when you can't reach anyone, but you also don't want to be alone. Therapy, church and My Soul Care can (and should) coexist.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">❓ Does it really work anytime?</div>
+        <div class="faq-a">Yes. No appointments, no waiting line, no holidays. Late at night, Sunday morning, Monday at 7am — care is available whenever your soul asks for it.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">❓ What if I don't know which plan to choose?</div>
+        <div class="faq-a">Start with Essential. It already delivers the essentials (the name doesn't lie). As care becomes a habit, you move up to Complete or Advanced — and on the annual plan, the daily cost is less than a cup of coffee.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">❓ Can I cancel anytime?</div>
+        <div class="faq-a">Yes, you can. No fine print and no drama. The idea here is that you stay because you want to — because you feel the care making a difference — not because you're trapped.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="pad final" id="final">
+  <div class="wrap">
+    <div class="final-card reveal">
+      <img src="png%20site/mascote%20sorrindo.png" alt="Mascote do My Soul Care" class="big-mascote">
+      <span class="eyebrow">It's your turn</span>
+      <h2>The wisdom of the teachings<br>of Jesus is one tap away.</h2>
+      <div class="gold-line"></div>
+      <p class="lead" style="margin-bottom:1.8rem;">You made it this far for a reason. Maybe today is the day to start walking closer. My Soul Care is ready to listen to you and respond with wisdom grounded in the Word — whenever you need it.</p>
+      <a href="#planos" class="btn btn-teal">Choose my plan now 🤍</a>
+      <div class="btn-sub">🍃 Start with the plan that fits your moment · cancel anytime</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHATSAPP SUPORTE -->
+<a class="wa-float" href="https://wa.me/5548984866851?text=Hi!%20I%20need%20help%20with%20My%20Soul%20Care%20%F0%9F%A4%8D" target="_blank" rel="noopener" aria-label="Chat with support on WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.515 5.26l-.999 3.648 3.984-1.045zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+  <span class="wa-label">WhatsApp support</span>
+</a>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <span class="footer-logo"><img src="png%20site/mascote%20sorrindo.png" alt="" class="footer-mascote"> My Soul Care</span>
+    <p class="footer-tag">A Fonte do Amor Perfeito product · Your soul care 🤍</p>
+    <div class="socials">
+      <a class="social" href="https://www.instagram.com/fontedoamorperfeito" target="_blank" rel="noopener">📸 Instagram · @fontedoamorperfeito</a>
+      <a class="social" href="https://www.youtube.com/@fontedoamorperfeito" target="_blank" rel="noopener">▶️ YouTube · @fontedoamorperfeito</a>
+    </div>
+    <p class="footer-fine" style="opacity:0.85; max-width:760px; margin:0 auto 0.6rem;">Disclaimer: This application uses Artificial Intelligence technology trained on public-domain biblical texts for purposes of reflection, study and spiritual entertainment. The generated responses are automated simulations and do not replace psychological or medical advice. By using the platform, you agree to our Terms of Use.</p>
+    <p class="footer-fine">🌟 Fonte do Amor Perfeito — All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  function selectPrice(row) {
+    const rows = row.parentElement.querySelectorAll('.price-row');
+    rows.forEach(r => { r.classList.remove('selected'); r.setAttribute('aria-checked', 'false'); });
+    row.classList.add('selected');
+    row.setAttribute('aria-checked', 'true');
+  }
+  function priceKey(e, row) {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectPrice(row); }
+  }
+
+  // Versão B — toggle de período no topo troca todos os planos de uma vez
+  function setPeriod(period, btn) {
+    const wrap = document.getElementById('plansB');
+    wrap.classList.remove('show-mensal', 'show-trimestral', 'show-anual');
+    wrap.classList.add('show-' + period);
+    btn.parentElement.querySelectorAll('.period-btn').forEach(b => {
+      b.classList.remove('active');
+      b.removeAttribute('aria-selected');
+    });
+    btn.classList.add('active');
+    btn.setAttribute('aria-selected', 'true');
+    document.querySelectorAll('.plan-checkout').forEach(a => {
+      const u = a.getAttribute('data-' + period);
+      if (u) a.setAttribute('href', u);
+    });
+  }
+</script>
+
+</body>
+</html>
